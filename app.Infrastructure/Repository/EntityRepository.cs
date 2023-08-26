@@ -109,7 +109,8 @@ namespace app.Infrastructure.Repository
             var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
             DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
             entity.UpdatedOn = BaTime;
-            entity.UpdatedBy = workContext.CurrentUserAsync().Result.FullName;
+            //entity.UpdatedBy = workContext.CurrentUserAsync().Result.FullName;
+            entity.UpdatedBy = "";
             return entity;
         }
         private async Task<T> GetAddAsyncProperties(T entity)

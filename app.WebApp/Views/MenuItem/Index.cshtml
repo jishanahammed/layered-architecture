@@ -1,4 +1,4 @@
-﻿@model MainMenuViewModel
+﻿@model MenuItemViewModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -10,10 +10,10 @@
         <div class="breadcrumb d-flex justify-content-between align-items-center  pl-3 pr-3">
             <ol class="breadcrumb mb-0 p-0">
                 <li class="breadcrumb-item"><a href="/Admin/Home/Index">Home</a></li>
-                <li class="breadcrumb-item active"> Menu List </li>
+                <li class="breadcrumb-item active"> MenuItem List </li>
             </ol>
             <div>
-                <a asp-action="AddRecort"><i class="fa fa-plus"></i>  Add New Menu </a>
+                <a asp-action="AddRecort"><i class="fa fa-plus"></i>  Add New MenuItem </a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <div class="card-header">
                 <div class="row w-100">
                     <div class="col-sm-3">
-                        <h5> <i class="fas fa-list"></i>  All Menu </h5>
+                        <h5> <i class="fas fa-list"></i>  All MenuItem </h5>
                     </div>
                 </div>
             </div>
@@ -36,21 +36,27 @@
                             <tr>
                                 <th>
                                     #
+                                </th> 
+                                <th>
+                                    Menu
                                 </th>
                                 <th>
                                     Name
+                                </th> 
+                                <th>
+                                    Short Name
                                 </th>
                                 <th class="text-center">
                                     Icon
                                 </th>
                                 <th class="text-center">
-                                  OrderNo
+                                    OrderNo
                                 </th>
                                 <th class="text-center"> Status </th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        
+
                         <tbody>
                             @foreach (var item in Model.datalist)
                             {
@@ -59,7 +65,13 @@
                                         @SN
                                     </td>
                                     <td>
+                                        @Html.DisplayFor(modelItem => item.MenuName)
+                                    </td>
+                                    <td>
                                         @Html.DisplayFor(modelItem => item.Name)
+                                    </td>  
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ShortName)
                                     </td>
                                     <td class="text-center">
                                         @Html.Raw(item.Icon)
@@ -68,7 +80,7 @@
                                         @Html.DisplayFor(modelItem => item.OrderNo)
                                     </td>
                                     <td class="text-center">
-                                        @if (item.IsActive==false)
+                                        @if (item.IsActive == false)
                                         {
                                             <b class="text-danger"> <i class="fas fa-times-circle fa-2x" style="font-size:20px"></i></b>
                                         }

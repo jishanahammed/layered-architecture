@@ -1,0 +1,14 @@
+﻿using app.Services.MenuItemService;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace app.Services.UserServices
+{
+    public interface IUserServices
+    {
+        Task<UserViewModel> GetAllRecort();
+    }
+}

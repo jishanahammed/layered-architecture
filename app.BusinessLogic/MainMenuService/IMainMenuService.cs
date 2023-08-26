@@ -13,5 +13,6 @@ namespace app.Services.MainMenuService
         Task<List<MainMenu>> GetAllRecort();
         Task<bool> UpdateRecort(MainMenuViewModel model);
         Task<bool> DeleteRecort(long Id);
+        Task<MainMenuViewModel> GetByRecort(long Id);
     }
 }

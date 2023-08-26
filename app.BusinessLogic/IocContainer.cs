@@ -1,4 +1,7 @@
 ﻿using app.Services.MainMenuService;
+using app.Services.MenuItemService;
+using app.Services.UserpermissionsService;
+using app.Services.UserServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +17,9 @@ namespace app.Services
         public static IServiceCollection AddServiceModel(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<IMainMenuService, MainMenuServices>();
+            services.AddTransient<IMenuItemService, MenuItemServices>();
+            services.AddTransient<IUserpermissionServices, UserpermissionServices>();
+            services.AddTransient<IUserServices, UsersServices>();
             return services;
         }
     }
