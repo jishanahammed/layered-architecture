@@ -109,8 +109,7 @@ namespace app.Infrastructure.Repository
             var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
             DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
             entity.UpdatedOn = BaTime;
-            //entity.UpdatedBy = workContext.CurrentUserAsync().Result.FullName;
-            entity.UpdatedBy = "";
+            entity.UpdatedBy = workContext.CurrentUserAsync().Result.FullName;
             return entity;
         }
         private async Task<T> GetAddAsyncProperties(T entity)
@@ -118,11 +117,9 @@ namespace app.Infrastructure.Repository
             var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
             DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
             entity.CreatedOn = BaTime;
-            //entity.CreatedBy = workContext.CurrentUserAsync().Result.FullName;
-            entity.CreatedBy = "";
+            entity.CreatedBy = workContext.CurrentUserAsync().Result.FullName;
             entity.IsActive = true;
-            //entity.TrakingId= workContext.CurrentUserAsync().Result.Id;
-            entity.TrakingId= "";
+            entity.TrakingId= workContext.CurrentUserAsync().Result.Id;
             return entity;
         }
 

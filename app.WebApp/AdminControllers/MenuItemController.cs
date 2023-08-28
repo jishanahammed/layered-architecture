@@ -1,11 +1,13 @@
 ﻿using app.EntityModel.CoreModel;
 using app.Services.MainMenuService;
 using app.Services.MenuItemService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class MenuItemController : Controller
     {
         private readonly IMenuItemService MenuItem;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using app.Services.MenuItemService;
+using app.Infrastructure.Auth;
 
 namespace app.Services.UserServices
 {
@@ -32,6 +33,12 @@ namespace app.Services.UserServices
                                                        Mobile=t1.PhoneNumber,
                                                    }).OrderByDescending(x => x.UserName).AsEnumerable());
             return model;
+        }
+
+        public async Task<ApplicationUser> GetByUser(string username)
+        {
+            var result = await dbContext.Users.FirstOrDefaultAsync(d => d.Email == username);
+           return result;
         }
     }
 }

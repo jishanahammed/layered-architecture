@@ -2,6 +2,7 @@ using app.Infrastructure;
 using app.Infrastructure.Auth;
 using app.Infrastructure.Repository;
 using app.Services;
+using app.WebApp.Handlers;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,8 +19,9 @@ namespace app.WebApp
             // var config = new  IConfiguration();
 
             builder.Services.AddServiceModel(builder.Configuration);
-            builder.Services.AddTransient(typeof(IEntityRepository<>), typeof(EntityRepository<>));
-            builder.Services.AddTransient<IWorkContext, WorkContextsService>();
+            builder.Services.AddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
+            builder.Services.AddScoped<IWorkContext, WorkContextsService>();
+            builder.Services.AddTransient<IAssigeMenus, AssigeMenus>();
 
 
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -42,8 +44,8 @@ namespace app.WebApp
             options =>
             {
                 options.LoginPath = new PathString("/Home/Index");
-                options.AccessDeniedPath = new PathString("/Home/AccessDenied");
-                options.LogoutPath = new PathString("/Home/Logout");
+                options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+                options.LogoutPath = new PathString("/Account/Logout");
                 options.Cookie.Name = "My.Cookie";
             });
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
@@ -53,8 +55,9 @@ namespace app.WebApp
                 options.Cookie.IsEssential = true;
                 options.IdleTimeout = TimeSpan.FromDays(30);
             });
-     
-
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddRazorPages();
+            builder.Services.AddMemoryCache();
             var app = builder.Build();
             if (!app.Environment.IsDevelopment())
             {

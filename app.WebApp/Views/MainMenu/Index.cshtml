@@ -44,13 +44,13 @@
                                     Icon
                                 </th>
                                 <th class="text-center">
-                                  OrderNo
+                                    OrderNo
                                 </th>
                                 <th class="text-center"> Status </th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        
+
                         <tbody>
                             @foreach (var item in Model.datalist)
                             {
@@ -68,7 +68,7 @@
                                         @Html.DisplayFor(modelItem => item.OrderNo)
                                     </td>
                                     <td class="text-center">
-                                        @if (item.IsActive==false)
+                                        @if (item.IsActive == false)
                                         {
                                             <b class="text-danger"> <i class="fas fa-times-circle fa-2x" style="font-size:20px"></i></b>
                                         }
@@ -95,3 +95,16 @@
     </div>
 
 </section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#User-Managment').addClass('menu-open');
+            $('#MainMenuIndex').addClass('active');
+        });
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+

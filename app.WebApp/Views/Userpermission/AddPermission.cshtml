@@ -81,7 +81,13 @@
 
 
 @section Scripts {
+
     <script>
+        $(document).ready(function () {
+            $('#User-Managment').addClass('menu-open');
+            $('#UserpermissionAddPermission').addClass('active');
+        });
+
 
         $("#UserId").change(function () {
             var userid = $("#UserId option:selected").val();

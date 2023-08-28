@@ -1,9 +1,11 @@
 ﻿
 using app.Services.MainMenuService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class MainMenuController : Controller
     {
         private readonly IMainMenuService mainMenu;

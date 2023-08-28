@@ -107,3 +107,15 @@
     </div>
 
 </section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#User-Managment').addClass('menu-open');
+            $('#MenuItemIndex').addClass('active');
+        });
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

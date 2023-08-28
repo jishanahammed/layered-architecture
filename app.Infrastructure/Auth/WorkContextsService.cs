@@ -43,29 +43,10 @@ namespace app.Infrastructure.Auth
             {
                 return _currentUser;
             }
-
-            var userGuid = GetUserGuidFromCookies();
-            //if (userGuid.HasValue)
-            //{
-            //    _currentUser = _userRepository.Query().Include(x => x.Roles).FirstOrDefault(x => x.UserGuid == userGuid);
-            //}
-
             if (_currentUser != null && await _userManager.IsInRoleAsync(_currentUser, "Admin"))
             {
                 return _currentUser;
             }
-
-            //userGuid = Guid.NewGuid();
-            //var dummyEmail = string.Format("{0}@guest.ecommerce.com", userGuid);
-            //_currentUser = new ApplicationUser
-            //{
-            //    FullName = userGuid.ToString(),
-            //    Email = dummyEmail,
-            //    UserName = dummyEmail,
-            //};
-            //var abc = await _userManager.CreateAsync(_currentUser, "User@123");
-            //await _userManager.AddToRoleAsync(_currentUser, "Admin");
-            //SetUserGuidCookies();
             return _currentUser;
         }
         public async Task<ApplicationUser> CurrentUserAsync()
@@ -84,26 +65,7 @@ namespace app.Infrastructure.Auth
             }
             return _currentUser;
         }
-        private Guid? GetUserGuidFromCookies()
-        {
-            if (_httpContext.Request.Cookies.ContainsKey(UserGuidCookiesName))
-            {
-                return Guid.Parse(_httpContext.Request.Cookies[UserGuidCookiesName]);
-            }
 
-            return null;
-        }
-
-        private void SetUserGuidCookies()
-        {
-            _httpContext.Response.Cookies.Append(UserGuidCookiesName, _currentUser.Id.ToString(), new CookieOptions
-            {
-                Expires = DateTime.UtcNow.AddYears(5),
-                HttpOnly = true,
-                IsEssential = true,
-                SameSite = SameSiteMode.Strict
-            });
-        }
 
         public async Task<bool> IsUserSignedIn()
         {

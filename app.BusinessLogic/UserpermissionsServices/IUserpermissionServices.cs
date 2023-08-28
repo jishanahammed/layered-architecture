@@ -1,5 +1,6 @@
 ﻿using app.Services.MenuItemService;
 using app.Services.UserpermissionsServices;
+using app.Services.UserServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace app.Services.UserpermissionsService
     {
         Task<bool> AddRecort(long Id,string UserId);
         Task<UserpermissionViewModel> GetAllRecort(string Id);
+        Task<MenuPermissionViewModel> GetAllMenuItemRecort(string username);
 
     }
 }

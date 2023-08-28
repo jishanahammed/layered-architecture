@@ -1,4 +1,9 @@
-﻿
+﻿@inject IAssigeMenus workcontect
+@inject IWorkContext getuser
+@{
+    var menulist = await workcontect.menulist();
+    var currentuse = await getuser.CurrentUserAsync();
+}
 <style>
     [class*=sidebar-light-] .nav-sidebar > .nav-item.menu-open > .nav-link, [class*=sidebar-light-] .nav-sidebar > .nav-item:hover > .nav-link {
         background-color: #65abe5 !important;
@@ -6,14 +11,15 @@
         font-weight: 900;
     }
 
-    [class*=sidebar-light-] .nav-sidebar > .nav-item.menu-open > .nav-link, [class*=sidebar-light-] .nav-sidebar > .nav-item:hover > .nav-link i {
+        [class*=sidebar-light-] .nav-sidebar > .nav-item.menu-open > .nav-link, [class*=sidebar-light-] .nav-sidebar > .nav-item:hover > .nav-link i {
             color: #f7faff !important;
         }
+
     .nav-treeview > .nav-item > .nav-link.active, [class*=sidebar-light-] .nav-treeview > .nav-item > .nav-link.active:hover {
         background-color: #65abe5 !important;
         color: #f7faff !important;
         border: 1px solid #fff !important;
-        font-weight:900;
+        font-weight: 900;
     }
 
     .navbar-white {
@@ -23,7 +29,7 @@
     }
 
     .layout-navbar-fixed .wrapper .sidebar-light-info .brand-link:not([class*=navbar]) {
-        color:#fbf3ea;
+        color: #fbf3ea;
         background-color: #266ca6;
     }
 
@@ -49,12 +55,16 @@
         color: #fff;
         border-radius: 0rem !important;
     }
+
+    [class*=sidebar-light-] .nav-sidebar > .nav-item > .nav-treeview {
+        background-color: white;
+    }
 </style>
 
 <aside class="main-sidebar sidebar-light-info elevation-4">
     <a href="/Admin/Index" class="brand-link text-center" style="line-height:1.4;font-size:17px">
         <b> Inventory Management </b>
-        
+
     </a>
 
     <div class="sidebar">
@@ -65,18 +75,18 @@
                     <div style="height:40px;width:190px;">
                         <img src="~/kgfile/mainlogo.png" style="height:40px;width:190px;border-radius:30px;margin-right:5px" />
                     </div>
-                   
+
                     <p style="font-weight:800;text-align:center;padding: 4px 0px 8px 0px;margin-bottom:0px; font-size: 18px;">
-                     @*  @currentuser.FullName *@
-                      
-                     </p>
-                  
+                        @*  @currentuser.FullName *@
+
+                    </p>
+
                 </li>
 
 
 
-                <li class="nav-item"  style="font-weight:800">
-                    
+                <li class="nav-item" style="font-weight:800">
+
                     <a asp-controller="Admin" asp-action="Index" id="Dashboard" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -84,57 +94,41 @@
                         </p>
                     </a>
                 </li>
-
-
-                <li class="nav-item"  style="font-weight:800">
-                    
-                    <a asp-controller="MainMenu" asp-action="Index" id="Dashboard" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Main Menu
-                        </p>
-                    </a>
-                </li>   
-                <li class="nav-item"  style="font-weight:800">
-                    
-                    <a asp-controller="MenuItem" asp-action="Index" id="Dashboard" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            MenuItem
-                        </p>
-                    </a>
-                </li> 
-                <li class="nav-item"  style="font-weight:800">
-                    
-                    <a asp-controller="Userpermission" asp-action="AddPermission" id="Dashboard" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Add Permission
-                        </p>
-                    </a>
-                </li>
-@*                @if (currentuser.actionslist == null)
+                @if (currentuse!=null)
                 {
-                    <p class="text-center"> <b> No Assign Role </b> </p>
-                }
-                else
+                    
+                
+                @foreach (var item in menulist.MainMenuVM)
                 {
-                    @foreach (var item in currentuser.actionslist)
+                    @if (item.menuItemVMs.Count() > 0)
                     {
-                        <li class="nav-item" style="font-weight:800">
 
-                            <a asp-controller="@item.ControllerName" asp-action="@item.ActionName" id="@item.UiNmae" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
+                        <li class="nav-item" id="@item.Activeid">
+                            <a href="#" class="nav-link">
+                                @Html.Raw(item.Icon)
                                 <p>
-                                    @item.UiNmae
+                                    @item.Name
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                @foreach (var menu in item.menuItemVMs)
+                                {
+                                    <li class="nav-item">
+                                        <a asp-action="@menu.Action" asp-controller="@menu.Controller" id="@menu.Controller@menu.Action" class="nav-link">
+                                            @Html.Raw(menu.Icon)
+                                            <p>@menu.Name</p>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
                         </li>
                     }
-                }*@
+
+                }
+                }
 
             </ul>
         </nav>
     </div>
 </aside>
-

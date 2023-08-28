@@ -1,4 +1,5 @@
-﻿using app.Services.MenuItemService;
+﻿using app.Infrastructure.Auth;
+using app.Services.MenuItemService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace app.Services.UserServices
     public interface IUserServices
     {
         Task<UserViewModel> GetAllRecort();
+        Task<ApplicationUser> GetByUser(string username);
+    
     }
 }

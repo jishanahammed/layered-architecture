@@ -45,7 +45,7 @@ namespace app.Infrastructure
                     FullName = "System Engineers",
                     LockoutEnabled = false,
                     NormalizedEmail = "CUS.JISHAN@GMAIL.COM",
-                    NormalizedUserName = "ENGINEERS",
+                    NormalizedUserName = "CUSTOMER",
                     PasswordHash = "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==",
                     ConcurrencyStamp = "616a2e8f-dc94-4576-8ec4-c9d75d1df6d9",
                     PhoneNumberConfirmed = true,

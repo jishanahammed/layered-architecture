@@ -4,12 +4,14 @@ using app.Services.MenuItemService;
 using app.Services.UserpermissionsService;
 using app.Services.UserpermissionsServices;
 using app.Services.UserServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class UserpermissionController : Controller
     {
         private readonly IUserpermissionServices userpermission;
