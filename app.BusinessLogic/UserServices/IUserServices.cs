@@ -12,6 +12,10 @@ namespace app.Services.UserServices
     {
         Task<UserViewModel> GetAllRecort();
         Task<ApplicationUser> GetByUser(string username);
+        Task<UserViewModel> GetByUserId(string username);
+        Task<bool> SoftDelete(string username);
+        Task<int> AddUser(UserViewModel model);
+        Task<int> UpdateUser(UserViewModel model);
     
     }
 }

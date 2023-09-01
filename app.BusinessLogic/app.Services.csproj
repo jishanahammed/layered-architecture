@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\app.EntityModel\app.EntityModel.csproj" />
     <ProjectReference Include="..\app.Infrastructure\app.Infrastructure.csproj" />
+    <ProjectReference Include="..\app.Utility\app.Utility.csproj" />
   </ItemGroup>
 
 </Project>

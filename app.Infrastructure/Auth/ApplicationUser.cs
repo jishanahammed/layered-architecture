@@ -19,6 +19,7 @@ namespace app.Infrastructure.Auth
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
+        public string Address { get; set; }
     }
 
 }

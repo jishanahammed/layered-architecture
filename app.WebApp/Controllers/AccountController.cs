@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using WebApp.Models;
+using app.WebApp.Models;
 using app.Services.UserServices;
 using app.Infrastructure.Auth;
 using Microsoft.AspNetCore.Http;
@@ -35,21 +35,24 @@ namespace app.WebApp.Controllers
             return View(model);
         }
 
-        [HttpGet]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(LoginViewModel model)
         {
-            model.UserName = "jishan.bd46@gmail.com";
-            model.Password = "Ji123456";
-            var  user =await UserServices.GetByUser(model.UserName);
+            //model.UserName = "jishan.bd46@gmail.com";
+            //model.Password = "Ji123456";
+            var  user =await UserServices.GetByUser(model.Email);
             if (user == null)
             {
+                ModelState.AddModelError(string.Empty, "User not found");
                 return View(model);
+
             }
             var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
             if (result.Succeeded)
             {
                 var getitem = await userpermission.GetAllMenuItemRecort(user.Id);
-                HttpContext.Session.SetString("Username", model.UserName);
+                HttpContext.Session.SetString("Username", user.UserName.ToString());
                 var arry= JsonSerializer.Serialize(getitem);
                 HttpContext.Session.SetString("ArrayData", arry);
                 return Redirect("/Admin/Index");

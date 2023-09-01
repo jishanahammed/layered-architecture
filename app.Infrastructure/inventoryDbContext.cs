@@ -21,12 +21,15 @@ namespace app.Infrastructure
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-           // FixedData.SeedData(builder);
+           FixedData.SeedData(builder);
             base.OnModelCreating(builder);
         }
         public virtual DbSet<MenuItem> MenuItem { get; set; }
         public virtual DbSet<MainMenu> MainMenu { get; set; }
         public virtual DbSet<Userpermissions> Userpermissions { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
+        public virtual DbSet<ProductSubCategory> ProductSubCategory { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
 
         
     }

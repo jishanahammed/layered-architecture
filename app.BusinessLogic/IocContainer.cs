@@ -1,5 +1,7 @@
 ﻿using app.Services.MainMenuService;
 using app.Services.MenuItemService;
+using app.Services.ProductCategory_Services;
+using app.Services.RolesServises;
 using app.Services.UserpermissionsService;
 using app.Services.UserServices;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +21,9 @@ namespace app.Services
             services.AddTransient<IMainMenuService, MainMenuServices>();
             services.AddTransient<IMenuItemService, MenuItemServices>();
             services.AddTransient<IUserpermissionServices, UserpermissionServices>();
+            services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserServices, UsersServices>();
+            services.AddTransient<IProductCategoryServices, ProductCategoryServices>();
             return services;
         }
     }
