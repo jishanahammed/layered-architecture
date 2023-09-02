@@ -16,6 +16,6 @@ namespace app.Utility.Miscellaneous
         public int Year { get; set; }
         public DateTime? fromDate { get; set; }
         public DateTime? toDate { get; set; }
-        public decimal? Sum { get; set; }
+        public int UserType { get; set; }
     }
 }

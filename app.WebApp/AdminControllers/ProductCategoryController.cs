@@ -47,6 +47,29 @@ namespace app.WebApp.AdminControllers
             return View(viewModel);
         }
 
-
+        [HttpGet]
+        public async Task<IActionResult> Delete(long id)
+        {
+            var res = await productCategoryServices.DeleteRecord(id);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateRecort(long id)
+        {
+            ProductCategoryViewModel viewModel = new ProductCategoryViewModel();
+            viewModel = await productCategoryServices.GetRecord(id);
+            return View(viewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateRecort(ProductCategoryViewModel viewModel)
+        {
+            var result = await productCategoryServices.UpdateRecord(viewModel);
+            if (result == 2)
+            {
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError(string.Empty, "Same Name already exists!");
+            return View(viewModel);
+        }
     }
 }

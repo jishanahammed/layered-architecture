@@ -12,7 +12,7 @@ namespace app.Services.ProductCategory_Services
         Task<int> AddRecord( ProductCategoryViewModel model);
         Task<int> UpdateRecord( ProductCategoryViewModel model);
         Task<bool> DeleteRecord( long id );
-        Task<ProductCategoryViewModel> GetRecord( int id );
+        Task<ProductCategoryViewModel> GetRecord(long id);
         Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize);
     }
 }

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using app.Utility;
+using app.Infrastructure.Auth;
 
 namespace app.Services.ProductCategory_Services
 {
@@ -14,10 +16,12 @@ namespace app.Services.ProductCategory_Services
     {
         private readonly IEntityRepository<ProductCategory> _entityRepository;
         private readonly inventoryDbContext dbContext;
-        public ProductCategoryServices(IEntityRepository<ProductCategory> entityRepository, inventoryDbContext dbContext)
+        private readonly IWorkContext workContext;
+        public ProductCategoryServices(IEntityRepository<ProductCategory> entityRepository, inventoryDbContext dbContext, IWorkContext workContext)
         {
             _entityRepository = entityRepository;
             this.dbContext = dbContext;
+            this.workContext = workContext;
         }
         public async Task<int> AddRecord(ProductCategoryViewModel model)
         {
@@ -26,6 +30,7 @@ namespace app.Services.ProductCategory_Services
             {
                 ProductCategory category = new ProductCategory();
                 category.Name = model.Name;
+                category.ProductType = model.ProductType;
                 var res = await _entityRepository.AddAsync(category);
                 return 2;
             }
@@ -43,14 +48,22 @@ namespace app.Services.ProductCategory_Services
         public async Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize)
         {
             ProductCategoryViewModel model = new ProductCategoryViewModel();
+            var user= await workContext.GetCurrentUserAsync();
             model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
+                                                                join t2 in dbContext.Users on t1.TrakingId equals t2.Id
                                                                 where t1.IsActive == true
                                                                 select new ProductCategoryViewModel
                                                                 {
                                                                     Id = t1.Id,
                                                                     ProductType = t1.ProductType,
-                                                                    Name = t1.Name
-                                                                }).AsEnumerable());
+                                                                    Name = t1.Name,
+                                                                    UserName=t2.FullName,
+                                                                    TrakingId=t1.TrakingId,
+                                                                }).AsQueryable());
+            if (user.UserType == 1)
+            {
+                model.ProductCategoriesList = model.ProductCategoriesList.Where(f => f.TrakingId == user.Id).AsQueryable();
+            }
             int resCount = model.ProductCategoriesList.Count();
             var pagers = new PagedList(resCount, page, pageSize);
             int recSkip = (page - 1) * pageSize;
@@ -61,17 +74,19 @@ namespace app.Services.ProductCategory_Services
                 Models = pagedList,
                 FirstSerialNumber = FirstSerialNumber,
                 PagedList = pagers,
-                TotalEntity = resCount
+                TotalEntity = resCount,
+                UserType = user.UserType,   
             };
             return pagedModel;
         }
 
-        public async Task<ProductCategoryViewModel> GetRecord(int id)
+        public async Task<ProductCategoryViewModel> GetRecord(long id)
         {
             var result = await _entityRepository.GetByIdAsync(id);
             ProductCategoryViewModel model = new ProductCategoryViewModel();
             model.Id = result.Id;
             model.Name = result.Name;
+            model.ProductType = result.ProductType;
             return model;
         }
 
@@ -82,6 +97,7 @@ namespace app.Services.ProductCategory_Services
             {
                 var result = await _entityRepository.GetByIdAsync(model.Id);
                 result.Name = model.Name;
+                result.ProductType = model.ProductType;
                 await _entityRepository.UpdateAsync(result);
                 return 2;
             }
