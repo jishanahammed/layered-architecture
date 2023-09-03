@@ -45,6 +45,19 @@ namespace app.Services.ProductCategory_Services
             return true;
         }
 
+        public async Task<ProductCategoryViewModel> GetAllRecord()
+        {
+            ProductCategoryViewModel model = new ProductCategoryViewModel();
+            model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
+                                                                where t1.IsActive == true
+                                                                select new ProductCategoryViewModel
+                                                                {
+                                                                    Id = t1.Id,
+                                                                    Name = t1.Name,
+                                                                }).AsQueryable());
+            return model;
+        }
+
         public async Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize)
         {
             ProductCategoryViewModel model = new ProductCategoryViewModel();
@@ -78,6 +91,19 @@ namespace app.Services.ProductCategory_Services
                 UserType = user.UserType,   
             };
             return pagedModel;
+        }
+
+        public async Task<ProductCategoryViewModel> GetProductTypeWiseList(string id)
+        {
+            ProductCategoryViewModel model = new ProductCategoryViewModel();
+            model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
+                                                                where t1.IsActive == true && t1.ProductType==id
+                                                                select new ProductCategoryViewModel
+                                                                {
+                                                                    Id = t1.Id,
+                                                                    Name = t1.Name,
+                                                                }).AsQueryable());
+            return model;
         }
 
         public async Task<ProductCategoryViewModel> GetRecord(long id)

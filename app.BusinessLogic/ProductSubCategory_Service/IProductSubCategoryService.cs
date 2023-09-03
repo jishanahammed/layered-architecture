@@ -14,6 +14,6 @@ namespace app.Services.ProductSubCategory_Service
         Task<int> UpdateRecord(ProductSubCategoryViewModel model);
         Task<bool> DeleteRecord(long id);
         Task<ProductSubCategoryViewModel> GetRecord(long id);
-        Task<PagedModel<ProductSubCategoryViewModel>> GetPagedListAsync(int page, int pageSize,int ProductCategoryId, string sarchString = null);
+        Task<PagedModel<ProductSubCategoryViewModel>> GetPagedListAsync(int page, int pageSize,int ProductCategoryId,string ProductType, string sarchString);
     }
 }

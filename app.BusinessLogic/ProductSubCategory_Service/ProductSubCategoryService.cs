@@ -50,7 +50,7 @@ namespace app.Services.ProductSubCategory_Service
             return true;
         }
 
-        public async Task<PagedModel<ProductSubCategoryViewModel>> GetPagedListAsync(int page, int pageSize, int ProductCategoryId, string sarchString = null)
+        public async Task<PagedModel<ProductSubCategoryViewModel>> GetPagedListAsync(int page, int pageSize, int ProductCategoryId, string ProductType, string sarchString)
         {
             ProductSubCategoryViewModel model = new ProductSubCategoryViewModel();
             var user = await workContext.GetCurrentUserAsync();
@@ -76,7 +76,19 @@ namespace app.Services.ProductSubCategory_Service
             {
                 model.ProductSubCategoriesList = model.ProductSubCategoriesList.Where(f => f.ProductCategoryId == ProductCategoryId).AsQueryable();
             }
-
+            if (!string.IsNullOrWhiteSpace(ProductType))
+            {
+                model.ProductSubCategoriesList = model.ProductSubCategoriesList.Where(f => f.ProductType.Trim() == ProductType.Trim()).AsQueryable();
+            }
+            if (!string.IsNullOrWhiteSpace(sarchString))
+            {
+                sarchString = sarchString.Trim().ToLower();
+                model.ProductSubCategoriesList = model.ProductSubCategoriesList.Where(t =>
+                    t.Name.ToLower().Contains(sarchString) ||
+                    t.UserName.ToLower().Contains(sarchString) ||
+                    t.ProductCategoryName.ToLower().Contains(sarchString)                  
+                );
+            }
             int resCount = model.ProductSubCategoriesList.Count();
             var pagers = new PagedList(resCount, page, pageSize);
             int recSkip = (page - 1) * pageSize;

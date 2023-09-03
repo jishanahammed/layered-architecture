@@ -71,5 +71,11 @@ namespace app.WebApp.AdminControllers
             ModelState.AddModelError(string.Empty, "Same Name already exists!");
             return View(viewModel);
         }
+        [HttpGet]
+        public async Task<JsonResult> GetByProductCategoryList(string id)
+        {
+            var res = await productCategoryServices.GetProductTypeWiseList(id);
+            return Json(res);   
+        }
     }
 }

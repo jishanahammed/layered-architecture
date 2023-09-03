@@ -1,6 +1,7 @@
 ﻿using app.Services.MainMenuService;
 using app.Services.MenuItemService;
 using app.Services.ProductCategory_Services;
+using app.Services.ProductSubCategory_Service;
 using app.Services.RolesServises;
 using app.Services.UserpermissionsService;
 using app.Services.UserServices;
@@ -24,6 +25,7 @@ namespace app.Services
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserServices, UsersServices>();
             services.AddTransient<IProductCategoryServices, ProductCategoryServices>();
+            services.AddTransient<IProductSubCategoryService, ProductSubCategoryService>();
             return services;
         }
     }

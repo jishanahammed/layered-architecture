@@ -19,5 +19,6 @@ namespace app.Services.ProductSubCategory_Service
         public int AccountingIncomeHeadId { get; set; }
         public int AccountingExpenseHeadId { get; set; }
         public IEnumerable<ProductSubCategoryViewModel> ProductSubCategoriesList { get; set; }
+        public List<ProductSubCategoryViewModel> PubCList { get; set; }
     }
 }
