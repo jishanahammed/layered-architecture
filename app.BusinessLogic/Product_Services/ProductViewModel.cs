@@ -1,4 +1,5 @@
-﻿using System;
+﻿using app.Services.ProductCategory_Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace app.Services.Product_Services
         public decimal PurchaseRate { get; set; }
         public decimal PurchaseCommissionRate { get; set; }
         public decimal TPPrice { get; set; }
-        public int UnitId { get; set; }
+        public string UnitName { get; set; }
+        public string ProductCategoryName { get; set; }
+        public string ProductSubCategoryName { get; set; }
+        public IEnumerable<ProductViewModel> ProductList { get; set; }
     }
 }

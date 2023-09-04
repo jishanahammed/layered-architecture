@@ -1,5 +1,4 @@
-﻿@model PagedModel<ProductSubCategoryViewModel>
-
+﻿@model PagedModel<ProductViewModel>
 @{
     var ff = Model;
     int SN = Model.FirstSerialNumber;
@@ -11,7 +10,7 @@
         pageNo = Model.PagedList.PageIndex;
         SN = ((Model.PagedList.PageIndex * Model.PagedList.PageSize) - Model.PagedList.PageSize) + 1;
     }
-    string urlinstring = "ProductSubCategory/GetPaged";
+    string urlinstring = "Product/GetPaged";
     Pager pagemodel = new Pager() { PagedList = pager, StringUrl = urlinstring };
 }
 <div class="card-body">
@@ -23,10 +22,16 @@
                         #
                     </th>
                     <th>
+                        Code
+                    </th>
+                    <th>
                         Name
                     </th>
                     <th>
-                        Product Category Name
+                        Category Name
+                    </th>
+                    <th>
+                        Sub CategoryName
                     </th>
                     <th>
                         Product Type
@@ -50,10 +55,16 @@
                             @SN
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Name)
+                            @Html.DisplayFor(modelItem => item.ProductCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.ProductCategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductSubCategoryName)
                         </td>
                         <td>
                             @if (item.ProductType == "R")
@@ -87,6 +98,6 @@
 <div class="card-footer">
 
     <div class="text-left">
-        @await Html.PartialAsync("_subCatagorypagingpartial", pagemodel)
+        @await Html.PartialAsync("_productpaginationpartial", pagemodel)
     </div>
 </div>

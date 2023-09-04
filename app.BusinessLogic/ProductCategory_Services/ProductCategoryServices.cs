@@ -73,7 +73,7 @@ namespace app.Services.ProductCategory_Services
                                                                     UserName=t2.FullName,
                                                                     TrakingId=t1.TrakingId,
                                                                 }).AsQueryable());
-            if (user.UserType == 1)
+            if (user.UserType == 2)
             {
                 model.ProductCategoriesList = model.ProductCategoriesList.Where(f => f.TrakingId == user.Id).AsQueryable();
             }
@@ -96,8 +96,9 @@ namespace app.Services.ProductCategory_Services
         public async Task<ProductCategoryViewModel> GetProductTypeWiseList(string id)
         {
             ProductCategoryViewModel model = new ProductCategoryViewModel();
+            var user = await workContext.GetCurrentUserAsync();
             model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
-                                                                where t1.IsActive == true && t1.ProductType==id
+                                                                where t1.IsActive == true && t1.ProductType==id && t1.TrakingId == user.Id
                                                                 select new ProductCategoryViewModel
                                                                 {
                                                                     Id = t1.Id,

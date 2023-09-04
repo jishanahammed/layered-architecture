@@ -68,7 +68,7 @@ namespace app.Services.ProductSubCategory_Service
                                                                     ProductCategoryId = t1.ProductCategoryId,
                                                                     ProductCategoryName=t3.Name
                                                                 }).AsQueryable());
-            if (user.UserType == 1)
+            if (user.UserType == 2)
             {
                 model.ProductSubCategoriesList = model.ProductSubCategoriesList.Where(f => f.TrakingId == user.Id).AsQueryable();
             }
@@ -103,6 +103,21 @@ namespace app.Services.ProductSubCategory_Service
                 UserType = user.UserType,
             };
             return pagedModel;
+        }
+
+        public async Task<ProductSubCategoryViewModel> GetProductTypeWiseList(long id)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            ProductSubCategoryViewModel model = new ProductSubCategoryViewModel();
+            model.ProductSubCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductSubCategory
+                                                                where t1.IsActive == true && t1.ProductCategoryId == id&& t1.TrakingId==user.Id
+                                                                   select new ProductSubCategoryViewModel
+                                                                {
+                                                                    Id = t1.Id,
+                                                                    Name = t1.Name,
+                                                                }).AsQueryable());
+            return model;
+
         }
 
         public async Task<ProductSubCategoryViewModel> GetRecord(long id)

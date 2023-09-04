@@ -11,4 +11,11 @@ namespace app.Utility
         Raw_Product ='R',
         Finish_Product ='F',
     }
+
+    public enum Unit
+    {
+        KG ,
+        Pcs,
+        Packet,
+    }
 }
