@@ -25,7 +25,8 @@ namespace app.Services.ProductCategory_Services
         }
         public async Task<int> AddRecord(ProductCategoryViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim());
+            var user = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim()&&f.TrakingId==user.Id);
             if (checkname == null)
             {
                 ProductCategory category = new ProductCategory();
@@ -119,7 +120,8 @@ namespace app.Services.ProductCategory_Services
 
         public async Task<int> UpdateRecord(ProductCategoryViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim() && f.Id != model.Id);
+            var user = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim()&&f.TrakingId== user.Id && f.Id != model.Id);
             if (checkname == null)
             {
                 var result = await _entityRepository.GetByIdAsync(model.Id);

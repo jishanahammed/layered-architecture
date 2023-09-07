@@ -28,7 +28,8 @@ namespace app.Services.ProductSubCategory_Service
         }
         public async Task<int> AddRecord(ProductSubCategoryViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim()&&f.ProductCategoryId==model.ProductCategoryId);
+            var user = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim()&&f.TrakingId==user.Id&&f.ProductCategoryId==model.ProductCategoryId);
             if (checkname == null)
             {
                 ProductSubCategory category = new ProductSubCategory();
@@ -133,7 +134,9 @@ namespace app.Services.ProductSubCategory_Service
 
         public async Task<int> UpdateRecord(ProductSubCategoryViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim() && f.ProductCategoryId == model.ProductCategoryId&&f.Id!=model.Id);
+
+            var user = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name.Trim() == model.Name.Trim()&&f.TrakingId==user.Id && f.ProductCategoryId == model.ProductCategoryId&&f.Id!=model.Id);
             if (checkname == null)
             {
                  

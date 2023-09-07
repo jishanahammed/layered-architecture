@@ -36,7 +36,7 @@
                                 <option value="">Select User Name</option>
                                 @foreach (var item in ViewBag.Recort.datalist)
                                 {
-                                    <option value="@item.UserId">@item.Email</option>
+                                    <option value="@item.UserId"> @item.FullName _ @item.Email _ @item.Mobile</option>
                                 }
 
                             </select>

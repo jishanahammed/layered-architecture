@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace app.Infrastructure.Migrations
 {
-    public partial class fffff : Migration
+    public partial class mmm : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,6 +36,7 @@ namespace app.Infrastructure.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -54,6 +55,131 @@ namespace app.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MainMenu",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OrderNo = table.Column<int>(type: "int", nullable: false),
+                    Icon = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MainMenu", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MenuItem",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShortName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OrderNo = table.Column<int>(type: "int", nullable: false),
+                    Controller = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Action = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Icon = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MenuId = table.Column<long>(type: "bigint", nullable: false),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenuItem", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductCategoryId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductSubCategoryId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShortName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    CreditSalePrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SaleCommissionRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PurchaseRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PurchaseCommissionRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    TPPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    UnitName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductCategory",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OrderNo = table.Column<int>(type: "int", nullable: false),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductCategory", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductSubCategory",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductCategoryId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OrderNo = table.Column<int>(type: "int", nullable: false),
+                    AccountingHeadId = table.Column<int>(type: "int", nullable: false),
+                    AccountingIncomeHeadId = table.Column<int>(type: "int", nullable: false),
+                    AccountingExpenseHeadId = table.Column<int>(type: "int", nullable: false),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductSubCategory", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -183,6 +309,34 @@ namespace app.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "f3c0251d-417b-404a-8336-74381c4c4540", "Admin", "ADMIN" },
+                    { "8e445865-a24d-4543-a6c6-9443d048cdb9", "0f8ca16a-54b7-4eed-99f3-1c5d53ec66f4", "Customer", "CUSTOMER" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "Address", "ConcurrencyStamp", "CreatedBy", "CreatedOn", "Email", "EmailConfirmed", "FullName", "IsActive", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Prefix", "SecurityStamp", "TwoFactorEnabled", "UpdatedBy", "UpdatedOn", "UserName", "UserType" },
+                values: new object[,]
+                {
+                    { "0f04028e-587c-37ad-8b36-6dbd6a059fa10", 0, null, "616a2e8f-dc94-4576-8ec4-c9d75d1df6d9", null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "cus.jishan@gmail.com", true, "System Engineers", true, false, null, "CUS.JISHAN@GMAIL.COM", "CUSTOMER", "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==", "01840019826", true, null, "37QJAUUNCSSXNFFB6ZXI6OJLHSCS5J63", false, null, null, "Customer", 2 },
+                    { "0f04028e-587c-47ad-8b36-6dbd6a059fa4", 0, null, "616a2e8f-dc94-4576-8ec4-c9d75d1df6d1", null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "jishan.bd46@gmail.com", true, "System Admin", true, false, null, "JISHAN.BD46@GMAIL.COM", "ADMINISTRATOR", "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==", "01840019826", true, null, "37QJAUUNCSSXNFFB6ZXI6OJLHSCS5J6I", false, null, null, "administrator", 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", "0f04028e-587c-37ad-8b36-6dbd6a059fa10" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "0f04028e-587c-47ad-8b36-6dbd6a059fa4" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -239,6 +393,21 @@ namespace app.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "MainMenu");
+
+            migrationBuilder.DropTable(
+                name: "MenuItem");
+
+            migrationBuilder.DropTable(
+                name: "Product");
+
+            migrationBuilder.DropTable(
+                name: "ProductCategory");
+
+            migrationBuilder.DropTable(
+                name: "ProductSubCategory");
 
             migrationBuilder.DropTable(
                 name: "Userpermissions");

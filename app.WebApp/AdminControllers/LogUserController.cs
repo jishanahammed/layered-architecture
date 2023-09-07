@@ -29,7 +29,7 @@ namespace app.WebApp.AdminControllers
         public async Task<IActionResult> AddRecort()
         {           
             UserViewModel model = new UserViewModel();
-            ViewBag.Recort = new SelectList(_rolesServices.GetAllAsync().Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
+            ViewBag.Recort = new SelectList(_rolesServices.GetAllAsync().Select(s => new { Id = s.Name, Name = s.Name }), "Id", "Name");
             return View(model);
         }
 

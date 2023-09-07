@@ -40,9 +40,12 @@ namespace app.Services.UserServices
             users.Email = model.Email;
             users.Address = model.Addreass;
             users.Prefix = model.Password;
-            if (model.RoleName == "Admin") { users.UserType = 1; }
-            if (model.RoleName == "Customer") { users.UserType = 2; }
-            users.UserType = 1;
+
+            if (model.RoleName == "Admin")
+            { model.UserType = 1; }
+            if (model.RoleName == "Customer") 
+            { model.UserType = 2; }
+            users.UserType=model.UserType;
             users.CreatedOn = DateTime.Now;
             users.CreatedBy = loguser.FullName;
             users.IsActive = true;

@@ -1,11 +1,14 @@
-﻿using app.Services.MainMenuService;
+﻿using app.Services.DropDownServices;
+using app.Services.MainMenuService;
 using app.Services.MenuItemService;
 using app.Services.Product_Services;
 using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
+using app.Services.PurchaseOrder_Services;
 using app.Services.RolesServises;
 using app.Services.UserpermissionsService;
 using app.Services.UserServices;
+using app.Services.Vendor_Service;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -28,6 +31,9 @@ namespace app.Services
             services.AddTransient<IProductCategoryServices, ProductCategoryServices>();
             services.AddTransient<IProductSubCategoryService, ProductSubCategoryService>();
             services.AddTransient<IProductServices, ProductServices>();
+            services.AddTransient<IVendorService, VendorServices>();
+            services.AddTransient<IPurchaseOrderServices, PurchaseOrderServices>();
+            services.AddTransient<IDropDownService, DropDownService>();
             return services;
         }
     }

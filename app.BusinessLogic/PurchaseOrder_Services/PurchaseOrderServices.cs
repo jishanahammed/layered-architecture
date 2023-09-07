@@ -1,0 +1,148 @@
+﻿using app.EntityModel.CoreModel;
+using app.Infrastructure.Auth;
+using app.Infrastructure.Repository;
+using app.Infrastructure;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using app.Utility.Miscellaneous;
+using app.Services.ProductSubCategory_Service;
+
+namespace app.Services.PurchaseOrder_Services
+{
+    public class PurchaseOrderServices : IPurchaseOrderServices
+    {
+
+        private readonly inventoryDbContext dbContext;
+        private readonly IWorkContext workContext;
+        public PurchaseOrderServices(inventoryDbContext dbContext,
+            IWorkContext workContext)
+        {
+            this.dbContext = dbContext;
+            this.workContext = workContext;
+        }
+        public async Task<long> AddPurchaseOrder(PurchaseOrderViewModel model)
+        {
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            var user = await workContext.GetCurrentUserAsync();
+            var poMax = await dbContext.PurchaseOrder.Where(x => x.TrakingId == user.Id).CountAsync() + 1;
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    var poCid = @"PUR-" +
+                    DateTime.Now.ToString("yy") +
+                    DateTime.Now.ToString("MM") +
+                    DateTime.Now.ToString("dd") + "-" +
+                    poMax.ToString().PadLeft(2, '0');
+                    PurchaseOrder order = new PurchaseOrder();
+                    order.PurchaseOrderNo = poCid;
+                    order.SupplierId = model.SupplierId;
+                    order.PurchaseDate = model.PurchaseDate;
+                    order.DeliveryDate= model.DeliveryDate; 
+                    order.DeliveryAddress = model.DeliveryAddress;  
+                    order.BankCharg= model.BankCharg;
+                    order.TransportCharges = model.TransportCharges;
+                    order.SupplierPaymentMethodEnumFK = model.SupplierPaymentMethodEnumFK;  
+                    order.Description = model.Description;  
+                    order.Status = model.Status;
+                    order.CreatedBy = user.FullName;
+                    order.TrakingId=user.Id;
+                    order.CreatedOn = BaTime;
+                    dbContext.PurchaseOrder.Add(order); 
+                    dbContext.SaveChanges();    
+                    List<PurchaseOrderDetails> purchaseOrderDetails = new List<PurchaseOrderDetails>();
+                    foreach(var item in model.MappVm)
+                    {
+                        PurchaseOrderDetails details= new PurchaseOrderDetails();
+                        details.PurchaseOrderId = order.Id;
+                        details.ProductId = item.ProductId;
+                        details.PurchaseQty = item.PurchaseQty;
+                        details.PurchaseRate = item.PurchaseRate;   
+                        details.PackSize = item.PackSize;   
+                        details.CreatedBy = user.FullName;  
+                        details.CreatedOn = BaTime; 
+                        purchaseOrderDetails.Add(details);
+                    }
+                    dbContext.PurchaseOrderDetails.AddRange(purchaseOrderDetails);  
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return order.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+
+        }
+
+        public async Task<PagedModel<PurchaseOrderViewModel>> GetPagedListAsync(int page, int pageSize, string sarchString)
+        {
+            PurchaseOrderViewModel model = new PurchaseOrderViewModel();
+            var user = await workContext.GetCurrentUserAsync();
+            model.datalist = await Task.Run(() => (from t1 in dbContext.PurchaseOrder
+                                                                   join t2 in dbContext.Users on t1.TrakingId equals t2.Id
+                                                                   join t3 in dbContext.Vendor on t1.SupplierId equals t3.Id
+                                                                   where t1.IsActive == true
+                                                                   select new PurchaseOrderViewModel
+                                                                   {
+                                                                       Id = t1.Id,
+                                                                       UserName = t2.FullName,
+                                                                       TrakingId = t1.TrakingId,
+                                                                       SupplierName = t3.Name,
+                                                                       PurchaseOrderNo = t1.PurchaseOrderNo,
+                                                                       PurchaseDate = t1.PurchaseDate,
+                                                                       SupplierPaymentMethodEnumFK = t1.SupplierPaymentMethodEnumFK,
+                                                                       DeliveryDate = t1.DeliveryDate,
+                                                                       DeliveryAddress = t1.DeliveryAddress,
+                                                                       IsSubmited=t1.IsSubmited,    
+                                                                       IsCancel=t1.IsCancel,
+                                                                       IsHold=t1.IsHold,    
+                                                                   }).AsQueryable());
+            if (user.UserType == 2)
+            {
+                model.datalist = model.datalist.Where(f => f.TrakingId == user.Id).AsQueryable();
+            }
+            if (!string.IsNullOrWhiteSpace(sarchString))
+            {
+                sarchString = sarchString.Trim().ToLower();
+                model.datalist = model.datalist.Where(t =>
+                    t.SupplierName.ToLower().Contains(sarchString) ||
+                    t.UserName.ToLower().Contains(sarchString) ||
+                    t.SupplierPaymentMethodEnumFK.ToLower().Contains(sarchString)
+                );
+            }
+            int resCount = model.datalist.Count();
+            var pagers = new PagedList(resCount, page, pageSize);
+            int recSkip = (page - 1) * pageSize;
+            var pagedList = model.datalist.Skip(recSkip).Take(pagers.PageSize).ToList();
+            int FirstSerialNumber = ((page * pageSize) - pageSize) + 1;
+            PagedModel<PurchaseOrderViewModel> pagedModel = new PagedModel<PurchaseOrderViewModel>()
+            {
+                Models = pagedList,
+                FirstSerialNumber = FirstSerialNumber,
+                PagedList = pagers,
+                TotalEntity = resCount,
+                UserType = user.UserType,
+            };
+            return pagedModel;
+        }
+
+        public Task<PurchaseOrderViewModel> GetPurchaseOrder(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> UpdatePurchaseOrder(PurchaseOrderViewModel model)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

@@ -18,4 +18,21 @@ namespace app.Utility
         Pcs,
         Packet,
     }
+    public enum VendorType
+    {
+        Supplier = 1,
+        Customer = 2,
+    }  
+    public enum PaymentType
+    {
+        Credit=1,
+        Cash=2,
+        Special=3,
+    } 
+    public enum CustomerType
+    {
+        Dealer=1,
+        Retail=2,
+        Corporate=3,
+    }
 }

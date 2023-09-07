@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using app.Infrastructure;
 
@@ -11,9 +12,10 @@ using app.Infrastructure;
 namespace app.Infrastructure.Migrations
 {
     [DbContext(typeof(inventoryDbContext))]
-    partial class inventoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230905093616_vvvv")]
+    partial class vvvv
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -351,134 +353,6 @@ namespace app.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductSubCategory");
-                });
-
-            modelBuilder.Entity("app.EntityModel.CoreModel.PurchaseOrder", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
-
-                    b.Property<decimal>("BankCharg")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeliveryAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DeliveryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsCancel")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsHold")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsSubmited")
-                        .HasColumnType("bit");
-
-                    b.Property<decimal>("OtherCharge")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("PurchaseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PurchaseOrderNo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<long>("SupplierId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("SupplierPaymentMethodEnumFK")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TermsAndCondition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrakingId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("TransportCharges")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PurchaseOrder");
-                });
-
-            modelBuilder.Entity("app.EntityModel.CoreModel.PurchaseOrderDetails", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PackSize")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
-
-                    b.Property<decimal>("PurchaseAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<long>("PurchaseOrderId")
-                        .HasColumnType("bigint");
-
-                    b.Property<decimal>("PurchaseQty")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("PurchaseRate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("TrakingId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UnitName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PurchaseOrderDetails");
                 });
 
             modelBuilder.Entity("app.EntityModel.CoreModel.Upazila", b =>
@@ -833,14 +707,14 @@ namespace app.Infrastructure.Migrations
                         new
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            ConcurrencyStamp = "d426aff2-22fa-49db-bfd9-8b19dda88752",
+                            ConcurrencyStamp = "3b54c6a9-84bc-4b4a-95d4-e4d9d60b8a51",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "e7cd0d49-cce2-48f5-a719-536828108b97",
+                            ConcurrencyStamp = "528fb791-1655-474b-92d7-25c5e3468672",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

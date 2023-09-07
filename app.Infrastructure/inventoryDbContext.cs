@@ -30,6 +30,15 @@ namespace app.Infrastructure
         public virtual DbSet<ProductCategory> ProductCategory { get; set; }
         public virtual DbSet<ProductSubCategory> ProductSubCategory { get; set; }
         public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Vendor> Vendor { get; set; }
+        public virtual DbSet<Division> Division { get; set; }
+        public virtual DbSet<District> District { get; set; }
+        public virtual DbSet<Upazila> Upazila { get; set; }
+
+
+        public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual DbSet<PurchaseOrderDetails> PurchaseOrderDetails { get; set; }
+
 
         
     }

@@ -77,7 +77,7 @@ namespace app.Services.UserpermissionsService
              List < MenuItemVM > menus=new List<MenuItemVM>();
             menus= await Task.Run(() => (from t1 in dbContext.MenuItem
                                          join t2 in dbContext.Userpermissions on t1.Id equals t2.MenuItem
-                                         where t2.IsActive==true && t1.MenuId==menuid &&t1.IsActive==true
+                                         where t2.IsActive==true && t1.MenuId==menuid &&t1.IsActive==true && t2.UserId==id
                                                    select new MenuItemVM
                                                    {
                                                        Id = t1.Id,

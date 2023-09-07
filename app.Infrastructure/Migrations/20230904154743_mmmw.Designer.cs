@@ -12,8 +12,8 @@ using app.Infrastructure;
 namespace app.Infrastructure.Migrations
 {
     [DbContext(typeof(inventoryDbContext))]
-    [Migration("20230826134748_fffffd")]
-    partial class fffffd
+    [Migration("20230904154743_mmmw")]
+    partial class mmmw
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,77 @@ namespace app.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.District", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("DivisionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("District");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.Division", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Division");
+                });
 
             modelBuilder.Entity("app.EntityModel.CoreModel.MainMenu", b =>
                 {
@@ -116,6 +187,211 @@ namespace app.Infrastructure.Migrations
                     b.ToTable("MenuItem");
                 });
 
+            modelBuilder.Entity("app.EntityModel.CoreModel.Product", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("CreditSalePrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ProductSubCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("PurchaseCommissionRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("PurchaseRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("SaleCommissionRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ShortName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TPPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.ProductCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCategory");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.ProductSubCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("AccountingExpenseHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccountingHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccountingIncomeHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderNo")
+                        .HasColumnType("int");
+
+                    b.Property<long>("ProductCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductSubCategory");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.Upazila", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("DistrictId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Upazila");
+                });
+
             modelBuilder.Entity("app.EntityModel.CoreModel.Userpermissions", b =>
                 {
                     b.Property<long>("Id")
@@ -156,6 +432,106 @@ namespace app.Infrastructure.Migrations
                     b.ToTable("Userpermissions");
                 });
 
+            modelBuilder.Entity("app.EntityModel.CoreModel.Vendor", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("ACName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("CreditLimit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("CustomerType")
+                        .HasColumnType("int");
+
+                    b.Property<long>("DistrictId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Division")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("HeadGLId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsForeign")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OptionalMobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PaymentType")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SecurityAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("SubZoneId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UpazilaId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("VendorReferenceId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("VendorStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VendorType")
+                        .HasColumnType("int");
+
+                    b.Property<long>("ZoneId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vendor");
+                });
+
             modelBuilder.Entity("app.Infrastructure.Auth.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -163,6 +539,9 @@ namespace app.Infrastructure.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -278,7 +657,7 @@ namespace app.Infrastructure.Migrations
                             IsActive = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "CUS.JISHAN@GMAIL.COM",
-                            NormalizedUserName = "ENGINEERS",
+                            NormalizedUserName = "CUSTOMER",
                             PasswordHash = "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==",
                             PhoneNumber = "01840019826",
                             PhoneNumberConfirmed = true,
@@ -319,14 +698,14 @@ namespace app.Infrastructure.Migrations
                         new
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            ConcurrencyStamp = "f1fa01c7-ce1f-455f-8ed7-75a7ccd2815e",
+                            ConcurrencyStamp = "d3a637b7-ac0f-4cc9-9c67-4f3bc1c2e3ed",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "87eeb416-3a95-4e6b-9a46-a4d10739ad22",
+                            ConcurrencyStamp = "4cc591c8-b6bc-4bcf-8585-5c0ff89854bf",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

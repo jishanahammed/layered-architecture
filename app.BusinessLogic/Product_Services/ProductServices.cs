@@ -27,7 +27,8 @@ namespace app.Services.Product_Services
         }
         public async Task<int> AddRecord(ProductViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.ProductName.Trim() == model.ProductName.Trim()&&f.ProductCategoryId==model.ProductCategoryId);
+            var users = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.ProductName.Trim() == model.ProductName.Trim()&&f.TrakingId==users.Id&&f.ProductCategoryId==model.ProductCategoryId);
             if (checkname == null)
             {
                 var user = await workContext.GetCurrentUserAsync();
@@ -140,7 +141,9 @@ namespace app.Services.Product_Services
 
         public async Task<int> UpdateRecord(ProductViewModel model)
         {
-            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.ProductName.Trim() == model.ProductName.Trim() &&
+            var users = await workContext.GetCurrentUserAsync();
+            var checkname = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.ProductName.Trim() == model.ProductName.Trim()&& 
+            f.TrakingId == users.Id &&
             f.ProductCategoryId == model.ProductCategoryId&&
             f.ProductSubCategoryId==model.ProductSubCategoryId&&
             f.Id!=model.Id);

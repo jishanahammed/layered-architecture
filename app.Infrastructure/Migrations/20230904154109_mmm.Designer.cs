@@ -12,8 +12,8 @@ using app.Infrastructure;
 namespace app.Infrastructure.Migrations
 {
     [DbContext(typeof(inventoryDbContext))]
-    [Migration("20230826124416_fffff")]
-    partial class fffff
+    [Migration("20230904154109_mmm")]
+    partial class mmm
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -116,6 +116,174 @@ namespace app.Infrastructure.Migrations
                     b.ToTable("MenuItem");
                 });
 
+            modelBuilder.Entity("app.EntityModel.CoreModel.Product", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("CreditSalePrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ProductSubCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("PurchaseCommissionRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("PurchaseRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("SaleCommissionRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ShortName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TPPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.ProductCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCategory");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.ProductSubCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("AccountingExpenseHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccountingHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AccountingIncomeHeadId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderNo")
+                        .HasColumnType("int");
+
+                    b.Property<long>("ProductCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductSubCategory");
+                });
+
             modelBuilder.Entity("app.EntityModel.CoreModel.Userpermissions", b =>
                 {
                     b.Property<long>("Id")
@@ -163,6 +331,9 @@ namespace app.Infrastructure.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -243,6 +414,50 @@ namespace app.Infrastructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "0f04028e-587c-47ad-8b36-6dbd6a059fa4",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "616a2e8f-dc94-4576-8ec4-c9d75d1df6d1",
+                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "jishan.bd46@gmail.com",
+                            EmailConfirmed = true,
+                            FullName = "System Admin",
+                            IsActive = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "JISHAN.BD46@GMAIL.COM",
+                            NormalizedUserName = "ADMINISTRATOR",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==",
+                            PhoneNumber = "01840019826",
+                            PhoneNumberConfirmed = true,
+                            SecurityStamp = "37QJAUUNCSSXNFFB6ZXI6OJLHSCS5J6I",
+                            TwoFactorEnabled = false,
+                            UserName = "administrator",
+                            UserType = 1
+                        },
+                        new
+                        {
+                            Id = "0f04028e-587c-37ad-8b36-6dbd6a059fa10",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "616a2e8f-dc94-4576-8ec4-c9d75d1df6d9",
+                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "cus.jishan@gmail.com",
+                            EmailConfirmed = true,
+                            FullName = "System Engineers",
+                            IsActive = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "CUS.JISHAN@GMAIL.COM",
+                            NormalizedUserName = "CUSTOMER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE8d8uAFK+zBNJ3j+s3k5c6D+OqrJJqgpV0CF42z2UDwqm/kSD/LWNXN8OAx/56YHg==",
+                            PhoneNumber = "01840019826",
+                            PhoneNumberConfirmed = true,
+                            SecurityStamp = "37QJAUUNCSSXNFFB6ZXI6OJLHSCS5J63",
+                            TwoFactorEnabled = false,
+                            UserName = "Customer",
+                            UserType = 2
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -270,6 +485,22 @@ namespace app.Infrastructure.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                            ConcurrencyStamp = "0f8ca16a-54b7-4eed-99f3-1c5d53ec66f4",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        },
+                        new
+                        {
+                            Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
+                            ConcurrencyStamp = "f3c0251d-417b-404a-8336-74381c4c4540",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -357,6 +588,18 @@ namespace app.Infrastructure.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "0f04028e-587c-47ad-8b36-6dbd6a059fa4",
+                            RoleId = "2c5e174e-3b0e-446f-86af-483d56fd7210"
+                        },
+                        new
+                        {
+                            UserId = "0f04028e-587c-37ad-8b36-6dbd6a059fa10",
+                            RoleId = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
