@@ -13,6 +13,8 @@ namespace app.Services.PurchaseOrder_Services
         Task<long> AddPurchaseOrder(PurchaseOrderViewModel model);
         Task<long> UpdatePurchaseOrder(PurchaseOrderViewModel model);
         Task<PurchaseOrderViewModel> GetPurchaseOrder(long id);
+        Task<long> DeletePurchaseOrderDetalies(long id);
+        Task<long> AddPurchaseOrderDetalies(PurchaseOrderDetailsViewModel model);
         Task<PagedModel<PurchaseOrderViewModel>> GetPagedListAsync(int page, int pageSize, string sarchString);
     }
 }

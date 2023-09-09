@@ -1,4 +1,6 @@
-﻿using app.Services.DropDownServices;
+﻿using app.EntityModel.CoreModel;
+using app.Services.DropDownServices;
+using app.Services.Product_Services;
 using app.Services.ProductSubCategory_Service;
 using app.Services.PurchaseOrder_Services;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +17,25 @@ namespace app.WebApp.AdminControllers
             this.purchaseOrderServices = purchaseOrderServices;
             this.dropDownService = dropDownService; 
         }
+
+        [HttpGet]
+        public async Task<ActionResult> Index(int page = 1, int pagesize = 10,string sarchString = null)
+        {
+            if (page < 1)
+                page = 1;
+            var results = await purchaseOrderServices.GetPagedListAsync(page, pagesize, sarchString);
+            return View(results);
+        }
+        [HttpGet]
+        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10,string sarchString = null)
+        {
+            if (page < 1)
+                page = 1;
+            var results = await purchaseOrderServices.GetPagedListAsync(page, pagesize,sarchString);
+            return PartialView("_PurchaseOrder", results);
+        }
+
+
         [HttpGet]
         public async Task<IActionResult> AddRecord()
         {
@@ -30,13 +51,28 @@ namespace app.WebApp.AdminControllers
         public async Task<IActionResult> AddRecord(PurchaseOrderViewModel viewModel)
         {
             var result = await purchaseOrderServices.AddPurchaseOrder(viewModel);
-            if (result == 2)
+            if (result>0)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Detalis", new {id=result});
             }
-            ModelState.AddModelError(string.Empty, "Same Name already exists!");
+
             return View(viewModel);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Detalis(long id)
+        {
+            var result = await purchaseOrderServices.GetPurchaseOrder(id);
+            return View(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> PurchaseOrderDetailReport(long id)
+        {
+            var result = await purchaseOrderServices.GetPurchaseOrder(id);
+            return View(result);
+        }
+
         [HttpGet]
         public async Task<JsonResult> GetAutoCompleteSupplierGet()
         {
@@ -56,6 +92,24 @@ namespace app.WebApp.AdminControllers
             var products = await dropDownService.sigleproduct(id);
             return Json(products);
         }
-
+        [HttpGet]
+        public async Task<IActionResult> UpdateRecord(long id)
+        {
+            var result = await purchaseOrderServices.GetPurchaseOrder(id);
+            return View(result);
+        }  
+        
+        [HttpGet]
+        public async Task<IActionResult> DeletepurchaseOrderDetalis(long id)
+        {
+            var result = await purchaseOrderServices.DeletePurchaseOrderDetalies(id);
+            return RedirectToAction("UpdateRecord", new { id = result });
+        } 
+        [HttpPost]
+        public async Task<IActionResult> AddpurchaseOrderDetalis(PurchaseOrderDetailsViewModel model)
+        {
+            var result = await purchaseOrderServices.AddPurchaseOrderDetalies(model);
+            return Json(result);
+        }
     }
 }

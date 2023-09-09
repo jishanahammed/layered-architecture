@@ -14,6 +14,7 @@ namespace app.Services
         public string TrakingId { get; set; }
         public string UserName { get; set; }
         public string UserEmail { get; set; }
+        public string UserAddress { get; set; }
         public string UserMobile { get; set; }
         public int UserType { get; set; }
         public string CreatedBy { get; set; }

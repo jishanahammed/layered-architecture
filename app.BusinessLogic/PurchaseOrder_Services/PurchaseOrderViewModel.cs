@@ -11,6 +11,8 @@ namespace app.Services.PurchaseOrder_Services
         public string PurchaseOrderNo { get; set; }
         public long SupplierId { get; set; }
         public string SupplierName { get; set; }
+        public string SupplierMobile { get; set; }
+        public string SupplierAddress { get; set; }
         public DateTime PurchaseDate { get; set; }
         public DateTime DeliveryDate { get; set; }
         public string DeliveryAddress { get; set; }
