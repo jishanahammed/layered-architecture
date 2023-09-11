@@ -47,6 +47,15 @@ namespace app.WebApp.AdminControllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> jasonAddRecord(VendorViewModel viewModel)
+        {
+            viewModel.VendorType = 1;
+            var result = await vendorService.AddRecord(viewModel);
+            return Json(result);
+        }
+
+
         [HttpGet]
         public async Task<IActionResult> Delete(long id)
         {

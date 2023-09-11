@@ -34,7 +34,12 @@ namespace app.Infrastructure
         public virtual DbSet<Division> Division { get; set; }
         public virtual DbSet<District> District { get; set; }
         public virtual DbSet<Upazila> Upazila { get; set; }
+        public virtual DbSet<Company> Company { get; set; }
 
+        public virtual DbSet<VoucherType> VoucherType { get; set; }
+        public virtual DbSet<Voucher> Voucher { get; set; }
+        public virtual DbSet<VoucherDetails> VoucherDetails { get; set; }
+        public virtual DbSet<StockInfo> StockInfo { get; set; }
 
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
         public virtual DbSet<PurchaseOrderDetails> PurchaseOrderDetails { get; set; }

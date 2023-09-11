@@ -48,8 +48,10 @@ namespace app.Services.PurchaseOrder_Services
                     order.DeliveryAddress = model.DeliveryAddress;
                     order.BankCharg = model.BankCharg;
                     order.TransportCharges = model.TransportCharges;
+                    order.OtherCharge = model.OtherCharge;
                     order.SupplierPaymentMethodEnumFK = model.SupplierPaymentMethodEnumFK;
                     order.Description = model.Description;
+                    order.TermsAndCondition = model.TermsAndCondition;
                     order.Status = model.Status;
                     order.CreatedBy = user.FullName;
                     order.TrakingId = user.Id;
@@ -107,8 +109,13 @@ namespace app.Services.PurchaseOrder_Services
 
         public async Task<long> DeletePurchaseOrderDetalies(long id)
         {
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            var user = await workContext.GetCurrentUserAsync();
             var result= await dbContext.PurchaseOrderDetails.FirstOrDefaultAsync(x => x.Id == id);  
             result.IsActive = false;
+            result.UpdatedOn= BaTime;
+            result.CreatedBy = user.FullName;   
             dbContext.Entry(result).State = EntityState.Modified;
             await dbContext.SaveChangesAsync();
             return result.PurchaseOrderId;
@@ -224,9 +231,27 @@ namespace app.Services.PurchaseOrder_Services
             return model;   
         }
 
-        public Task<long> UpdatePurchaseOrder(PurchaseOrderViewModel model)
+        public async Task<long> UpdatePurchaseOrder(PurchaseOrderViewModel model)
         {
-            throw new NotImplementedException();
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            var user = await workContext.GetCurrentUserAsync();
+            PurchaseOrder order = await dbContext.PurchaseOrder.FirstOrDefaultAsync(d=>d.Id==model.Id);
+            order.SupplierId = model.SupplierId;
+            order.PurchaseDate = model.PurchaseDate;
+            order.DeliveryDate = model.DeliveryDate;
+            order.DeliveryAddress = model.DeliveryAddress;
+            order.BankCharg = model.BankCharg;
+            order.TransportCharges = model.TransportCharges;
+            order.OtherCharge = model.OtherCharge;
+            order.SupplierPaymentMethodEnumFK = model.SupplierPaymentMethodEnumFK;
+            order.Description = model.Description;
+            order.TermsAndCondition = model.TermsAndCondition;
+            order.UpdatedBy = user.FullName;
+            order.UpdatedOn = BaTime;
+            dbContext.Entry(order).State = EntityState.Modified;
+            await dbContext.SaveChangesAsync();
+            return  order.Id;   
         }
     }
 }

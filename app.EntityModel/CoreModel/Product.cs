@@ -19,7 +19,9 @@ namespace app.EntityModel.CoreModel
         public decimal SaleCommissionRate { get; set; }
         public decimal PurchaseRate { get; set; }
         public decimal PurchaseCommissionRate { get; set; }
-        public decimal TPPrice { get; set; }
+        public decimal TPrice { get; set; }
+        public decimal CostingPrice { get; set; }
+        public int CompanyId { get; set; }
         public string UnitName { get; set; }
     }
 }

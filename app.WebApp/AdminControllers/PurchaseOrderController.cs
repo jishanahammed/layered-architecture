@@ -91,7 +91,15 @@ namespace app.WebApp.AdminControllers
         {
             var products = await dropDownService.sigleproduct(id);
             return Json(products);
+        }  
+
+        [HttpGet]
+        public async Task<IActionResult> ChangeStatus(long id)
+        {
+            return View();
         }
+
+
         [HttpGet]
         public async Task<IActionResult> UpdateRecord(long id)
         {
@@ -110,6 +118,18 @@ namespace app.WebApp.AdminControllers
         {
             var result = await purchaseOrderServices.AddPurchaseOrderDetalies(model);
             return Json(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateRecord(PurchaseOrderViewModel viewModel)
+        {
+            var result = await purchaseOrderServices.UpdatePurchaseOrder(viewModel);
+            if (result > 0)
+            {
+                return RedirectToAction("Detalis", new { id = result });
+            }
+
+            return View(viewModel);
         }
     }
 }

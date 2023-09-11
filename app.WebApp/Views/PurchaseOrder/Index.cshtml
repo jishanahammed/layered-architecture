@@ -87,17 +87,20 @@
                                             <td>
                                                 @SN
                                             </td>
-                                            <td> <a target ="_blank" href="~/PurchaseOrder/PurchaseOrderDetailReport?id=@item.Id"> @item.PurchaseOrderNo  </a>  </td>
+                                            <td> <a target="_blank" href="~/PurchaseOrder/PurchaseOrderDetailReport?id=@item.Id"> @item.PurchaseOrderNo  </a>  </td>
                                             <td>@item.SupplierName </td>
                                             <td>@item.PurchaseDate.ToShortDateString() </td>
                                             <td>@item.SupplierPaymentMethodEnumFK </td>
                                             <td>@item.DeliveryDate.ToShortDateString() </td>
                                             <td>@item.DeliveryAddress </td>
-                                            <td> 
-                                                @if(@item.IsSubmited==true){
-                                                <b class="text-success">  Submited  </b>
-                                                }else{
-                                                <b class="text-primary">  Submite  </b>
+                                            <td>
+                                                @if (@item.IsSubmited == true)
+                                                {
+                                                    <b class="text-success">  Submitted  </b>
+                                                }
+                                                else
+                                                {
+                                                    @Html.ActionLink("Draft","ChangeStatus", new {  id=item.Id},new {@class = "text-primary",  onclick = "return confirm('Are you sure you want to delete this?')" })
                                                 }
                                             </td>
                                             <td class="text-center">
@@ -109,7 +112,7 @@
                                         SN++;
                                     }
                                 </tbody>
-                            </table> 
+                            </table>
                         </div>
                     </div>
 
@@ -127,12 +130,44 @@
     </div>
 
 </section>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Changes Status </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Confirm changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @section Scripts {
     <script>
         $(document).ready(function () {
             $('#Purchase-Order').addClass('menu-open');
             $('#PurchaseOrderIndex').addClass('active');
         });
+
+
+        function Submitted(id) {
+
+        }
+
     </script>
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

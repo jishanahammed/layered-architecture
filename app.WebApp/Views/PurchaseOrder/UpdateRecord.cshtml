@@ -40,8 +40,9 @@
 
             </div>
             <div class="card-body">
-                <form asp-action="AddRecord" method="post">
+                <form asp-action="UpdateRecord" method="post" style="background-color:aliceblue;margin-bottom:40px;padding:10px">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @Html.HiddenFor(model => model.Id)
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="form-group">
@@ -133,6 +134,19 @@
                         </div>
                     </div>
 
+                    <div class="row mt-2">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="submit" value="Update Confirm" class="btn btn-warning" />
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </form>
+
+                <div style="background-color:#f7f7f7;margin-bottom:20px;padding:10px">
+
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <label for="ProductId" class="control-label"> Product</label>
@@ -213,9 +227,9 @@
                                         <td>
                                             @Html.DisplayFor(modelItem => vm.PurchaseAmount)
                                         </td>
-                                        <td>   
+                                        <td>
                                             @Html.ActionLink("","DeletepurchaseOrderDetalis", new {  id=vm.Id},new {@class = "text-danger fas fa-trash",  onclick = "return confirm('Are you sure you want to delete this?')" })
-                                          </td>
+                                        </td>
                                     </tr>
 
                                     SN++;
@@ -249,17 +263,14 @@
                         </table>
                     </div>
 
-                    <div class="row mt-2">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <input type="submit" value="Add Confirm" class="btn btn-success" />
-                            </div>
-                        </div>
-                        <div class="col-md-4"></div>
-                    </div>
 
-                </form>
+
+                </div>
+
+ 
+
+
+   
             </div>
         </div>
     </div>
@@ -385,17 +396,17 @@
             var total = $('#TotalPrice').val();
             var unit = $('#unitid').text();
             var object = { ProductId: productid, ProductName: productname, PurchaseQty: Quantity, PurchaseRate: Price, PurchaseAmount: total, PackSize: unit, PurchaseOrderId:@Model.Id };
-            //$.ajax({
-            //    type: "POST",
-            //    url: "@Url.Action("AddpurchaseOrderDetalis", "PurchaseOrder")",
-            //    datatype: "Json",
-            //    data: object,
-            //    success: function (data) {
-            //        if (data>0) {
-            //            location.reload();
-            //        }
-            //    }
-            //});
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddpurchaseOrderDetalis", "PurchaseOrder")",
+                datatype: "Json",
+                data: object,
+                success: function (data) {
+                    if (data>0) {
+                        location.reload();
+                    }
+                }
+            });
         }
 
     </script>

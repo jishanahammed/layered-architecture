@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using app.Infrastructure;
 
@@ -11,9 +12,10 @@ using app.Infrastructure;
 namespace app.Infrastructure.Migrations
 {
     [DbContext(typeof(inventoryDbContext))]
-    partial class inventoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230910061958_fg")]
+    partial class fg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -868,9 +870,6 @@ namespace app.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -1048,14 +1047,14 @@ namespace app.Infrastructure.Migrations
                         new
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            ConcurrencyStamp = "01dafddf-5bee-46ba-8efe-ce3c14649e69",
+                            ConcurrencyStamp = "a6345fa7-df26-420a-857d-be838a4b034c",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "e3de866f-35ec-4a88-9a60-da8bb8b5ac39",
+                            ConcurrencyStamp = "9902cf14-8f08-4bac-be9e-d09cf2799cbf",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

@@ -20,6 +20,7 @@
                 <li class="breadcrumb-item active"> Purchase Order </li>
             </ol>
             <div>
+
                 <a asp-action="Index"><i class="fa fa-list"></i> Purchase Order </a>
             </div>
         </div>
@@ -30,11 +31,19 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title text-info">
-                    <i class="fas fa-plus"></i>
-                    Purchase Order
-                </h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="card-title text-info">
+                            <i class="fas fa-plus"></i>
+                            Purchase Order
+                        </h3>
+                    </div>
+                 
+                    <div class="col-md-6"></div>
+                    <div class="col-md-2">  <button type="button" class="btn btn-primary d-block" data-toggle="modal" data-target=".bd-example-modal-lg">Add Supplier</button></div>
+                </div>
 
+               
             </div>
             <div class="card-body">
                 <form asp-action="AddRecord" method="post">
@@ -203,6 +212,109 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add New Supplier </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="row">
+
+                            <div class="row">
+
+                                <div class="col-lg-6  col-sm-12">
+                                    <div class="form-group">
+                                        <label for="Name" class="control-label"> Name</label>
+                                        <input id="Name" name="Name"class="form-control" required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="Mobile" class="control-label"> Mobile</label>
+                                        <input id="Mobile" class="form-control" required />                                       
+                                    </div>
+                                </div>
+                            <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="Email" class="control-label">Email</label>
+                                        <input id="Email" class="form-control" required />
+                                    </div>
+                                </div>
+                            <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="NID" class="control-label">NID</label>
+                                        <input id="NID" class="form-control" required />
+                                    </div>
+                                </div>
+                            <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="ContactName" class="control-label"> Contact Person</label>
+                                        <input id="ContactName" class="form-control" required />                                      
+                                    </div>
+                                </div>
+
+
+                            <div class="col-lg-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="ACName" class="control-label">A/C Name</label>
+                                        <input id="ACName" class="form-control" required />
+                                    </div>
+                                </div>
+                            <div class="col-lg-6  col-sm-12">
+                                    <div class="form-group">
+                                        <label for="ACNo" class="control-label">A/C NO</label>
+                                        <input id="ACNo" class="form-control" required />                                     
+                                    </div>
+                                </div>
+
+                            <div class="col-lg-6  col-sm-12">
+                                    <div class="form-group">
+                                        <label for="BankName" class="control-label">Bank Name</label>
+                                        <input id="BankName" class="form-control" required />
+                                    </div>
+                                </div>
+                            <div class="col-lg-6  col-sm-12">
+                                    <div class="form-group">
+                                        <label for="BranchName" class="control-label">Branch Name</label>
+                                        <input id="BranchName" class="form-control" required />
+                                    </div>
+                                </div>
+
+                            <div class="col-lg-6  col-sm-12">
+                                    <div class="form-group">
+                                        <label for="Address" class="control-label">Address</label>
+                                        <input id="Address" class="form-control" required />
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-4"> </div>
+                    <div class="col-lg-4">
+                        <button type="button" class="btn btn-success" id="submitBtn">Submit</button>
+                        </div>
+                    <div class="col-lg-4"> </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 
 @section Scripts {
@@ -383,7 +495,51 @@
             }
         }
 
+        $("#submitBtn").click(function () {
+            // Get form data
+            var viewModel = {
+                Name: $("#Name").val(),
+                Email: $("#Email").val(),
+                Mobile: $("#Mobile").val(),
+                NID: $("#NID").val(),
+                Address: $("#Address").val(),
+                ACName: $("#ACName").val(),
+                ACNo: $("#ACNo").val(),
+                BankName: $("#BankName").val(),
+                BranchName: $("#BranchName").val(),
+                ContactName: $("#ContactName").val(),
+            };
+            console.log("viewModel", viewModel);
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("jasonAddRecord", "Supplier")",
+                datatype: "Json",
+                data: viewModel,
+                success: function (response) {
+                    if (response == 2) {
+                        console.log("Form submitted successfully!");
+                        ff();
+                        $('.bd-example-modal-lg').modal('hide');
+                        $('.modal-backdrop').remove();
+                    }else{
+                        alert("Supplier already added");
+                    }
+
+                },
+                error: function (error) {
+                    console.error("Error submitting form:", error);
+                }
+            });
+        });
+
+
+
     </script>
+
+
+
+
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
