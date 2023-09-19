@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using app.Infrastructure.Repository;
 using app.EntityModel.CoreModel;
 using Microsoft.EntityFrameworkCore;
+using app.Utility;
 
 namespace app.Services.PurchaseFinalized_Services
 {
@@ -23,21 +24,117 @@ namespace app.Services.PurchaseFinalized_Services
         public async Task<long> GetPurchaseFinalizedAsync(long id)
         {
             if (id == 0) { return -1; }
+            var user = await workContext.GetCurrentUserAsync();
             PurchaseOrder purchase = await dbContext.PurchaseOrder.FindAsync(id);
+            VoucherType voucherType = dbContext.VoucherType.Where(x => x.Code == "PV").FirstOrDefault();
             List<PurchaseOrderDetails> details = await dbContext.PurchaseOrderDetails.Where(d => d.PurchaseOrderId == purchase.Id).ToListAsync();
+            decimal totalcost = purchase.TransportCharges + purchase.BankCharg + purchase.OtherCharge;
+            decimal total = details.Sum(item => item.PurchaseAmount);
             if (details.Count == 0) { return -2; }
             using (var scope = dbContext.Database.BeginTransaction())
             {
                 try
                 {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = purchase.PurchaseDate;
+                    voucher.VoucherNo = GetVoucherNo(voucherType.Id,voucherType.Code, user.Id, purchase.PurchaseDate);
+                    voucher.VoucherTypeId=voucherType.Id;
+                    voucher.VendorId = purchase.SupplierId;
+                    voucher.ReferenceId = purchase.Id;
+                    voucher.Narration = "OrderNo:" + purchase.PurchaseOrderNo+"-" +purchase.Description;
+                    voucher.CreatedBy = user.FullName;    
+                    voucher.TrakingId = user.Id;    
+                    voucher.CreatedOn=DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true; 
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();  
+                    List<VoucherDetails> list = new List<VoucherDetails>();
+                    foreach (var item in details)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = item.ProductId;
+                        voucherDetails.ReferenceId = voucher.ReferenceId;
+                        voucherDetails.DebitAmount=item.PurchaseAmount;
+                        voucherDetails.CreditAmount=0;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        list.Add(voucherDetails);
+                    }
+                    dbContext.VoucherDetails.AddRange(list);
+                    dbContext.SaveChanges();
+                    List<StockInfo> stockInfos = new List<StockInfo>();
+                    List<UserProduct> uproduct = new List<UserProduct>();
+                    foreach (var item in details) {
+                        decimal costingprice = ((((totalcost * item.PurchaseAmount) / total) + item.PurchaseAmount) /item.PurchaseQty);
+                        StockInfo stock=new StockInfo();
+                        UserProduct userProduct =dbContext.UserProduct.FirstOrDefault(f=>f.ProductId==item.ProductId&&f.TrakingId== user.Id);
 
+                        stock.StockTypeId = (int)StockType.PV;
+                        stock.ProductId = item.ProductId;
+                        stock.ReferenceId = purchase.Id;
+                        stock.ReferenceNo = purchase.PurchaseOrderNo;
+                        stock.InQty = item.PurchaseQty;
+                        stock.InPrice = item.PurchaseRate;
+                        stock.OutQty = 0;
+                        stock.OutPrice = 0;
+                        stock.CreatedBy = user.FullName;
+                        stock.TrakingId = user.Id;
+                        stock.CreatedOn = DateTime.Now;
+                        stock.IsActive = true;
+                        stock.ReceivedDate = DateTime.Now;
+                        stock.CogsPrice = costingprice;
+                        dbContext.StockInfo.Add(stock);
+                        dbContext.SaveChanges();
+                        var AVGPrice = magAVGPrice(user.Id,item.ProductId);
+                        userProduct.AVGPrice = (decimal)AVGPrice;
+                        dbContext.Entry(userProduct).State = EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    purchase.IsSubmited = true; ;
+                    purchase.UpdatedBy = user.FullName;
+                    purchase.UpdatedOn = DateTime.Now;
+                    dbContext.Entry(purchase).State = EntityState.Modified;
+                    dbContext.SaveChanges();                  
+                    scope.Commit();
+                    return voucher.Id;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
-                    throw;
+                    scope.Rollback();
+                    return 0;
                 }
             }
         }
+
+        private object magAVGPrice(string id,long product)
+        {
+            IQueryable<StockInfo> stockInfos = dbContext.StockInfo.Where(d=>d.TrakingId==id&&d.IsActive==true&&d.ProductId==product).AsQueryable();
+            decimal inqty=stockInfos.Select(d=>d.InQty).Sum();   
+            decimal Outqty=stockInfos.Select(d=>d.OutQty).Sum();
+
+            decimal InValue = stockInfos.Select(d => d.InQty*d.CogsPrice).Sum();
+            decimal OutValue = stockInfos.Select(d => d.OutQty*d.CogsPrice).Sum();
+
+            decimal balanceQty = (inqty - Outqty);
+            decimal totalValue = InValue - OutValue;
+            decimal Abgprice = totalValue / balanceQty;
+            return Abgprice;
+        }
+
+        public string GetVoucherNo(int voucherTypeId,string Code,string userid, DateTime voucherDate)
+        {
+            string voucherNo = string.Empty;
+            int vouchersCount = dbContext.Voucher.Where(x => x.VoucherTypeId == voucherTypeId && x.VoucherDate.Month == voucherDate.Month
+            && x.VoucherDate.Year == voucherDate.Year&&x.TrakingId==userid).Count();
+            vouchersCount++;
+            voucherNo =Code + "-" + vouchersCount.ToString().PadLeft(4, '0');
+            return voucherNo;
+        }
+
+
     }
 }

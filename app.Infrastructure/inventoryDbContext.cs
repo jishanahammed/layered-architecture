@@ -1,4 +1,5 @@
 ﻿using app.EntityModel.CoreModel;
+using app.EntityModel.DatabaseView;
 using app.Infrastructure.Auth;
 using Microsoft.AspNetCore.Builder.Internal;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -40,9 +41,14 @@ namespace app.Infrastructure
         public virtual DbSet<Voucher> Voucher { get; set; }
         public virtual DbSet<VoucherDetails> VoucherDetails { get; set; }
         public virtual DbSet<StockInfo> StockInfo { get; set; }
+        public virtual DbSet<UserProduct> UserProduct { get; set; }
+        public virtual DbSet<AccountHeads> AccountHeads { get; set; }
 
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
         public virtual DbSet<PurchaseOrderDetails> PurchaseOrderDetails { get; set; }
+
+
+        public virtual DbSet<StockView> StockView { get; set; }
 
 
         

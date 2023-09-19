@@ -17,5 +17,9 @@ namespace app.Services.Voucher_Service
         public string ReferenceNo { set; get; }
         public long VendorId { set; get; }
         public string VendorName { set; get; }
+        public string VendorMobile { set; get; }
+        public string VendorEmail { set; get; }
+        public string VendorAddress { set; get; }
+        public List<VoucherDetalisViewModel> voucherDetalisViewModels { set; get; }
     }
 }

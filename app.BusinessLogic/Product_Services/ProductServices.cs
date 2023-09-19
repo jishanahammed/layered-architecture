@@ -40,6 +40,7 @@ namespace app.Services.Product_Services
                 product.ProductSubCategoryId=model.ProductSubCategoryId;
                 product.UnitName=model.UnitName;
                 product.ProductType=model.ProductType;
+                product.CompanyId=model.CompanyId;
                 product.ProductCode = GenerateProductCode(model.ProductType,count.ToString());
                await _entityRepository.AddAsync(product);
                 return 2;
@@ -64,6 +65,7 @@ namespace app.Services.Product_Services
                                                                    join t2 in dbContext.ProductCategory on t1.ProductCategoryId equals t2.Id
                                                                    join t3 in dbContext.ProductSubCategory on t1.ProductSubCategoryId equals t3.Id
                                                                    join t4 in dbContext.Users on t1.TrakingId equals t4.Id
+                                                                   join t5 in dbContext.Company on t1.CompanyId equals t5.Id
                                                                    where t1.IsActive == true
                                                                    select new ProductViewModel
                                                                    {
@@ -78,6 +80,8 @@ namespace app.Services.Product_Services
                                                                        UnitName=t1.UnitName,
                                                                        ProductName=t1.ProductName,
                                                                        ProductCode=t1.ProductCode,
+                                                                       CompanyId=t1.CompanyId,
+                                                                       CompanyName=t5.Name
                                                                        
                                                                    }).AsQueryable());
             if (user.UserType == 2)
@@ -136,6 +140,7 @@ namespace app.Services.Product_Services
             model.ProductType = result.ProductType; 
             model.ProductCategoryId = result.ProductCategoryId; 
             model.ProductSubCategoryId = result.ProductSubCategoryId;   
+            model.CompanyId = result.CompanyId;   
             return model;
         }
 
@@ -152,6 +157,7 @@ namespace app.Services.Product_Services
                 Product product = await _entityRepository.GetByIdAsync(model.Id);
                 product.ProductName = model.ProductName;
                 product.ShortName = model.ShortName;
+                product.CompanyId = model.CompanyId;
                 product.ProductCategoryId = model.ProductCategoryId;
                 product.ProductSubCategoryId = model.ProductSubCategoryId;
                 product.UnitName = model.UnitName;

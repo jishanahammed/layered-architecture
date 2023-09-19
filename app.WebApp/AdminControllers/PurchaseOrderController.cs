@@ -2,6 +2,7 @@
 using app.Services.DropDownServices;
 using app.Services.Product_Services;
 using app.Services.ProductSubCategory_Service;
+using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +13,14 @@ namespace app.WebApp.AdminControllers
 
         private readonly IPurchaseOrderServices purchaseOrderServices;
         private readonly IDropDownService dropDownService;
-        public PurchaseOrderController(IPurchaseOrderServices purchaseOrderServices, IDropDownService dropDownService)
+        private readonly IPurchaseFinalizedServices purchaseFinalizedServices;
+        public PurchaseOrderController(IPurchaseOrderServices purchaseOrderServices,
+            IDropDownService dropDownService,
+            IPurchaseFinalizedServices purchaseFinalizedServices)
         {
             this.purchaseOrderServices = purchaseOrderServices;
             this.dropDownService = dropDownService; 
+            this.purchaseFinalizedServices = purchaseFinalizedServices; 
         }
 
         [HttpGet]
@@ -96,6 +101,7 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(long id)
         {
+            var result= await purchaseFinalizedServices.GetPurchaseFinalizedAsync(id);  
             return View();
         }
 

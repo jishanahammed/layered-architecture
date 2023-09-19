@@ -9,5 +9,6 @@ namespace app.Services.Voucher_Service
     public interface IVoucherService
     {
         Task<long> AddPurchaseVoucher(VoucherViewModel voucher);
+        Task<VoucherViewModel> DetailsVoucher(long id);
     }
 }

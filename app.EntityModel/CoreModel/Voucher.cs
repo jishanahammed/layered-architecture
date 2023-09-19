@@ -14,5 +14,6 @@ namespace app.EntityModel.CoreModel
      public string Narration { set; get; }
      public long ReferenceId { set; get; }
      public long VendorId { set; get; }
+     public bool IsSubmitted { set; get; }
     }
 }

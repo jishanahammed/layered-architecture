@@ -97,7 +97,15 @@
                                         <span asp-validation-for="ProductSubCategoryId" class="text-danger"></span>
                                     </div>
                                 </div>
-                               
+                                <div class="col-lg-5 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="CompanyId" class="control-label">Company</label>
+                                        <select asp-for="CompanyId" class="form-control" required asp-items="ViewBag.company">
+                                            <option value="">-- Select Company --</option>
+                                        </select>
+                                        <span asp-validation-for="CompanyId" class="text-danger"></span>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -124,8 +132,26 @@
 
             ff();
             dd();
+            product();
         });
-
+        function product() {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("CompanyGet", "UsersProduct")",
+                datatype: "Json",
+                success: function (data) {
+                    if (data) {
+                        console.log("hhhhhhhhhh", data);
+                        $("#CompanyId").empty();
+                        $("#CompanyId").append("<option value=''>Select Company</option>");
+                        $(data).each(function (index, item) {
+                            $("#CompanyId").append("<option value='" + item.id + "'>" + item.name + "</option>");
+                        });
+                        $("#CompanyId").val(@Model.CompanyId);
+                    }
+                }
+            });
+        };
         function ff() {
             var text = $("#ProductTypeId").val();
             $.ajax({

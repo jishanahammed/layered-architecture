@@ -4,9 +4,12 @@ using app.Services.MenuItemService;
 using app.Services.Product_Services;
 using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
+using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
 using app.Services.RolesServises;
+using app.Services.Stock_Service;
 using app.Services.UserpermissionsService;
+using app.Services.UserProduct_Service;
 using app.Services.UserServices;
 using app.Services.Vendor_Service;
 using Microsoft.Extensions.Configuration;
@@ -34,6 +37,9 @@ namespace app.Services
             services.AddTransient<IVendorService, VendorServices>();
             services.AddTransient<IPurchaseOrderServices, PurchaseOrderServices>();
             services.AddTransient<IDropDownService, DropDownService>();
+            services.AddTransient<IUserProductService, UserProductService>();
+            services.AddTransient<IPurchaseFinalizedServices, PurchaseFinalizedServices>();
+            services.AddTransient<IStockService, StockService>();
             return services;
         }
     }

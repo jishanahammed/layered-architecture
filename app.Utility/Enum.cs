@@ -35,4 +35,11 @@ namespace app.Utility
         Retail=2,
         Corporate=3,
     }
+    public enum StockType
+    {
+        PV = 1,
+        SV = 2,
+        PRV = 3,
+        SRV = 4,
+    }
 }

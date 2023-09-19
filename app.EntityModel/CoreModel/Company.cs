@@ -8,7 +8,7 @@ namespace app.EntityModel.CoreModel
 {
     public class Company:BaseEntity
     {
-        public int Name { set; get; }
-        public int Address { set; get; }
+        public string Name { set; get; }
+        public string Address { set; get; }
     }
 }

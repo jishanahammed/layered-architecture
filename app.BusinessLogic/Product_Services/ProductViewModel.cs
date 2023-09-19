@@ -24,6 +24,8 @@ namespace app.Services.Product_Services
         public string UnitName { get; set; }
         public string ProductCategoryName { get; set; }
         public string ProductSubCategoryName { get; set; }
+        public int CompanyId { get; set; }
+        public string CompanyName { get; set; }
         public IEnumerable<ProductViewModel> ProductList { get; set; }
     }
 }
