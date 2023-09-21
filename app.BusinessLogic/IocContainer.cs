@@ -12,6 +12,7 @@ using app.Services.UserpermissionsService;
 using app.Services.UserProduct_Service;
 using app.Services.UserServices;
 using app.Services.Vendor_Service;
+using app.Services.Voucher_Service;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -40,6 +41,7 @@ namespace app.Services
             services.AddTransient<IUserProductService, UserProductService>();
             services.AddTransient<IPurchaseFinalizedServices, PurchaseFinalizedServices>();
             services.AddTransient<IStockService, StockService>();
+            services.AddTransient<IVoucherService, VoucherService>();
             return services;
         }
     }

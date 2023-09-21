@@ -28,7 +28,13 @@ namespace app.Utility
         Credit=1,
         Cash=2,
         Special=3,
-    } 
+    }
+    public enum PaymentMethod
+    {
+        Cash_Heand = 1,
+        Bank = 2,
+        Mobile_banking = 3,
+    }
     public enum CustomerType
     {
         Dealer=1,

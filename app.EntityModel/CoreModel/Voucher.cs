@@ -10,6 +10,7 @@ namespace app.EntityModel.CoreModel
     {
      public int VoucherTypeId { set; get; }
      public string VoucherNo { set; get; }
+     public string PaymentMethod { set; get; }
      public DateTime VoucherDate { set; get; }
      public string Narration { set; get; }
      public long ReferenceId { set; get; }

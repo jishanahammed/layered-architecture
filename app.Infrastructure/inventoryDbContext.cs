@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -47,7 +48,7 @@ namespace app.Infrastructure
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
         public virtual DbSet<PurchaseOrderDetails> PurchaseOrderDetails { get; set; }
 
-
+        [NotMapped]
         public virtual DbSet<StockView> StockView { get; set; }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using app.EntityModel.CoreModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,6 +23,28 @@ namespace app.EntityModel.DatabaseView
         public decimal InQty { get; set; }
         public decimal OutQty { get; set; }
         public decimal AVGPrice { get; set; }
-
     }
 }
+
+
+
+//CREATE VIEW[dbo].[StockView] AS
+//select
+//s.ProductId,
+//sum (s.InQty) as InQty,
+//sum(s.OutQty) as OutQty,
+//s.TrakingId,
+//pc.Name as ProductCategoryName,
+//psc.Name as ProductSubCategoryName,
+//p.ProductName,
+//up.AVGPrice,
+//c.Name as CompanyName,
+//c.Id as CompanyId
+//from[dbo].[StockInfo] as s
+//join[dbo].[UserProduct] as up on s.ProductId = up.ProductId
+//join[dbo].[Product] as p on up.ProductId = p.Id
+//join[dbo].[ProductCategory] as pc on p.ProductCategoryId = pc.Id
+//join[dbo].[ProductSubCategory] as psc on p.ProductSubCategoryId = psc.Id
+//join[dbo].[Company] as c on up.CompanyId = c.Id
+//where s.IsActive = 1
+//group by s.ProductId, s.TrakingId, p.ProductName, pc.Name, psc.Name, up.AVGPrice, c.Name, c.Id

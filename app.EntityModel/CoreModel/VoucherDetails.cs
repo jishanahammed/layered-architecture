@@ -13,5 +13,7 @@ namespace app.EntityModel.CoreModel
         public decimal DebitAmount { set; get; }
         public decimal CreditAmount { set; get; }
         public long ReferenceId { set; get; }
+        public string Titel { set; get; }
+        public string Particular { set; get; }
     }
 }

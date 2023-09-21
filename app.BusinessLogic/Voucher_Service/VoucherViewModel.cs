@@ -9,6 +9,7 @@ namespace app.Services.Voucher_Service
     public class VoucherViewModel:BaseViewModel
     {
         public int VoucherTypeId { set; get; }
+        public int SupplierPaymentMethodEnumFK { set; get; }
         public string VoucherTypeCode { set; get; }
         public string VoucherNo { set; get; }
         public DateTime VoucherDate { set; get; }
@@ -20,6 +21,8 @@ namespace app.Services.Voucher_Service
         public string VendorMobile { set; get; }
         public string VendorEmail { set; get; }
         public string VendorAddress { set; get; }
+        public decimal Amount { set; get; }
         public List<VoucherDetalisViewModel> voucherDetalisViewModels { set; get; }
+        public IEnumerable<VoucherViewModel> voucherlist { set; get; }
     }
 }
