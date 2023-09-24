@@ -2,10 +2,12 @@
 using app.Services.MainMenuService;
 using app.Services.ProductCategory_Services;
 using app.Utility.Miscellaneous;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
-{ 
+{
+    [Authorize]
     public class ProductCategoryController : Controller
     {
         private readonly IProductCategoryServices productCategoryServices;

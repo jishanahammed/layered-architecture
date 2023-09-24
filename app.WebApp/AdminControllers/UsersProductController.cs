@@ -2,10 +2,12 @@
 using app.Services.DropDownServices;
 using app.Services.Product_Services;
 using app.Services.UserProduct_Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class UsersProductController : Controller
     {
         private readonly IDropDownService dropDownService;
@@ -40,7 +42,12 @@ namespace app.WebApp.AdminControllers
             var res= await userProductService.AddRecort(companyid,userId,productId);
             return Json(res);
         }
-
+        [HttpGet]
+        public async Task<JsonResult> UpdateProduct(long id,decimal mrp)
+        {
+            var res = await userProductService.updatet(id,mrp);
+            return Json(res);
+        }
         [HttpGet]
         public async Task<ActionResult> UserProductList(int page = 1, int pagesize = 10, string sarchString = null)
         {

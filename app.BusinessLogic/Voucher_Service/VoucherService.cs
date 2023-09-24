@@ -108,7 +108,9 @@ namespace app.Services.Voucher_Service
                                               CreatedBy = t1.CreatedBy,
                                               CreatedOn = t1.CreatedOn,
                                               Narration = t1.Narration,
-
+                                              UserAddress=user.Address,
+                                              UserMobile=user.PhoneNumber,
+                                              UserEmail=user.Email,    
                                           }).FirstOrDefaultAsync());
 
             model.voucherDetalisViewModels = await Task.Run(() => (from t1 in dbContext.Voucher
@@ -156,6 +158,19 @@ namespace app.Services.Voucher_Service
                                               CreatedOn = t1.CreatedOn,
                                               Narration = t1.Narration,
                                           }).AsQueryable());
+
+            if (!string.IsNullOrWhiteSpace(sarchString))
+            {
+                sarchString = sarchString.Trim().ToLower();
+                model.voucherlist = model.voucherlist.Where(t =>
+                    t.VoucherNo.ToLower().Contains(sarchString) ||
+                    t.UserName.ToLower().Contains(sarchString) ||
+                    t.VendorName.ToLower().Contains(sarchString) ||
+                    t.VendorMobile.ToLower().Contains(sarchString) ||
+                    t.VendorEmail.ToLower().Contains(sarchString)
+
+                );
+            }
             int resCount = model.voucherlist.Count();
             var pagers = new PagedList(resCount, page, pageSize);
             int recSkip = (page - 1) * pageSize;
@@ -171,5 +186,9 @@ namespace app.Services.Voucher_Service
             };
             return pagedModel;
         }
+
+
+
+
     }
 }

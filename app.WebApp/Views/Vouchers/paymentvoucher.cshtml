@@ -1,5 +1,4 @@
 ﻿@model PagedModel<VoucherViewModel>
-
 @{
     var ff = Model;
     int SN = Model.FirstSerialNumber;
@@ -37,6 +36,7 @@
                     <th>
                         Posting   Name
                     </th>
+                    <th class="text-center"> Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,9 +50,10 @@
                         <td>  @Html.DisplayFor(modelItem => item.VoucherNo) </td>
                         <td>  @Html.DisplayFor(modelItem => item.VendorName) </td>
                         <td>  @Html.DisplayFor(modelItem => item.VendorMobile) </td>
-                        <td>  @Html.DisplayFor(modelItem => item.CreatedOn.ToShortDateString()) </td>
-
-
+                        <td>  @item.CreatedOn.ToShortDateString()</td>
+                        <td class="text-center">
+                            @Html.ActionLink("","Supplier_Payment_Details", new {  id=item.Id},new {@class = "text-info fas fa-eye" })
+                        </td>
                     </tr>
                     SN++;
                 }
@@ -60,8 +61,6 @@
         </table>
     </div>
 </div>
-
-
 <div class="card-footer">
     <div class="text-left">
         @await Html.PartialAsync("_pagingpartial", pagemodel)

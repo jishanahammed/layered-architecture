@@ -6,7 +6,9 @@ using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
 using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
+using app.Services.Report_service;
 using app.Services.RolesServises;
+using app.Services.Sales_Service;
 using app.Services.Stock_Service;
 using app.Services.UserpermissionsService;
 using app.Services.UserProduct_Service;
@@ -42,6 +44,8 @@ namespace app.Services
             services.AddTransient<IPurchaseFinalizedServices, PurchaseFinalizedServices>();
             services.AddTransient<IStockService, StockService>();
             services.AddTransient<IVoucherService, VoucherService>();
+            services.AddTransient<ISalesService, SalesService>();
+            services.AddTransient<IReportService, ReportService>();
             return services;
         }
     }

@@ -124,8 +124,8 @@ namespace app.Services.Vendor_Service
                                                          Name = t1.Name,
                                                          Mobile = t1.Mobile,    
                                                          Email = t1.Email,
-                                                         NID = t1.NID,
-                                                         ContactName = t1.ContactName,  
+                                                         NID = t1.NID==null?"":t1.NID,
+                                                         ContactName = t1.ContactName==null?"": t1.ContactName,  
                                                          Address = t1.Address,  
                                                          UserName = t2.FullName,
                                                          TrakingId = t1.TrakingId,
@@ -140,14 +140,12 @@ namespace app.Services.Vendor_Service
                 model.vendorList = model.vendorList.Where(t =>
                     t.Name.ToLower().Contains(sarchString) ||
                     t.UserName.ToLower().Contains(sarchString) ||
-                    t.Mobile.ToLower().Contains(sarchString) ||
-                    t.NID.ToLower().Contains(sarchString) ||
+                    t.Mobile.ToString().ToLower().Contains(sarchString) ||
+                    t.NID.ToString().ToLower().Contains(sarchString) ||
                     t.Email.ToLower().Contains(sarchString) ||
-                    t.ContactName.ToLower().Contains(sarchString)||
-                    t.Address.ToLower().Contains(sarchString)
-
-
-                );
+                    t.ContactName.ToString().ToLower().Contains(sarchString)||
+                    t.Address.ToString().ToLower().Contains(sarchString)
+                ).AsQueryable();
             }
             int resCount = model.vendorList.Count();
             var pagers = new PagedList(resCount, page, pageSize);

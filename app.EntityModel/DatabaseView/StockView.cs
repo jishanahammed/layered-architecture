@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,18 @@ namespace app.EntityModel.DatabaseView
 
 
 
-//CREATE VIEW[dbo].[StockView] AS
+//USE[InvetoryDB]
+//GO
+
+///****** Object:  View [dbo].[StockView]    Script Date: 9/21/2023 8:54:25 PM ******/
+//SET ANSI_NULLS ON
+//GO
+
+//SET QUOTED_IDENTIFIER ON
+//GO
+
+
+//CREATE VIEW [dbo].[StockView] AS
 //select
 //s.ProductId,
 //sum (s.InQty) as InQty,
@@ -48,3 +60,7 @@ namespace app.EntityModel.DatabaseView
 //join[dbo].[Company] as c on up.CompanyId = c.Id
 //where s.IsActive = 1
 //group by s.ProductId, s.TrakingId, p.ProductName, pc.Name, psc.Name, up.AVGPrice, c.Name, c.Id
+
+//GO
+
+

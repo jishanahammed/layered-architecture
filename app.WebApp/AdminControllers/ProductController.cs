@@ -3,11 +3,13 @@ using app.Services.MenuItemService;
 using app.Services.Product_Services;
 using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IProductSubCategoryService productSubCategoryService;

@@ -1,4 +1,5 @@
 ﻿using app.EntityModel.CoreModel;
+using app.Services.UserProduct_Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace app.Services.DropDownServices
         Task<List<DropDownCustomViewModel>> companyproductlist(long id);
         Task<IEnumerable<DropDownViewmodel>> Companlist();
         Task<Product> sigleproduct(long id);
+        Task<UserProductServiceViewModel> sigleproductWithstock(long id);
+        Task<Vendor> sigleCustomer(string mobile);
     }
 }

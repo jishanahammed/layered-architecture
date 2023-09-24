@@ -9,6 +9,7 @@
         url: "/" + url + "?page=" + page + "&&pagesize=" + sizeperpage + "&&stringsearch=" + stringsearch + "",
         type: 'GET',
         success: function (result) {
+            console.log(result,"result")
             $('#paginatedsection').html(result);
         }
     });

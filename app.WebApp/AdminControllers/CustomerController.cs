@@ -1,9 +1,11 @@
 ﻿using app.Services.ProductCategory_Services;
 using app.Services.Vendor_Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly IVendorService vendorService;
@@ -11,18 +13,18 @@ namespace app.WebApp.AdminControllers
         {
             this.vendorService = vendorService;
         }
-        public async Task<ActionResult> Index(int page = 1, int pagesize = 10, string sarchString=null)
+        public async Task<ActionResult> Index(int page = 1, int pagesize = 10, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
-            var results = await vendorService.GetPagedListAsync(page, pagesize,2,sarchString);
+            var results = await vendorService.GetPagedListAsync(page, pagesize,2, stringsearch);
             return View(results);
         }
-        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10, string sarchString = null)
+        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
-            var results = await vendorService.GetPagedListAsync(page, pagesize, 2, sarchString);
+            var results = await vendorService.GetPagedListAsync(page, pagesize, 2, stringsearch);
             return PartialView("_customerCategorypartial", results);
         }
 

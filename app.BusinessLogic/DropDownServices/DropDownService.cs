@@ -2,6 +2,7 @@
 using app.Infrastructure;
 using app.Infrastructure.Auth;
 using app.Services.Product_Services;
+using app.Services.UserProduct_Service;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -37,12 +38,13 @@ namespace app.Services.DropDownServices
         public async Task<IEnumerable<DropDownViewmodel>> productlist()
         {
             var user = await workContext.GetCurrentUserAsync();
-            IEnumerable<DropDownViewmodel> dropDownViewmodels = await Task.Run(() => (from t11 in dbContext.UserProduct
+            IEnumerable<DropDownViewmodel> dropDownViewmodels = await Task.Run(() => 
+                                                      (from t11 in dbContext.UserProduct
                                                       join t1 in dbContext.Product on t11.ProductId equals t1.Id
                                                       join t2 in dbContext.ProductCategory on t1.ProductCategoryId equals t2.Id
                                                       join t3 in dbContext.ProductSubCategory on t1.ProductSubCategoryId equals t3.Id
                                                       join t4 in dbContext.Company on t11.CompanyId equals t4.Id
-                                                      where t11.IsActive == true&&t1.TrakingId==user.Id
+                                                      where t11.IsActive == true&&t11.TrakingId==user.Id
                                                       select new DropDownViewmodel
                                                       {
                                                           Id = t1.Id,
@@ -59,6 +61,7 @@ namespace app.Services.DropDownServices
 
         public async Task<List<DropDownCustomViewModel>> companyproductlist(long id)
         {
+            var user = await workContext.GetCurrentUserAsync();
             List<DropDownCustomViewModel> dropDownViewmodels = await Task.Run(() => (from t1 in dbContext.Product
                                                                                       join t2 in dbContext.ProductCategory on t1.ProductCategoryId equals t2.Id
                                                                                       join t3 in dbContext.ProductSubCategory on t1.ProductSubCategoryId equals t3.Id
@@ -70,7 +73,7 @@ namespace app.Services.DropDownServices
                                                                                       }).ToListAsync());
             foreach (var item in dropDownViewmodels)
             {
-                var userproduct=  dbContext.UserProduct.FirstOrDefault(f=>f.ProductId==item.Id&&f.IsActive==true);
+                var userproduct=  dbContext.UserProduct.FirstOrDefault(f=>f.ProductId==item.Id&&f.IsActive==true&&f.TrakingId==user.Id);
                 if (userproduct != null)
                 {
                     item.IsAssigen= true;
@@ -95,6 +98,36 @@ namespace app.Services.DropDownServices
                      }).OrderBy(x => x.Name).AsQueryable();
 
             return dropDownViewmodels;
+        }
+
+        public async Task<Vendor> sigleCustomer(string mobile)
+        {
+            Vendor vendor = new Vendor();
+            var users = await workContext.GetCurrentUserAsync();
+            Vendor res = await dbContext.Vendor.FirstOrDefaultAsync(x => x.Mobile.Trim() == mobile.Trim()&&x.TrakingId== users.Id);   
+            if (res != null)
+            {
+                return res;
+            }
+            vendor.Id = 0;
+            return vendor;
+            
+        }
+
+        public async Task<UserProductServiceViewModel> sigleproductWithstock(long id)
+        {
+            UserProductServiceViewModel model = new UserProductServiceViewModel();
+            var users = await workContext.GetCurrentUserAsync();
+            var userproduct = await dbContext.UserProduct.FirstOrDefaultAsync(k=>k.ProductId==id&&k.TrakingId== users.Id);
+            var product = await dbContext.Product.FindAsync(id);
+            var stock = dbContext.StockInfo.Where(f=>f.ProductId==id&& f.TrakingId == users.Id).Sum(f=>f.InQty-f.OutQty);
+            //var stock = dbContext.StockView.FromSqlRaw("EXEC dbo.SP_Stock @p0", users.Id).Where(f => f.ProductId == id).Sum(f => f.InQty - f.OutQty);
+            model.ProductId=userproduct.ProductId;
+            model.MRP=userproduct.MRP;
+            model.AVGPrice=userproduct.AVGPrice;
+            model.UnitNane=product.UnitName;
+            model.StockQuntity= stock;
+            return model;   
         }
     }
 }

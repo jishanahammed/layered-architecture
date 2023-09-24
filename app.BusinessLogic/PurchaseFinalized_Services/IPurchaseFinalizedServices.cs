@@ -9,5 +9,6 @@ namespace app.Services.PurchaseFinalized_Services
     public interface IPurchaseFinalizedServices
     {
         Task<long> GetPurchaseFinalizedAsync(long id);
+        Task<long> GetSalesFinalizedAsync(long id);
     }
 }

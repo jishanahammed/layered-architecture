@@ -10,6 +10,7 @@ namespace app.Services.Voucher_Service
     {
         public int VoucherTypeId { set; get; }
         public int SupplierPaymentMethodEnumFK { set; get; }
+        public string PaymentMethod { set; get; }
         public string VoucherTypeCode { set; get; }
         public string VoucherNo { set; get; }
         public DateTime VoucherDate { set; get; }
@@ -22,7 +23,11 @@ namespace app.Services.Voucher_Service
         public string VendorEmail { set; get; }
         public string VendorAddress { set; get; }
         public decimal Amount { set; get; }
+        public decimal DebitAmount { set; get; }
+        public decimal CreditAmount { set; get; }
+        public decimal Blance { set; get; }
         public List<VoucherDetalisViewModel> voucherDetalisViewModels { set; get; }
         public IEnumerable<VoucherViewModel> voucherlist { set; get; }
+        public List<VoucherViewModel> datalist { set; get; }
     }
 }

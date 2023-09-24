@@ -99,5 +99,13 @@ namespace app.Services.UserProduct_Service
             return pagedModel;
 
         }
+
+        public async Task<bool> updatet(long id, decimal mrp)
+        {
+            var userproduct= await dbContext.UserProduct.FirstOrDefaultAsync(f=>f.Id==id);
+            userproduct.MRP = mrp;
+            var res = await _entityRepository.UpdateAsync(userproduct);
+           return res;  
+        }
     }
 }

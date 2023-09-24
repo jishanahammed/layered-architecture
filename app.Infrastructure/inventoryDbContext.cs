@@ -47,7 +47,8 @@ namespace app.Infrastructure
 
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
         public virtual DbSet<PurchaseOrderDetails> PurchaseOrderDetails { get; set; }
-
+        public virtual DbSet<SalesOrder> SalesOrder { get; set; }
+        public virtual DbSet<SalesOrderDetails> SalesOrderDetails { get; set; }
         [NotMapped]
         public virtual DbSet<StockView> StockView { get; set; }
 

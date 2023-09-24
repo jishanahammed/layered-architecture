@@ -4,10 +4,12 @@ using app.Services.Product_Services;
 using app.Services.ProductSubCategory_Service;
 using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class PurchaseOrderController : Controller
     {
 
@@ -84,7 +86,12 @@ namespace app.WebApp.AdminControllers
             var products = await dropDownService.vendorlist(1);
             return Json(products);
         }
-
+        [HttpGet]
+        public async Task<JsonResult> GetAutoCompleteCustomerGet()
+        {
+            var products = await dropDownService.vendorlist(2);
+            return Json(products);
+        }
         [HttpGet]
         public async Task<JsonResult> GetAutoCompleteProductGet()
         {
@@ -101,8 +108,8 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(long id)
         {
-            var result= await purchaseFinalizedServices.GetPurchaseFinalizedAsync(id);  
-            return View();
+            var result= await purchaseFinalizedServices.GetPurchaseFinalizedAsync(id);
+            return RedirectToAction("Index");
         }
 
 

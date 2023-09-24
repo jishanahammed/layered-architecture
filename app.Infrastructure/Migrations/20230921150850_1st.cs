@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace app.Infrastructure.Migrations
 {
-    public partial class last : Migration
+    public partial class _1st : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -321,6 +321,61 @@ namespace app.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PurchaseOrderDetails", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SalesOrder",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SalesOrderNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CustomerId = table.Column<long>(type: "bigint", nullable: false),
+                    SalesDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DeliveryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DeliveryAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TermsAndCondition = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SupplierPaymentMethodEnumFK = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OtherCharge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IsCancel = table.Column<bool>(type: "bit", nullable: false),
+                    IsSubmited = table.Column<bool>(type: "bit", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SalesOrder", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SalesOrderDetails",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SalesOrderId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    UnitName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SalesQty = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SalesRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SalesAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PackSize = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TrakingId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SalesOrderDetails", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -657,8 +712,8 @@ namespace app.Infrastructure.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "ee89796c-defe-4279-b511-77d08c311646", "Admin", "ADMIN" },
-                    { "8e445865-a24d-4543-a6c6-9443d048cdb9", "40ad6d00-1cdf-41f6-b2c5-827f1eed0350", "Customer", "CUSTOMER" }
+                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "27798fa7-fc1a-476c-aca5-d7889adf9f6e", "Admin", "ADMIN" },
+                    { "8e445865-a24d-4543-a6c6-9443d048cdb9", "1fe16b64-ea25-4e21-ab33-a1ee3c37b8c2", "Customer", "CUSTOMER" }
                 });
 
             migrationBuilder.InsertData(
@@ -769,6 +824,12 @@ namespace app.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "PurchaseOrderDetails");
+
+            migrationBuilder.DropTable(
+                name: "SalesOrder");
+
+            migrationBuilder.DropTable(
+                name: "SalesOrderDetails");
 
             migrationBuilder.DropTable(
                 name: "StockInfo");

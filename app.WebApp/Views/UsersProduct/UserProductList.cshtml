@@ -79,6 +79,7 @@
                                     <th>Unit Price  </th>
                                     <th>MRP  </th>
                                     <th>AVG Price  </th>
+                                    <th class ="text-center"> Action  </th>
       
                                 </tr>
                             </thead>
@@ -105,12 +106,40 @@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.AVGPrice)
                                         </td>
+                                        <td class="text-center">
+                                            <a data-toggle="modal" data-target="#exampleModal" onclick="markedit(@item.Id)"> <i class="fas fa-edit"></i> </a>
+                                        </td>
 
                                     </tr>
                                     SN++;
                                 }
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" for="Id" id="Id" name="Id" class="form-control" />
+                                <div class="form-group">
+                                    <label for="MRP" class="control-label"> MRP</label>
+                                    <input for="MRP" id="MRP" name="MRP" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="Savechanges()">Save changes</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -128,3 +157,41 @@
     </div>
 
 </section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#User-Product').addClass('menu-open');
+            $('#UserProductUserProductlist').addClass('active');
+        });
+
+        function markedit(id){
+            $('#Id').val(id);
+        }
+        function Savechanges(){
+           var id= $('#Id').val();
+            var MRP = $('#MRP').val();
+            console.log(id,MRP);
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("UpdateProduct", "UsersProduct")",
+                datatype: "Json",
+                data: { id: id, mrp: parseFloat(MRP) },
+                success: function (data) {
+                    if(data){
+                        location.reload();
+                    }else{
+                        alert("Sommething went wrong!");
+                    }
+                    
+                }
+            })
+        }
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
+
+

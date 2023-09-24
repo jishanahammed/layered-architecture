@@ -1,12 +1,14 @@
 ﻿using app.EntityModel.CoreModel;
 using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class ProductSubCategoryController : Controller
     {
         private readonly IProductSubCategoryService productSubCategoryService;

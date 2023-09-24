@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using app.EntityModel.DatabaseView;
+using Microsoft.EntityFrameworkCore;
 
 namespace app.Services.Stock_Service
 {
@@ -32,7 +33,8 @@ namespace app.Services.Stock_Service
         public async Task<IEnumerable<StockView>> GetStocks()
         {
             var user = await workContext.GetCurrentUserAsync();
-            IQueryable<StockView> list =  dbContext.StockView.Where(d => d.TrakingId == user.Id).AsQueryable();
+            IQueryable<StockView> list =  dbContext.StockView.FromSqlRaw("EXEC dbo.SP_Stock @p0", user.Id).AsQueryable();
+            //IQueryable<StockView> list =  dbContext.StockView.Where(d => d.TrakingId == user.Id).AsQueryable();
             return list;   
         }
     }

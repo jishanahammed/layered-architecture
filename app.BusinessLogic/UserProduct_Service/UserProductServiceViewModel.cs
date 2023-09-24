@@ -18,6 +18,8 @@ namespace app.Services.UserProduct_Service
         public decimal MRP { set; get; }
         public string ProductCategoryName { get; set; }
         public string ProductSubCategoryName { get; set; }
+        public string UnitNane { get; set; }
+        public decimal StockQuntity { get; set; }
         public IEnumerable<UserProductServiceViewModel> ProductList { get; set; }
     }
 }

@@ -208,6 +208,7 @@ namespace app.Services.PurchaseOrder_Services
                                               IsSubmited = t1.IsSubmited,
                                               IsCancel = t1.IsCancel,
                                               IsHold = t1.IsHold,
+
                                           }).FirstOrDefaultAsync());
 
             model.MappVm = await Task.Run(() => (from t1 in dbContext.PurchaseOrderDetails

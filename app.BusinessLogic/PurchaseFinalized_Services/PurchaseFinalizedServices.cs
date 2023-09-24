@@ -27,7 +27,7 @@ namespace app.Services.PurchaseFinalized_Services
             var user = await workContext.GetCurrentUserAsync();
             PurchaseOrder purchase = await dbContext.PurchaseOrder.FindAsync(id);
             VoucherType voucherType = dbContext.VoucherType.Where(x => x.Code == "PV").FirstOrDefault();
-            List<PurchaseOrderDetails> details = await dbContext.PurchaseOrderDetails.Where(d => d.PurchaseOrderId == purchase.Id).ToListAsync();
+            List<PurchaseOrderDetails> details = await dbContext.PurchaseOrderDetails.Where(d => d.PurchaseOrderId == purchase.Id && d.IsActive == true).ToListAsync();
             decimal totalcost = purchase.TransportCharges + purchase.BankCharg + purchase.OtherCharge;
             decimal total = details.Sum(item => item.PurchaseAmount);
             if (details.Count == 0) { return -2; }
@@ -112,7 +112,7 @@ namespace app.Services.PurchaseFinalized_Services
 
         private object magAVGPrice(string id,long product)
         {
-            IQueryable<StockInfo> stockInfos = dbContext.StockInfo.Where(d=>d.TrakingId==id&&d.IsActive==true&&d.ProductId==product).AsQueryable();
+            var stockInfos = dbContext.StockInfo.Where(d=>d.TrakingId==id&&d.IsActive==true&&d.ProductId==product).ToList();
             decimal inqty=stockInfos.Select(d=>d.InQty).Sum();   
             decimal Outqty=stockInfos.Select(d=>d.OutQty).Sum();
 
@@ -135,6 +135,86 @@ namespace app.Services.PurchaseFinalized_Services
             return voucherNo;
         }
 
-
+        public async Task<long> GetSalesFinalizedAsync(long id)
+        {
+            if (id == 0) { return -1; }
+            var user = await workContext.GetCurrentUserAsync();
+            SalesOrder salse = await dbContext.SalesOrder.FindAsync(id);
+            VoucherType voucherType = dbContext.VoucherType.Where(x => x.Code == "SV").FirstOrDefault();
+            List<SalesOrderDetails> details = await dbContext.SalesOrderDetails.Where(d => d.SalesOrderId == salse.Id&& d.IsActive==true).ToListAsync();          
+            decimal total = details.Sum(item => item.SalesAmount);
+            if (details.Count == 0) { return -2; }
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = salse.SalesDate;
+                    voucher.VoucherNo = GetVoucherNo(voucherType.Id, voucherType.Code, user.Id, salse.SalesDate);
+                    voucher.VoucherTypeId = voucherType.Id;
+                    voucher.VendorId = salse.CustomerId;
+                    voucher.ReferenceId = salse.Id;
+                    voucher.Narration = "OrderNo:" + salse.SalesOrderNo + "-" + salse.Description;
+                    voucher.CreatedBy = user.FullName;
+                    voucher.TrakingId = user.Id;
+                    voucher.CreatedOn = DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true;
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();
+                    List<VoucherDetails> list = new List<VoucherDetails>();
+                    foreach (var item in details)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = item.ProductId;
+                        voucherDetails.ReferenceId = voucher.ReferenceId;
+                        voucherDetails.DebitAmount = item.SalesAmount;
+                        voucherDetails.CreditAmount = 0;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        list.Add(voucherDetails);
+                    }
+                    dbContext.VoucherDetails.AddRange(list);
+                    dbContext.SaveChanges();
+                    List<StockInfo> stockInfos = new List<StockInfo>();
+                    List<UserProduct> uproduct = new List<UserProduct>();
+                    foreach (var item in details)
+                    {
+                       
+                        StockInfo stock = new StockInfo();
+                        stock.StockTypeId = (int)StockType.SV;
+                        stock.ProductId = item.ProductId;
+                        stock.ReferenceId = salse.Id;
+                        stock.ReferenceNo = salse.SalesOrderNo;
+                        stock.InQty = 0;
+                        stock.InPrice = 0;
+                        stock.OutQty = item.SalesQty;
+                        stock.OutPrice = item.SalesRate;
+                        stock.CreatedBy = user.FullName;
+                        stock.TrakingId = user.Id;
+                        stock.CreatedOn = DateTime.Now;
+                        stock.IsActive = true;
+                        stock.ReceivedDate = DateTime.Now;
+                        dbContext.StockInfo.Add(stock);
+                        dbContext.SaveChanges();
+                    }
+                    salse.IsSubmited = true; ;
+                    salse.UpdatedBy = user.FullName;
+                    salse.UpdatedOn = DateTime.Now;
+                    dbContext.Entry(salse).State = EntityState.Modified;
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return voucher.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+        }
     }
 }

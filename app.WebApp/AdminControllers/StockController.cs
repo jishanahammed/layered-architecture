@@ -1,8 +1,10 @@
 ﻿using app.Services.Stock_Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
+    [Authorize]
     public class StockController : Controller
     {
         private readonly IStockService stockService;
