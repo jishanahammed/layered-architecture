@@ -143,7 +143,7 @@ namespace app.Services.PurchaseOrder_Services
                                                        IsSubmited = t1.IsSubmited,
                                                        IsCancel = t1.IsCancel,
                                                        IsHold = t1.IsHold,
-                                                   }).AsQueryable());
+                                                   }).OrderBy(d=>d.IsSubmited).AsQueryable());
             if (user.UserType == 2)
             {
                 model.datalist = model.datalist.Where(f => f.TrakingId == user.Id).AsQueryable();

@@ -40,6 +40,7 @@ namespace app.Utility
         Dealer=1,
         Retail=2,
         Corporate=3,
+        Individual = 4,
     }
     public enum StockType
     {
@@ -47,5 +48,19 @@ namespace app.Utility
         SV = 2,
         PRV = 3,
         SRV = 4,
+    }
+    public enum OtherExpensesType
+    {
+        Rent =1,
+        Repairs =2,
+        Insurance =3,
+        Rates_and_Taxes =4,
+        Tax_Penalties = 5,
+        Conveyance=6,
+        Consumptions_of_Spares = 7,
+        Salary= 8,
+        Refresment = 9,
+        Utility_Bill = 10,
+       Others = 20,
     }
 }

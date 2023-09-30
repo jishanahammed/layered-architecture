@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace app.EntityModel.DatabaseView
 {
-    [Table("StockView")]
+    //[Table("StockView")]
     public class StockView
     {
         [Key]

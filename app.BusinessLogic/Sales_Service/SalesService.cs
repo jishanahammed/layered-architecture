@@ -162,7 +162,7 @@ namespace app.Services.Sales_Service
                                                        DeliveryAddress = t1.DeliveryAddress,
                                                        IsSubmited = t1.IsSubmited,
                                                        IsCancel = t1.IsCancel,
-                                                   }).AsQueryable());
+                                                   }).OrderBy(f=>f.IsSubmited).AsQueryable());
             if (user.UserType == 2)
             {
                 model.datalist = model.datalist.Where(f => f.TrakingId == user.Id).AsQueryable();

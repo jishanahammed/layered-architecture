@@ -20,11 +20,11 @@
     <div class="container-fluid ">
         <div class="breadcrumb d-flex justify-content-between align-items-center shadow">
             <ol class="breadcrumb mb-0 p-0">
-                <li class="breadcrumb-item"><a href="/Admin/Home/Index">Home</a></li>
-                <li class="breadcrumb-item active"> Purchase Order  </li>
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active"> Purchase   </li>
             </ol>
             <div>
-                <a asp-action="AddRecord"><i class="fa fa-plus"></i> New Purchase Order </a>
+                <a asp-action="AddRecord"><i class="fa fa-plus"></i> New Purchase  </a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
             <div class="card-header">
                 <div class="row w-100 mb-4">
                     <div class="col-sm-10">
-                        <h5> <i class="fas fa-list"></i>  All Purchase Order </h5>
+                        <h5> <i class="fas fa-list"></i>  All Purchase  </h5>
                     </div>
 
                     <div class="col-sm-2">
@@ -100,7 +100,7 @@
                                                 }
                                                 else
                                                 {
-                                                    @Html.ActionLink("Draft","ChangeStatus", new {  id=item.Id},new {@class = "text-primary",  onclick = "return confirm('Are you sure you want to Submit this?')" })
+                                                    <b>  @Html.ActionLink("Draft","ChangeStatus", new {  id=item.Id},new {@class = "btn btn-primary btn-sm",  onclick = "return confirm('Are you sure you want to Submit this?')" })</b>
                                                 }
                                             </td>
                                             <td class="text-center">

@@ -593,6 +593,12 @@ namespace app.Infrastructure.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("DiscountAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Discountpercentages")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -684,6 +690,101 @@ namespace app.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SalesOrderDetails");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.SalesReturn", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("CustomerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSubmited")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Reason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SalesReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SalesReturnNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SalesReturn");
+                });
+
+            modelBuilder.Entity("app.EntityModel.CoreModel.SalesReturnDetails", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("ReturnAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ReturnQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ReturnRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("SalesReturnId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("TrakingId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SalesReturnDetails");
                 });
 
             modelBuilder.Entity("app.EntityModel.CoreModel.StockInfo", b =>
@@ -1108,6 +1209,116 @@ namespace app.Infrastructure.Migrations
                     b.ToTable("VoucherType");
                 });
 
+            modelBuilder.Entity("app.EntityModel.DatabaseView.PurchesViewRepot", b =>
+                {
+                    b.Property<int>("Serialno")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Serialno"), 1L, 1);
+
+                    b.Property<decimal>("CogsPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("InPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("InQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductCategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductSubCategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PurchaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("PurchaseId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("PurchaseNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("SupplierId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("SupplierMobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SupplierName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Serialno");
+
+                    b.ToTable("PurchesViewRepot");
+                });
+
+            modelBuilder.Entity("app.EntityModel.DatabaseView.SalesViewReport", b =>
+                {
+                    b.Property<int>("Serialno")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Serialno"), 1L, 1);
+
+                    b.Property<long>("CompanyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CoustomerMobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CoustomerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("CustomerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("OtherCharge")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductCategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductSubCategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("SalesAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("SalesDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SalesOrderNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("SalesQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Serialno");
+
+                    b.ToTable("SalesViewReport");
+                });
+
             modelBuilder.Entity("app.EntityModel.DatabaseView.StockView", b =>
                 {
                     b.Property<long>("ProductId")
@@ -1314,14 +1525,14 @@ namespace app.Infrastructure.Migrations
                         new
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            ConcurrencyStamp = "1fe16b64-ea25-4e21-ab33-a1ee3c37b8c2",
+                            ConcurrencyStamp = "33153fbf-3ae1-4720-b869-2eb93b28da40",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "27798fa7-fc1a-476c-aca5-d7889adf9f6e",
+                            ConcurrencyStamp = "d4dc2a82-b5a8-40f1-80f6-f795b4f62fd6",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

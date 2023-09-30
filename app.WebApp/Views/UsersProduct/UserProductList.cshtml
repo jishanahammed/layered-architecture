@@ -23,11 +23,11 @@
     <div class="container-fluid ">
         <div class="breadcrumb d-flex justify-content-between align-items-center shadow">
             <ol class="breadcrumb mb-0 p-0">
-                <li class="breadcrumb-item"><a href="/Admin/Home/Index">Home</a></li>
-                <li class="breadcrumb-item active"> User Product List  </li>
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active"> Products List  </li>
             </ol>
             <div>
-                <a asp-action="Index"><i class="fa fa-plus"></i>  User Product </a>
+                <a asp-action="Index"><i class="fa fa-plus"></i>   Products </a>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
             <div class="card-header">
                 <div class="row w-100 mb-4">
                     <div class="col-md-10 col-sm-6">
-                        <h5> <i class="fas fa-list"></i>  All User Product  </h5>
+                        <h5> <i class="fas fa-list"></i>  All  Products  </h5>
                     </div>
 
                     <div class="col-md-2 col-sm-6">
@@ -161,8 +161,8 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            $('#User-Product').addClass('menu-open');
-            $('#UserProductUserProductlist').addClass('active');
+            $('#Products').addClass('menu-open');
+            $('#ProductsUserProductlist').addClass('active');
         });
 
         function markedit(id){

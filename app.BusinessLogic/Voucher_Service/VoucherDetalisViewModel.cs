@@ -14,6 +14,7 @@ namespace app.Services.Voucher_Service
         public decimal DebitAmount { set; get; }
         public decimal CreditAmount { set; get; }
         public long ReferenceId { set; get; }
+        public string ReferenceName { set; get; }
         public string Titel { set; get; }
         public string Particular { set; get; }
     }

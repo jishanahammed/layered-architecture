@@ -17,6 +17,8 @@ namespace app.EntityModel.CoreModel
         public string Description { get; set; }
         public string SupplierPaymentMethodEnumFK { get; set; }
         public decimal OtherCharge { get; set; }
+        public decimal Discountpercentages { get; set; }
+        public decimal DiscountAmount { get; set; }
         public bool IsCancel { get; set; }
         public bool IsSubmited { get; set; }
         public int Status { get; set; }

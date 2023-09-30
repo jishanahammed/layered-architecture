@@ -53,6 +53,11 @@ namespace app.WebApp.AdminControllers
         [HttpPost]
         public async Task<IActionResult> AddRecord(SalesViewModel viewModel)
         {
+            if (viewModel.MappVm==null)
+            {
+                ModelState.AddModelError(string.Empty, "Product Item Zero!");
+                return View(viewModel);
+            }
             var result = await salesService.AddSalesOrder(viewModel);
             if (result > 0)
             {

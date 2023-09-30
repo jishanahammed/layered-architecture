@@ -123,6 +123,8 @@ namespace app.Services.Voucher_Service
                                                                        VoucherId = t2.VoucherId,
                                                                        CreditAmount = t2.CreditAmount,
                                                                        DebitAmount = t2.DebitAmount,
+                                                                       Particular = t2.Particular,
+                                                                       Titel = t2.Titel,
 
                                                                    }).ToListAsync());
             return model;
@@ -187,8 +189,187 @@ namespace app.Services.Voucher_Service
             return pagedModel;
         }
 
+        public async Task<PagedModel<VoucherViewModel>> GetOtherExpensesPagedListAsync(int page, int pageSize, string sarchString, int TypeId)
+        {
+            VoucherViewModel model = new VoucherViewModel();
+            var user = await workContext.GetCurrentUserAsync();
+            model.voucherlist = await Task.Run(() => (from t1 in dbContext.Voucher                                                    
+                                                      where t1.VoucherTypeId == TypeId && t1.IsActive == true && t1.TrakingId == user.Id
+                                                      select new VoucherViewModel
+                                                      {
+                                                          Id = t1.Id,
+                                                          VoucherNo = t1.VoucherNo,
+                                                          VoucherDate = t1.VoucherDate,
+                                                          VoucherTypeId = t1.VoucherTypeId,
+                                                          VendorId = t1.VendorId,
+                                                          CreatedBy = t1.CreatedBy,
+                                                          CreatedOn = t1.CreatedOn,
+                                                          Narration = t1.Narration,
+                                                      }).AsQueryable());
+
+            if (!string.IsNullOrWhiteSpace(sarchString))
+            {
+                sarchString = sarchString.Trim().ToLower();
+                model.voucherlist = model.voucherlist.Where(t =>
+                    t.VoucherNo.ToLower().Contains(sarchString) ||
+                    t.UserName.ToLower().Contains(sarchString)
+
+                );
+            }
+            int resCount = model.voucherlist.Count();
+            var pagers = new PagedList(resCount, page, pageSize);
+            int recSkip = (page - 1) * pageSize;
+            var pagedList = model.voucherlist.Skip(recSkip).Take(pagers.PageSize).ToList();
+            int FirstSerialNumber = ((page * pageSize) - pageSize) + 1;
+            PagedModel<VoucherViewModel> pagedModel = new PagedModel<VoucherViewModel>()
+            {
+                Models = pagedList,
+                FirstSerialNumber = FirstSerialNumber,
+                PagedList = pagers,
+                TotalEntity = resCount,
+                UserType = user.UserType,
+            };
+            return pagedModel;
+        }
 
 
+        public async Task<long> OtherExpenses(VoucherViewModel model)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = model.VoucherDate;
+                    voucher.VoucherNo = GetVoucherNo(model.VoucherTypeId, model.VoucherTypeCode, user.Id, model.VoucherDate);
+                    voucher.VoucherTypeId = model.VoucherTypeId;
+                    voucher.VendorId = model.VendorId;
+                    voucher.ReferenceId = 0;
+                    voucher.Narration = "ReferenceNo : " +model.ReferenceNo + ", Description: " + model.Narration;
+                    voucher.CreatedBy = user.FullName;
+                    voucher.TrakingId = user.Id;
+                    voucher.CreatedOn = DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true;
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();
+                    List<VoucherDetails> lists=new List<VoucherDetails>();
+                    foreach (var item in model.voucherDetalisViewModels)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = 0;
+                        voucherDetails.ReferenceId = item.ReferenceId;
+                        voucherDetails.DebitAmount = item.DebitAmount;
+                        voucherDetails.CreditAmount = 0;
+                        voucherDetails.Titel = item.ReferenceName;
+                        voucherDetails.Particular = item.Particular;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        lists.Add(voucherDetails);  
+                    }                   
+                    dbContext.VoucherDetails.AddRange(lists);
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return voucher.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+        }
 
+        public async Task<VoucherViewModel> OtherExpensesVoucher(long id)
+        {
+            VoucherViewModel model = new VoucherViewModel();
+            var user = await workContext.GetCurrentUserAsync();
+            model = await Task.Run(() => (from t1 in dbContext.Voucher                                        
+                                          where t1.Id == id && t1.IsActive == true && t1.TrakingId == user.Id
+                                          select new VoucherViewModel
+                                          {
+                                              Id = t1.Id,
+                                              VoucherNo = t1.VoucherNo,
+                                              VoucherDate = t1.VoucherDate,
+                                              VoucherTypeId = t1.VoucherTypeId,
+                                              CreatedBy = t1.CreatedBy,
+                                              CreatedOn = t1.CreatedOn,
+                                              Narration = t1.Narration,
+                                              UserAddress = user.Address,
+                                              UserMobile = user.PhoneNumber,
+                                              UserEmail = user.Email,
+                                          }).FirstOrDefaultAsync());
+
+            model.voucherDetalisViewModels = await Task.Run(() => (from t1 in dbContext.Voucher
+                                                                   join t2 in dbContext.VoucherDetails on t1.Id equals t2.VoucherId
+
+                                                                   where t1.Id == id && t1.IsActive == true && t1.TrakingId == user.Id
+                                                                   select new VoucherDetalisViewModel
+                                                                   {
+                                                                       Id = t2.Id,
+                                                                       VoucherId = t2.VoucherId,
+                                                                       CreditAmount = t2.CreditAmount,
+                                                                       DebitAmount = t2.DebitAmount,
+                                                                       Particular = t2.Particular,
+                                                                       Titel = t2.Titel,
+
+                                                                   }).ToListAsync());
+            return model;
+        }
+
+        public async Task<long> OtherIncomeVoucher(VoucherViewModel model)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = model.VoucherDate;
+                    voucher.VoucherNo = GetVoucherNo(model.VoucherTypeId, model.VoucherTypeCode, user.Id, model.VoucherDate);
+                    voucher.VoucherTypeId = model.VoucherTypeId;
+                    voucher.VendorId = model.VendorId;
+                    voucher.ReferenceId = 0;
+                    voucher.Narration = "ReferenceNo : " + model.ReferenceNo + ", Description: " + model.Narration;
+                    voucher.CreatedBy = user.FullName;
+                    voucher.TrakingId = user.Id;
+                    voucher.CreatedOn = DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true;
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();
+                    List<VoucherDetails> lists = new List<VoucherDetails>();
+                    foreach (var item in model.voucherDetalisViewModels)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = 0;
+                        voucherDetails.ReferenceId = 0;
+                        voucherDetails.DebitAmount = item.DebitAmount;
+                        voucherDetails.CreditAmount = 0;
+                        voucherDetails.Titel = item.Titel;
+                        voucherDetails.Particular = item.Particular;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        lists.Add(voucherDetails);
+                    }
+                    dbContext.VoucherDetails.AddRange(lists);
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return voucher.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+        }
     }
 }

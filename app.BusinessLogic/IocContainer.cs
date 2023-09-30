@@ -8,6 +8,7 @@ using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
 using app.Services.Report_service;
 using app.Services.RolesServises;
+using app.Services.SalaesReturn_service;
 using app.Services.Sales_Service;
 using app.Services.Stock_Service;
 using app.Services.UserpermissionsService;
@@ -46,6 +47,7 @@ namespace app.Services
             services.AddTransient<IVoucherService, VoucherService>();
             services.AddTransient<ISalesService, SalesService>();
             services.AddTransient<IReportService, ReportService>();
+            services.AddTransient<ISalesReturns, SalesReturnService>();
             return services;
         }
     }

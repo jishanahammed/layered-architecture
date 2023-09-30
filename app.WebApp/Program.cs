@@ -52,7 +52,7 @@ namespace app.WebApp
             {
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
-                options.IdleTimeout = TimeSpan.FromDays(30);
+                options.IdleTimeout = TimeSpan.FromDays(1);
             });
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddRazorPages();

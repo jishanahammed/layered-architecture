@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using app.EntityModel.DatabaseView;
 
 namespace app.Services.Report_service
 {
@@ -56,6 +57,32 @@ namespace app.Services.Report_service
             }
             model.datalist = vms;   
             return model;   
+        }
+
+        public async Task<IEnumerable<PurchesViewRepot>> PurchesReport(ReportsViewModel model)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            model.TrakingId = user.Id;
+            var StartDate = model.StartDate.ToString("dd/MM/yyyy");
+            var EndDate = model.EndDate.ToString("dd/MM/yyyy");
+            if (model.SupplierId == null) { model.SupplierId = 0; }
+            if (model.ProductId == null) { model.ProductId = 0; }
+            if (model.CompanyId == null) { model.CompanyId = 0; }
+            IQueryable<PurchesViewRepot> list = dbContext.PurchesViewRepot.FromSqlRaw("EXEC dbo.SP_PurchesReport {0},{1},{2},{3},{4},{5}", user.Id, StartDate, EndDate, model.SupplierId, model.CompanyId, model.ProductId).AsQueryable();
+            return list;
+        }
+
+        public async Task<IEnumerable<SalesViewReport>> SalesReport(ReportsViewModel model)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            model.TrakingId = user.Id;
+          var StartDate = model.StartDate.ToString("dd/MM/yyyy");
+           var EndDate = model.EndDate.ToString("dd/MM/yyyy");
+            if (model.CustomerId==null) { model.CustomerId = 0; }
+            if (model.ProductId==null) { model.ProductId = 0; }
+            if (model.CompanyId==null) { model.CompanyId = 0; }
+            IQueryable<SalesViewReport> list = dbContext.SalesViewReport.FromSqlRaw("EXEC dbo.SP_SaleReport {0},{1},{2},{3},{4},{5}", user.Id, StartDate, EndDate,model.CustomerId, model.CompanyId,model.ProductId).AsQueryable();
+            return list;
         }
     }
 }

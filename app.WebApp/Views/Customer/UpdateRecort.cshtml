@@ -10,7 +10,7 @@
     <div class="container-fluid ">
         <div class="breadcrumb d-flex justify-content-between align-items-center  pl-3 pr-3">
             <ol class="breadcrumb mb-0 p-0">
-                <li class="breadcrumb-item"><a href="/Admin/Home/Index">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
                 <li class="breadcrumb-item active"> Customer </li>
             </ol>
             <div>
@@ -55,41 +55,29 @@
                                         <input asp-for="Mobile" class="form-control" required />
                                         <span asp-validation-for="Mobile" class="text-danger"></span>
                                     </div>
-                                </div>   
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label asp-for="Email" class="control-label">Email</label>
-                                        <input asp-for="Email" class="form-control" required />
-                                        <span asp-validation-for="Email" class="text-danger"></span>
-                                    </div>
-                                </div>  
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label asp-for="NID" class="control-label">NID</label>
-                                        <input asp-for="NID" class="form-control" required />
-                                        <span asp-validation-for="NID" class="text-danger"></span>
-                                    </div>
-                                </div> 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label asp-for="ContactName" class="control-label"> Contact Person</label>
-                                        <input asp-for="ContactName" class="form-control" required />
-                                        <span asp-validation-for="ContactName" class="text-danger"></span>
-                                    </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <label asp-for="PaymentType">Payment Type</label>
-                                        <select asp-for="PaymentType" class="form-control" required>
-                                            <option value="">-- Select Unit --</option>
-                                            @foreach (var option in Enum.GetValues(typeof(PaymentType)))
-                                            {
-                                                <option value="@option">@option</option>
-                                            }
-                                        </select>
-                                        <span asp-validation-for="PaymentType" class="text-danger"></span>
+                                        <label asp-for="Email" class="control-label">Email</label>
+                                        <input asp-for="Email" class="form-control" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
-                                </div>  
+                                </div>
+
+
+                                @*                      <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                <label asp-for="PaymentType">Payment Type</label>
+                                <select asp-for="PaymentType" class="form-control" required>
+                                <option value="">-- Select Unit --</option>
+                                @foreach (var option in Enum.GetValues(typeof(PaymentType)))
+                                {
+                                <option value="@option">@option</option>
+                                }
+                                </select>
+                                <span asp-validation-for="PaymentType" class="text-danger"></span>
+                                </div>
+                                </div> *@
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label asp-for="CustomerType">Customer Type</label>
@@ -103,27 +91,34 @@
                                         <span asp-validation-for="CustomerType" class="text-danger"></span>
                                     </div>
                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="Address" class="control-label">Address</label>
+                                        <input asp-for="Address" class="form-control" required />
+                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                    </div>
+                                </div>
 
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <label asp-for="SecurityAmount" class="control-label">Security Amount</label>
-                                        <input asp-for="SecurityAmount" class="form-control" required />
-                                        <span asp-validation-for="SecurityAmount" class="text-danger"></span>
+                                        <label asp-for="ContactName" class="control-label"> Contact Person</label>
+                                        <input asp-for="ContactName" class="form-control" />
+                                        <span asp-validation-for="ContactName" class="text-danger"></span>
                                     </div>
-                                </div> 
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="NID" class="control-label">NID</label>
+                                        <input asp-for="NID" class="form-control" />
+                                        <span asp-validation-for="NID" class="text-danger"></span>
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label asp-for="CreditLimit" class="control-label">Credit Limit</label>
                                         <input asp-for="CreditLimit" class="form-control" required />
                                         <span asp-validation-for="CreditLimit" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                     
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label asp-for="Address" class="control-label">Address</label>
-                                        <input asp-for="Address" class="form-control" required />
-                                        <span asp-validation-for="Address" class="text-danger"></span>
                                     </div>
                                 </div>
 

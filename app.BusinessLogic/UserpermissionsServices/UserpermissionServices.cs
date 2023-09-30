@@ -56,7 +56,7 @@ namespace app.Services.UserpermissionsService
             MenuPermissionViewModel viewModel = new MenuPermissionViewModel();
             List<MainMenuVM> models = new List<MainMenuVM>();
             //var user = await workContext.CurrentUserAsync();
-            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).ToListAsync();
+            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).OrderBy(f=>f.OrderNo).ToListAsync();
             foreach (var item in result)
             {
                 string str = item.Name;

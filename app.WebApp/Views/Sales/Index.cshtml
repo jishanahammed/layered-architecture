@@ -20,7 +20,7 @@
     <div class="container-fluid ">
         <div class="breadcrumb d-flex justify-content-between align-items-center  pl-3 pr-3">
             <ol class="breadcrumb mb-0 p-0">
-                <li class="breadcrumb-item"><a href="/Admin/Home/Index">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
                 <li class="breadcrumb-item active"> Sales </li>
             </ol>
             <div>
@@ -97,7 +97,7 @@
                                                 }
                                                 else
                                                 {
-                                                    @Html.ActionLink("Draft","ChangeStatus", new {  id=item.Id},new {@class = "text-primary",  onclick = "return confirm('Are you sure you want to Submit this?')" })
+                                                    @Html.ActionLink("Draft","ChangeStatus", new {  id=item.Id},new {@class = "btn btn-primary btn-sm",  onclick = "return confirm('Are you sure you want to Submit this?')" })
                                                 }
                                             </td>
                                             <td class="text-center">

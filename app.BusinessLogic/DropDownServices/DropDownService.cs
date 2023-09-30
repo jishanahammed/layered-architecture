@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -128,6 +129,37 @@ namespace app.Services.DropDownServices
             model.UnitNane=product.UnitName;
             model.StockQuntity= stock;
             return model;   
+        }
+
+        public async Task<IEnumerable<DropDownCustomViewModel>> companyUserproductlist(long id)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            IEnumerable<DropDownCustomViewModel> dropDownViewmodels = await Task.Run(() =>
+                                                      (from t11 in dbContext.UserProduct
+                                                       join t1 in dbContext.Product on t11.ProductId equals t1.Id
+                                                       join t2 in dbContext.ProductCategory on t1.ProductCategoryId equals t2.Id
+                                                       join t3 in dbContext.ProductSubCategory on t1.ProductSubCategoryId equals t3.Id
+                                                       join t4 in dbContext.Company on t11.CompanyId equals t4.Id
+                                                       where t11.IsActive == true && t11.TrakingId == user.Id&&t11.CompanyId==id
+                                                       select new DropDownCustomViewModel
+                                                       {
+                                                           Id = t1.Id,
+                                                           Name = t4.Name + " -- " + t2.Name + " - " + t3.Name + " - " + t1.ProductName + " (" + t1.UnitName + ")",
+                                                       }).AsQueryable());
+            return dropDownViewmodels;
+        }
+
+        public async Task<Vendor> sigleCustomerinfo(long id)
+        {
+            Vendor vendor = new Vendor();
+            var users = await workContext.GetCurrentUserAsync();
+            Vendor res = await dbContext.Vendor.FirstOrDefaultAsync(x => x.Id==id && x.TrakingId == users.Id);
+            if (res != null)
+            {
+                return res;
+            }
+            vendor.Id = 0;
+            return vendor;
         }
     }
 }
