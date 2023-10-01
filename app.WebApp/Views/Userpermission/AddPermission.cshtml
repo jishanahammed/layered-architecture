@@ -95,7 +95,10 @@
         })
         function actives(id) {
             var userid = $("#UserId option:selected").val();
-            
+            if (userid == "") {
+                $.notify("please select user first !", "error");
+                return;
+            }
             console.log(userid);
             if (confirm("Are you sure you went to change  Permission?")) {
                 $.ajax({
@@ -118,8 +121,13 @@
         }
         function inactives(id) {
             var userid = $("#UserId option:selected").val();
-
             console.log(userid);
+            if (userid=="") {
+                $.notify("please select user first !", "error");
+                return;
+            }
+
+          
             if (confirm("Are you sure you went to change Permission?")) {
                 $.ajax({
                     url: "/Userpermission/ChangePermission?id=" + id + "&&userid=" + userid + "",

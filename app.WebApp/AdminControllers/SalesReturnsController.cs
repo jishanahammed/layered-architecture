@@ -110,7 +110,7 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(long id)
         {
-            var result = await purchaseFinalizedServices.GetPurchaseFinalizedAsync(id);
+            var result = await purchaseFinalizedServices.GetSalesReturnFinalizedAsync(id);
             return RedirectToAction("Index");
         }
 

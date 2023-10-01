@@ -16,6 +16,10 @@ namespace app.EntityModel.CoreModel
         public decimal InPrice { set; get; }
         public decimal OutQty { set; get; }
         public decimal OutPrice { set; get; }
+        public decimal SaleReturnQty { set; get; }
+        public decimal SaleReturnPrice { set; get; }
+        public decimal PurchesReturnQty { set; get; }
+        public decimal PurchesSaleReturnPrice { set; get; }
         public decimal CogsPrice { set; get; }
         public DateTime ReceivedDate { set; get; }
     }

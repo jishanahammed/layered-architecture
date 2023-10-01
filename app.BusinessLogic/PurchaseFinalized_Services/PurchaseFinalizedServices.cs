@@ -216,5 +216,94 @@ namespace app.Services.PurchaseFinalized_Services
                 }
             }
         }
+
+        public async Task<long> GetSalesReturnFinalizedAsync(long id)
+        {
+
+            if (id == 0) { return -1; }
+            var user = await workContext.GetCurrentUserAsync();
+            SalesReturn salse = await dbContext.SalesReturn.FindAsync(id);
+            VoucherType voucherType = dbContext.VoucherType.Where(x => x.Code == "SRV").FirstOrDefault();
+            List<SalesReturnDetails> details = await dbContext.SalesReturnDetails.Where(d => d.SalesReturnId == salse.Id && d.IsActive == true).ToListAsync();
+            decimal total = details.Sum(item => item.ReturnAmount);
+            if (details.Count == 0) { return -2; }
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = salse.SalesReturnDate;
+                    voucher.VoucherNo = GetVoucherNo(voucherType.Id, voucherType.Code, user.Id, salse.SalesReturnDate);
+                    voucher.VoucherTypeId = voucherType.Id;
+                    voucher.VendorId = salse.CustomerId;
+                    voucher.ReferenceId = salse.Id;
+                    voucher.Narration = "OrderNo:" + salse.SalesReturnNo + "-" + salse.Reason;
+                    voucher.CreatedBy = user.FullName;
+                    voucher.TrakingId = user.Id;
+                    voucher.CreatedOn = DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true;
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();
+                    List<VoucherDetails> list = new List<VoucherDetails>();
+                    foreach (var item in details)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = item.ProductId;
+                        voucherDetails.ReferenceId = voucher.ReferenceId;
+                        voucherDetails.DebitAmount = item.ReturnAmount;
+                        voucherDetails.CreditAmount = 0;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        list.Add(voucherDetails);
+                    }
+                    dbContext.VoucherDetails.AddRange(list);
+                    dbContext.SaveChanges();
+                    List<StockInfo> stockInfos = new List<StockInfo>();
+                    List<UserProduct> uproduct = new List<UserProduct>();
+                    foreach (var item in details)
+                    {
+
+                        StockInfo stock = new StockInfo();
+                        stock.StockTypeId = (int)StockType.SV;
+                        stock.ProductId = item.ProductId;
+                        stock.ReferenceId = salse.Id;
+                        stock.ReferenceNo = salse.SalesReturnNo;
+                        stock.InQty = 0;
+                        stock.InPrice = 0;
+                        stock.OutQty = 0;
+                        stock.OutPrice = 0;
+                        stock.PurchesReturnQty = 0;
+                        stock.PurchesSaleReturnPrice = 0;
+                        stock.SaleReturnQty = item.ReturnQty;
+                        stock.SaleReturnPrice = item.ReturnRate;
+                        stock.CreatedBy = user.FullName;
+                        stock.TrakingId = user.Id;
+                        stock.CreatedOn = DateTime.Now;
+                        stock.IsActive = true;
+                        stock.ReceivedDate = DateTime.Now;
+                        dbContext.StockInfo.Add(stock);
+                        dbContext.SaveChanges();
+                    }
+                    salse.IsSubmited = true; ;
+                    salse.UpdatedBy = user.FullName;
+                    salse.UpdatedOn = DateTime.Now;
+                    dbContext.Entry(salse).State = EntityState.Modified;
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return voucher.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+        }
+
+
     }
 }

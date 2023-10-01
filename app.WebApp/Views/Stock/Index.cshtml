@@ -37,6 +37,7 @@
                                     <th> Product</th>
                                     <th> In Quntity</th>
                                     <th> Out Quntity</th>
+                                    <th> Sales ReturnQty</th>
                                     <th>
                                         Balance Quantity
                                     </th>
@@ -52,7 +53,8 @@
                                         <td>  @(item.ProductCategoryName+"-"+item.ProductSubCategoryName+"-"+item.ProductName) </td>
                                         <td>  @item.InQty </td>
                                         <td>  @item.OutQty </td>
-                                        <td>  @(item.InQty-item.OutQty) </td>
+                                        <td>  @item.SalesReturnQty </td>
+                                        <td>  @((item.InQty-item.OutQty)+item.SalesReturnQty) </td>
                                         <td>  @item.AVGPrice </td>
                                      </tr>
                                      SN++;

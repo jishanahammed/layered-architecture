@@ -10,5 +10,6 @@ namespace app.Services.PurchaseFinalized_Services
     {
         Task<long> GetPurchaseFinalizedAsync(long id);
         Task<long> GetSalesFinalizedAsync(long id);
+        Task<long> GetSalesReturnFinalizedAsync(long id);
     }
 }

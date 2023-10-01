@@ -28,7 +28,7 @@ namespace app.Services.SalaesReturn_service
             var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
             DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
             var user = await workContext.GetCurrentUserAsync();
-            var poMax = await dbContext.PurchaseOrder.Where(x => x.TrakingId == user.Id).CountAsync() + 1;
+            var poMax = await dbContext.SalesReturn.Where(x => x.TrakingId == user.Id).CountAsync() + 1;
             using (var scope = dbContext.Database.BeginTransaction())
             {
                 try
@@ -185,8 +185,10 @@ namespace app.Services.SalaesReturn_service
                                               CustomerAddress = vendor.Address,
                                               SalesReturnNo = t1.SalesReturnNo,
                                               SalesReturnDate = t1.SalesReturnDate,
-                                             Reason = t1.Reason,
+                                              Reason = t1.Reason,
                                               IsSubmited = t1.IsSubmited,
+                                              CreatedBy = t1.CreatedBy,
+                                              CreatedOn = t1.CreatedOn, 
                                                 }).FirstOrDefaultAsync());
 
             model.MappVm = await Task.Run(() => (from t1 in dbContext.SalesReturnDetails

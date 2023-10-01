@@ -25,6 +25,7 @@ namespace app.Services.Voucher_Service
         public decimal Amount { set; get; }
         public decimal DebitAmount { set; get; }
         public decimal CreditAmount { set; get; }
+        public decimal ReturnAmount { set; get; }
         public decimal Blance { set; get; }
         public List<VoucherDetalisViewModel> voucherDetalisViewModels { set; get; }
         //public IEnumerable<VoucherDetalisViewModel> ModelVM { set; get; }

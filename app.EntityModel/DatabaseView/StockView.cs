@@ -23,6 +23,7 @@ namespace app.EntityModel.DatabaseView
         public string TrakingId { get; set; }
         public decimal InQty { get; set; }
         public decimal OutQty { get; set; }
+        public decimal SalesReturnQty { get; set; }
         public decimal AVGPrice { get; set; }
     }
 }
