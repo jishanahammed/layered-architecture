@@ -73,7 +73,7 @@ namespace app.Services.Vendor_Service
             var user = await workContext.GetCurrentUserAsync();
             model.vendorList = await Task.Run(() => (from t1 in dbContext.Vendor
                                                      join t2 in dbContext.Users on t1.TrakingId equals t2.Id
-                                                     where t1.IsActive == true && t1.VendorType == 2
+                                                     where t1.IsActive == true && t1.VendorType == 2 && t1.TrakingId == user.Id 
                                                      select new VendorViewModel
                                                      {
                                                          Id = t1.Id,
@@ -95,7 +95,7 @@ namespace app.Services.Vendor_Service
             var user = await workContext.GetCurrentUserAsync();
             model.vendorList = await Task.Run(() => (from t1 in dbContext.Vendor
                                                      join t2 in dbContext.Users on t1.TrakingId equals t2.Id
-                                                     where t1.IsActive == true && t1.VendorType == 1
+                                                     where t1.IsActive == true && t1.VendorType == 1 && t1.TrakingId==user.Id
                                                      select new VendorViewModel
                                                      {
                                                          Id = t1.Id,
@@ -117,7 +117,7 @@ namespace app.Services.Vendor_Service
             var user = await workContext.GetCurrentUserAsync();
             model.vendorList = await Task.Run(() => (from t1 in dbContext.Vendor
                                                      join t2 in dbContext.Users on t1.TrakingId equals t2.Id
-                                                     where t1.IsActive == true&&t1.VendorType == vendorType 
+                                                     where t1.IsActive == true&&t1.VendorType == vendorType && t1.TrakingId == user.Id
                                                      select new VendorViewModel
                                                      {
                                                          Id = t1.Id,

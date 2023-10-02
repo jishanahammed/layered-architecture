@@ -496,6 +496,19 @@
                 Address: $("#Address").val(),
                 ContactName: $("#ContactName").val(),
             };
+            if (viewModel.Name=="") {
+                alert("Add Supplier Name");
+                return;
+            }
+            if (viewModel.Mobile=="") {
+                alert("Add Supplier Mobile");
+                return;
+            }
+
+            if (viewModel.Address == "") {
+                alert("Add Supplier Address");
+                return;
+            }
             console.log("viewModel", viewModel);
 
             $.ajax({

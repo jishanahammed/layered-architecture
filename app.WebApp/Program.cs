@@ -42,7 +42,7 @@ namespace app.WebApp
             builder.Services.ConfigureApplicationCookie(
             options =>
             {
-                options.LoginPath = new PathString("/Home/Index");
+                //options.LoginPath = new PathString("/Home/Index");
                 options.AccessDeniedPath = new PathString("/Account/AccessDenied");
                 options.LogoutPath = new PathString("/Account/Logout");
                 options.Cookie.Name = "My.Cookie";
@@ -60,8 +60,7 @@ namespace app.WebApp
             var app = builder.Build();
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/Home/Error");            
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

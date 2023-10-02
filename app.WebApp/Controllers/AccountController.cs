@@ -30,22 +30,21 @@ namespace app.WebApp.Controllers
             this.userpermission = userpermission;
         }
         [HttpGet]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login()
         {
+            LoginViewModel model=new LoginViewModel();
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Index(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
-            //model.UserName = "jishan.bd46@gmail.com";
-            //model.Password = "Ji123456";
             var  user =await UserServices.GetByUser(model.Email);
             if (user == null)
             {
                 ModelState.AddModelError(string.Empty, "User not found");
-                return View(model);
+              return  View(model);
 
             }
             var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
@@ -59,7 +58,7 @@ namespace app.WebApp.Controllers
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "User is not verified");
+                ModelState.AddModelError(string.Empty, "Password is not verified");
                 return View(model);
             }
 

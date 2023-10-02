@@ -148,7 +148,7 @@ namespace app.Services.Sales_Service
             model.datalist = await Task.Run(() => (from t1 in dbContext.SalesOrder
                                                    join t2 in dbContext.Users on t1.TrakingId equals t2.Id
                                                    join t3 in dbContext.Vendor on t1.CustomerId equals t3.Id
-                                                   where t1.IsActive == true
+                                                   where t1.IsActive == true && t1.TrakingId == user.Id 
                                                    select new SalesViewModel
                                                    {
                                                        Id = t1.Id,

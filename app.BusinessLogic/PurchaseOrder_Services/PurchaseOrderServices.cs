@@ -128,7 +128,7 @@ namespace app.Services.PurchaseOrder_Services
             model.datalist = await Task.Run(() => (from t1 in dbContext.PurchaseOrder
                                                    join t2 in dbContext.Users on t1.TrakingId equals t2.Id
                                                    join t3 in dbContext.Vendor on t1.SupplierId equals t3.Id
-                                                   where t1.IsActive == true
+                                                   where t1.IsActive == true && t1.TrakingId == user.Id 
                                                    select new PurchaseOrderViewModel
                                                    {
                                                        Id = t1.Id,
