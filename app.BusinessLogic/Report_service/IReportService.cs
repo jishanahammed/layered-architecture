@@ -13,5 +13,6 @@ namespace app.Services.Report_service
         Task<VoucherViewModel> Generalledger(long vendorId);
         Task<IEnumerable<SalesViewReport>> SalesReport(ReportsViewModel model);
         Task<IEnumerable<PurchesViewRepot>> PurchesReport(ReportsViewModel model);
+        Task<IEnumerable<ProfitandLossStatement>> ProfitLoss(ReportsViewModel model);
     }
 }

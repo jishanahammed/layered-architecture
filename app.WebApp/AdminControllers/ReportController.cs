@@ -1,4 +1,5 @@
-﻿using app.Services.DropDownServices;
+﻿using app.EntityModel.DatabaseView;
+using app.Services.DropDownServices;
 using app.Services.PurchaseOrder_Services;
 using app.Services.Report_service;
 using Microsoft.AspNetCore.Authorization;
@@ -74,6 +75,25 @@ namespace app.WebApp.AdminControllers
             var res = await reportService.PurchesReport(model);
             return View(res);
         }
+
+        public async Task<IActionResult> ProfitLoss()
+        {
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            ReportsViewModel model = new ReportsViewModel();
+            model.StartDate = BaTime;
+            model.EndDate = BaTime;
+            return View(model);
+        }
+
+        public async Task<IActionResult> ProfitLossPrintView(ReportsViewModel model)
+        {
+            var res = await reportService.ProfitLoss(model);
+            ProfitandLossStatement profitandLossStatement = new ProfitandLossStatement();
+            profitandLossStatement = res.FirstOrDefault(d=>d.Serialno==1);
+            return View(profitandLossStatement);
+        }
+
 
     }
 }

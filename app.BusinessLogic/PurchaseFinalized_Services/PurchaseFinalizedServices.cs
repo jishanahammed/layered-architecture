@@ -165,6 +165,7 @@ namespace app.Services.PurchaseFinalized_Services
                     List<VoucherDetails> list = new List<VoucherDetails>();
                     foreach (var item in details)
                     {
+                        
                         VoucherDetails voucherDetails = new VoucherDetails();
                         voucherDetails.VoucherId = voucher.Id;
                         voucherDetails.ProductId = item.ProductId;
@@ -183,7 +184,7 @@ namespace app.Services.PurchaseFinalized_Services
                     List<UserProduct> uproduct = new List<UserProduct>();
                     foreach (var item in details)
                     {
-                       
+                        var product = dbContext.UserProduct.FirstOrDefault(f => f.ProductId == item.ProductId && f.TrakingId == user.Id);
                         StockInfo stock = new StockInfo();
                         stock.StockTypeId = (int)StockType.SV;
                         stock.ProductId = item.ProductId;
@@ -192,7 +193,7 @@ namespace app.Services.PurchaseFinalized_Services
                         stock.InQty = 0;
                         stock.InPrice = 0;
                         stock.OutQty = item.SalesQty;
-                        stock.OutPrice = item.SalesRate;
+                        stock.OutPrice = product.AVGPrice;
                         stock.CreatedBy = user.FullName;
                         stock.TrakingId = user.Id;
                         stock.CreatedOn = DateTime.Now;

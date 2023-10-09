@@ -71,6 +71,16 @@ namespace app.Services.Report_service
             return model;
         }
 
+        public async Task<IEnumerable<ProfitandLossStatement>> ProfitLoss(ReportsViewModel model)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            model.TrakingId = user.Id;
+            var StartDate = model.StartDate.ToString("dd/MM/yyyy");
+            var EndDate = model.EndDate.ToString("dd/MM/yyyy");
+            IQueryable<ProfitandLossStatement> list = dbContext.ProfitandLossStatement.FromSqlRaw("EXEC SP_Profit_Loss {0},{1},{2}",StartDate, EndDate, user.Id).AsQueryable();
+            return list;    
+        }
+
         public async Task<IEnumerable<PurchesViewRepot>> PurchesReport(ReportsViewModel model)
         {
             var user = await workContext.GetCurrentUserAsync();

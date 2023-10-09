@@ -59,6 +59,8 @@ namespace app.Infrastructure
         public virtual DbSet<SalesViewReport> SalesViewReport { get; set; }
         [NotMapped]
         public virtual DbSet<PurchesViewRepot> PurchesViewRepot { get; set; }
+        [NotMapped]
+        public virtual DbSet<ProfitandLossStatement> ProfitandLossStatement { get; set; }
 
 
         
