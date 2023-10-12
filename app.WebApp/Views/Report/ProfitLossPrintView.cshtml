@@ -5,10 +5,10 @@
 }
 @{
     Layout = null;
-    var TotalExpenses = Model.BankCharg + Model.OtherCharge + Model.TransportCharges;
+    var TotalExpenses = Model.BankCharg + Model.OtherCharge + Model.TransportCharges+Model.OtherExpenses;
     var NetSale = Model.Sales - Model.SalesReturn;
     var COGS = ((Model.Purches + Model.OpeningStock) - Model.ClosingStock);
-    var GrossProfit = COGS - NetSale;
+    var GrossProfit = NetSale-COGS;
     var NetProfit = ((GrossProfit - TotalExpenses)+Model.OtherIncome);
 }
 
@@ -223,17 +223,11 @@
                         <td style="width:30%;text-align:right;font-weight:700"> @(Model.Sales - Model.SalesReturn) </td>
                     </tr>
 
-                    <tr style="margin-bottom:15px">
-                        <th style="width:30%"> Other Income </th>
-                        <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.OtherIncome </td>
-                        <td style="width:30%;text-align:right">  </td>
-                    </tr>
+
                 </tbody>
             </table>
 
             <table style="width: 100%">
-
                 <tbody>
 
                     <tr style="margin-bottom:15px">
@@ -303,6 +297,14 @@
                         <td style="width:20%;text-align:right;font-weight:700">Total Expenses: </td>
                         <td style="width:30%;text-align:right;font-weight:700"> @TotalExpenses </td>
                     </tr>
+
+                    <tr style="margin-bottom:15px">
+                        <th style="width:30%"> Other Income </th>
+                        <th style="width:20%">.....................................</th>
+                        <td style="width:20%;text-align:right"> @Model.OtherIncome </td>
+                        <td style="width:30%;text-align:right">  </td>
+                    </tr>
+
                     <tr style="margin-bottom:15px">
                         <th style="width:30%">  </th>
                         <th style="width:20%"></th>

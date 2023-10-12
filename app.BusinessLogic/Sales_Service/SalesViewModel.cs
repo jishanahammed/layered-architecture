@@ -25,6 +25,8 @@ namespace app.Services.Sales_Service
         public bool IsCancel { get; set; }
         public bool IsSubmited { get; set; }
         public int Status { get; set; }
+        public decimal? Discountpercentages { get; set; }
+        public decimal? DiscountAmount { get; set; }
         public List<SalesOrderDetailsViewModel> salesOrderDetailsViews { get;set; }
         public List<SalesOrderDetailsViewModel> MappVm { get;set; }
         public IEnumerable<SalesViewModel> datalist { get; set; }

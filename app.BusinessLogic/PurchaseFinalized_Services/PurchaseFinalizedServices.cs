@@ -85,7 +85,7 @@ namespace app.Services.PurchaseFinalized_Services
                         stock.TrakingId = user.Id;
                         stock.CreatedOn = DateTime.Now;
                         stock.IsActive = true;
-                        stock.ReceivedDate = DateTime.Now;
+                        stock.ReceivedDate = purchase.PurchaseDate;
                         stock.CogsPrice = costingprice;
                         dbContext.StockInfo.Add(stock);
                         dbContext.SaveChanges();
@@ -198,7 +198,7 @@ namespace app.Services.PurchaseFinalized_Services
                         stock.TrakingId = user.Id;
                         stock.CreatedOn = DateTime.Now;
                         stock.IsActive = true;
-                        stock.ReceivedDate = DateTime.Now;
+                        stock.ReceivedDate = salse.SalesDate;
                         dbContext.StockInfo.Add(stock);
                         dbContext.SaveChanges();
                     }
@@ -269,7 +269,7 @@ namespace app.Services.PurchaseFinalized_Services
                     {
 
                         StockInfo stock = new StockInfo();
-                        stock.StockTypeId = (int)StockType.SV;
+                        stock.StockTypeId = (int)StockType.SRV;
                         stock.ProductId = item.ProductId;
                         stock.ReferenceId = salse.Id;
                         stock.ReferenceNo = salse.SalesReturnNo;
@@ -285,7 +285,7 @@ namespace app.Services.PurchaseFinalized_Services
                         stock.TrakingId = user.Id;
                         stock.CreatedOn = DateTime.Now;
                         stock.IsActive = true;
-                        stock.ReceivedDate = DateTime.Now;
+                        stock.ReceivedDate = salse.SalesReturnDate;
                         dbContext.StockInfo.Add(stock);
                         dbContext.SaveChanges();
                     }

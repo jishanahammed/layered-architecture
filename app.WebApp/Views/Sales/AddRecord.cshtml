@@ -220,6 +220,30 @@
                         </tbody>
                     </table>
 
+                    <table class="table table-bordered" id="checklist2" style="margin-top:20px">
+                        <tr>
+                            <td colspan="4" style="text-align: right;"> Sales Discount <b class="text-danger"> On Going Work </b> :</td>
+                            <td>
+                                <div class="form-group">
+                                    <input asp-for="Discountpercentages" class="form-control" />
+                                    <span asp-validation-for="Discountpercentages" class="text-danger"></span>
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="form-group">
+                                    <input asp-for="DiscountAmount" class="form-control" />
+                                    <span asp-validation-for="DiscountAmount" class="text-danger"></span>
+                                </div>
+                            </td>
+                        </tr>
+                 
+                        <tr>
+                            <td colspan="5" style="text-align: right;"> <b> Gross Total </b></td>
+                            <td colspan="2" style="text-align: left;"> <span id="GrossTotal"> </span></td>
+                        </tr>
+
+                    </table>
+
                     <div class="row mt-2">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
@@ -252,12 +276,12 @@
         });
 
 
-        $("#salefrom").submit(function (event) {           
+        $("#salefrom").submit(function (event) {
             event.preventDefault();
             var countid = datalist.length;
             if (countid == 0) {
-              alert("Product Item is Zero ");
-            } else {               
+                alert("Product Item is Zero ");
+            } else {
                 this.submit();
             }
         });
@@ -318,6 +342,7 @@
         $("#ProductId").change(function () {
             productsize = "";
             var productid = $("#ProductId").val();
+            AvailableStock = 0;
             $.ajax({
                 type: "GET",
                 url: "@Url.Action("ProductGet", "Sales")",
@@ -328,7 +353,9 @@
                         console.log("getproducteeee", data);
                         $("#unitid").text(data.unitNane);
                         $("#Price").val(data.mrp);
+
                         $("#AvailableStock").val(data.stockQuntity);
+                        AvailableStock = data.stockQuntity;
                         var Quantity = $('#Quantity').val();
                         if (Quantity > 0) {
                             var total = Quantity * data.mrp;
@@ -382,12 +409,16 @@
         })
         $("#OtherCharge").keyup(function () {
             lodedata();
+        })  
+        $("#DiscountAmount").keyup(function () {
+            lodedata();
         })
 
 
         let datalist = [];
         let productsize = "";
         let GrossTotal = 0;
+        let AvailableStock = 0;
         function getinfo() {
             var productid = $('#ProductId').val();
             var productname = $('#ProductId Option:selected').text();
@@ -413,14 +444,19 @@
             } else {
                 alert("Add Price");
                 return;
-            } 
+            }
 
             var object = { ProductId: productid, ProductName: productname, SalesQty: Quantity, SalesRate: Price, SalesAmount: total, PackSize: unit };
             var res = datalist.find(x => x.ProductId == object.ProductId);
             if (res == null) {
-                console.log("gggg", object);
-                datalist.push(object);
-                lodedata();
+                if (AvailableStock >= parseInt(Quantity)) {
+                    console.log("gggg", object);
+                    datalist.push(object);
+                    lodedata();
+                }
+                else {
+                    $.notify("Not Available Stock!", "error");
+                }
             }
             else {
                 alert("Product already added");
@@ -458,11 +494,26 @@
                 tag += '<td colspan="5" style="text-align: right;"> <b>Other Charge</b></td>';
                 tag += '<td colspan="2" style="text-align: left;">' + OtherCharge + ' </td>';
                 tag += '</tr>';
+                var DiscountAmount = $("#DiscountAmount").val();
                 var GrossTotal = parseFloat(TotalSales) + parseFloat(OtherCharge);
+                let Total = 0;
+                if (parseFloat(DiscountAmount) > 0) {
+                    Total = GrossTotal - parseFloat(DiscountAmount);
+                    $("#GrossTotal").text(Total);
+                } else {
+                    Total = GrossTotal;
+                    $("#GrossTotal").text(Total);
+                }
+
+
+
+
                 tag += '<tr>';
-                tag += '<td colspan="5" style="text-align: right;"> <b>Gross Total </b></td>';
+                tag += '<td colspan="5" style="text-align: right;"> <b> Total </b></td>';
                 tag += '<td colspan="2" style="text-align: left;">' + GrossTotal + ' </td>';
                 tag += '</tr>';
+
+
                 var Quantity = $('#Quantity').val(0);
                 var Price = $('#Price').val(0);
                 var total = $('#TotalPrice').val(0);
