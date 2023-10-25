@@ -13,6 +13,7 @@ namespace app.Services.DropDownServices
         Task<IEnumerable<DropDownViewmodel>> vendorlist(int vendortype);
         Task<IEnumerable<DropDownViewmodel>> productlist();
         Task<List<DropDownCustomViewModel>> companyproductlist(long id);
+        Task<List<DropDownCustomViewModel>> AdvanceSurachproductlist(long catagoryId,long subcatagoryid,long companyid);
         Task<IEnumerable<DropDownCustomViewModel>> companyUserproductlist(long id);
         Task<IEnumerable<DropDownViewmodel>> Companlist();
         Task<Product> sigleproduct(long id);

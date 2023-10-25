@@ -153,9 +153,7 @@ namespace app.Services.PurchaseOrder_Services
                 sarchString = sarchString.Trim().ToLower();
                 model.datalist = model.datalist.Where(t =>
                     t.SupplierName.ToLower().Contains(sarchString) ||
-                    t.PurchaseOrderNo.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString) ||
-                    t.SupplierPaymentMethodEnumFK.ToLower().Contains(sarchString)
+                    t.PurchaseOrderNo.ToLower().Contains(sarchString) 
                 );
             }
             int resCount = model.datalist.Count();
@@ -177,7 +175,6 @@ namespace app.Services.PurchaseOrder_Services
         public async Task<PurchaseOrderViewModel> GetPurchaseOrder(long id)
         {
             PurchaseOrderViewModel model = new PurchaseOrderViewModel();
-
             var user = await workContext.GetCurrentUserAsync();
             model = await Task.Run(() => (from t1 in dbContext.PurchaseOrder
                                           join t2 in dbContext.Users on t1.TrakingId equals t2.Id
@@ -208,7 +205,6 @@ namespace app.Services.PurchaseOrder_Services
                                               IsSubmited = t1.IsSubmited,
                                               IsCancel = t1.IsCancel,
                                               IsHold = t1.IsHold,
-
                                           }).FirstOrDefaultAsync());
 
             model.MappVm = await Task.Run(() => (from t1 in dbContext.PurchaseOrderDetails
@@ -226,8 +222,7 @@ namespace app.Services.PurchaseOrder_Services
                                               PackSize=t1.PackSize,
                                               PurchaseOrderId=t1.PurchaseOrderId,   
                                               ProductName=t4.Name+"-"+t3.Name+"-"+t2.ProductName,
-                                              UnitName=t2.UnitName
-                                              
+                                              UnitName=t2.UnitName                                  
                                           }).AsQueryable());
             return model;   
         }

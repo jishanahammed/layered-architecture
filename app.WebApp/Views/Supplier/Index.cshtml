@@ -12,7 +12,7 @@
         pageNo = Model.PagedList.PageIndex;
         SN = ((Model.PagedList.PageIndex * Model.PagedList.PageSize) - Model.PagedList.PageSize) + 1;
     }
-    string urlinstring = "Customer/GetPaged";
+    string urlinstring = "Supplier/GetPaged";
     Pager pagemodel = new Pager() { PagedList = pager, StringUrl = urlinstring };
 }
 
@@ -52,8 +52,8 @@
                             <strong class="card-title">
                                 Show
                                 <select id="sizeperpageselect" onchange="LoadPagination('@pagemodel.StringUrl', 1)">
-                                    <option value="10" selected>10</option>
-                                    <option value="15">15</option>
+                                    <option value="10">10</option>
+                                    <option value="15" selected>15</option>
                                     <option value="20">20</option>
                                     <option value="25">25</option>
                                     <option value="30">30</option>

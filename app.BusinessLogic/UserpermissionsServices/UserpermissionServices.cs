@@ -56,7 +56,7 @@ namespace app.Services.UserpermissionsService
             MenuPermissionViewModel viewModel = new MenuPermissionViewModel();
             List<MainMenuVM> models = new List<MainMenuVM>();
             //var user = await workContext.CurrentUserAsync();
-            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).OrderBy(f=>f.OrderNo).ToListAsync();
+            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).OrderBy(f=>f.OrderNo).AsNoTracking().ToListAsync();
             foreach (var item in result)
             {
                 string str = item.Name;
@@ -86,7 +86,7 @@ namespace app.Services.UserpermissionsService
                                                        Controller = t1.Controller, 
                                                        OrderNo = t1.OrderNo,
                                                        Icon = t1.Icon,  
-                                                   }).OrderBy(x => x.OrderNo).ToListAsync());
+                                                   }).OrderBy(x => x.OrderNo).AsNoTracking().ToListAsync());
            return menus;    
         }
 
@@ -94,13 +94,13 @@ namespace app.Services.UserpermissionsService
         {
             UserpermissionViewModel viewModel = new UserpermissionViewModel();
             List<UserpermissionViewModel> models = new List<UserpermissionViewModel>();
-            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).ToListAsync();
+            var result = await dbContext.MainMenu.Where(s => s.IsActive == true).AsNoTracking().ToListAsync();
             foreach (var item in result)
             {
                 UserpermissionViewModel model = new UserpermissionViewModel();
                 model.MenuName = item.Name;
                 models.Add(model);
-                var itemlist = dbContext.MenuItem.Where(d => d.MenuId == item.Id &&d.IsActive==true).ToList();
+                var itemlist = dbContext.MenuItem.Where(d => d.MenuId == item.Id &&d.IsActive==true).AsNoTracking().ToList();
                 List<MenuItemViewModel> menuitemlist = new List<MenuItemViewModel>();
                 foreach (var menu in itemlist)
                 {

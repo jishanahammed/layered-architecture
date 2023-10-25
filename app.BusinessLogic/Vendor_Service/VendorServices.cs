@@ -121,9 +121,9 @@ namespace app.Services.Vendor_Service
                                                      select new VendorViewModel
                                                      {
                                                          Id = t1.Id,
-                                                         Name = t1.Name,
+                                                         Name = t1.Name == null ? "" : t1.Name,
                                                          Mobile = t1.Mobile,    
-                                                         Email = t1.Email,
+                                                         Email =t1.Email == null ? "" : t1.Email,
                                                          NID = t1.NID==null?"":t1.NID,
                                                          ContactName = t1.ContactName==null?"": t1.ContactName,  
                                                          Address = t1.Address,  
@@ -138,11 +138,11 @@ namespace app.Services.Vendor_Service
             {
                 sarchString = sarchString.Trim().ToLower();
                 model.vendorList = model.vendorList.Where(t =>
-                    t.Name.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString) ||
+                    t.Name.ToString().ToLower().Contains(sarchString) ||
+                    t.UserName.ToString().ToLower().Contains(sarchString) ||
                     t.Mobile.ToString().ToLower().Contains(sarchString) ||
                     t.NID.ToString().ToLower().Contains(sarchString) ||
-                    t.Email.ToLower().Contains(sarchString) ||
+                    t.Email.ToString().ToLower().Contains(sarchString) ||
                     t.ContactName.ToString().ToLower().Contains(sarchString)||
                     t.Address.ToString().ToLower().Contains(sarchString)
                 ).AsQueryable();

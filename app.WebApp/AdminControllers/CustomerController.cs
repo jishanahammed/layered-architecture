@@ -13,14 +13,14 @@ namespace app.WebApp.AdminControllers
         {
             this.vendorService = vendorService;
         }
-        public async Task<ActionResult> Index(int page = 1, int pagesize = 10, string stringsearch = null)
+        public async Task<ActionResult> Index(int page = 1, int pagesize = 15, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
             var results = await vendorService.GetPagedListAsync(page, pagesize,2, stringsearch);
             return View(results);
         }
-        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10, string stringsearch = null)
+        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 15, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;

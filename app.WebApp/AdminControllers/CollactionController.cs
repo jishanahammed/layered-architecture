@@ -13,19 +13,19 @@ namespace app.WebApp.AdminControllers
             this.voucherService = voucherService;
         }
 
-        public async Task<ActionResult> Index(int page = 1, int pagesize = 10, string sarchString = null)
+        public async Task<ActionResult> Index(int page = 1, int pagesize = 15, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
-            var results = await voucherService.GetPagedListAsync(page, pagesize, sarchString);
+            var results = await voucherService.GetPagedListAsync(page, pagesize, stringsearch);
             return View(results);
         }
         [HttpGet]
-        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10, string sarchString = null)
+        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 15, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
-            var results = await voucherService.GetPagedListAsync(page, pagesize, sarchString);
+            var results = await voucherService.GetPagedListAsync(page, pagesize, stringsearch);
             return PartialView("collactionvoucher", results);
         }
 

@@ -42,7 +42,7 @@
                         <label for="ProductCategoryId" class="control-label"> Search by Name, </label>
                         <div class="input-group">
 
-                            <input type="text" class="form-control" name="Searchvalued" placeholder="Search by Name ,Product Category Name" id="Searchvalued">
+                            <input type="text" class="form-control" name="Searchvalue" placeholder="Search Product Category Name" id="Searchvalue">
                             <div class="input-group-append">
                                 <button class="btn btn-info" type="button" onclick="LoadPagination('@pagemodel.StringUrl', 1)"> Search </button>
                             </div>
@@ -53,8 +53,8 @@
                             <strong class="card-title">
                                 Show
                                 <select id="sizeperpageselect" onchange="LoadPagination('@pagemodel.StringUrl', 1)">
-                                    <option value="10" selected>10</option>
-                                    <option value="15">15</option>
+                                    <option value="10">10</option>
+                                    <option value="15" selected>15</option>
                                     <option value="20">20</option>
                                     <option value="25">25</option>
                                     <option value="30">30</option>

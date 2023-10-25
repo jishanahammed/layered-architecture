@@ -43,6 +43,7 @@ namespace app.Services.Report_service
             foreach (var voucher in voucherList)
             {
                 VoucherViewModel voucherView = new VoucherViewModel();
+                voucherView.Id = voucher.Id;
                 voucherView.VendorId = vendorId;
                 voucherView.VoucherNo = voucher.VoucherNo;
                 voucherView.VoucherDate = voucher.VoucherDate;

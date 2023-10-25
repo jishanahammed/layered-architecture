@@ -13,7 +13,11 @@ namespace app.WebApp.AdminControllers
         private readonly IDropDownService dropDownService;
         private readonly  IWorkContext workContext;
         private readonly IUserProductService userProductService;
-        public UsersProductController(IDropDownService dropDownService, IWorkContext workContext, IUserProductService userProductService)
+        public UsersProductController(
+            IDropDownService dropDownService,
+            IWorkContext workContext,
+            IUserProductService userProductService
+            )
         {
             this.dropDownService = dropDownService;
             this.workContext = workContext;
@@ -36,6 +40,14 @@ namespace app.WebApp.AdminControllers
             var company = await dropDownService.companyproductlist(companyid);
             return Json(company);
         }
+
+        [HttpGet]
+        public async Task<JsonResult> AdvanceSurachproductlist(long catagoryId, long subcatagoryid, long companyid)
+        {
+            var company = await dropDownService.AdvanceSurachproductlist(catagoryId, subcatagoryid,companyid);
+            return Json(company);
+        }
+
         [HttpGet]
         public async Task<JsonResult> AssigenProduct(long companyid,string userId,long productId)
         {

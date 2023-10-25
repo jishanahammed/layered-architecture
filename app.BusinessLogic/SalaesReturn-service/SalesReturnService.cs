@@ -127,7 +127,7 @@ namespace app.Services.SalaesReturn_service
                                                        Id = t1.Id,
                                                        UserName = t2.FullName,
                                                        TrakingId = t1.TrakingId,
-                                                       CustomerName = t3.Name,
+                                                       CustomerName = t3.Name==null?"":t3.Name,
                                                        SalesReturnNo=t1.SalesReturnNo,
                                                        SalesReturnDate = t1.SalesReturnDate,
                                                        Reason = t1.Reason,    
@@ -142,8 +142,7 @@ namespace app.Services.SalaesReturn_service
                 sarchString = sarchString.Trim().ToLower();
                 model.datalist = model.datalist.Where(t =>
                     t.CustomerName.ToLower().Contains(sarchString) ||
-                    t.SalesReturnNo.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString) 
+                    t.SalesReturnNo.ToLower().Contains(sarchString) 
                 );
             }
             int resCount = model.datalist.Count();

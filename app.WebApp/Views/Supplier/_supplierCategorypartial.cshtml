@@ -11,7 +11,7 @@
         pageNo = Model.PagedList.PageIndex;
         SN = ((Model.PagedList.PageIndex * Model.PagedList.PageSize) - Model.PagedList.PageSize) + 1;
     }
-    string urlinstring = "Customer/GetPaged";
+    string urlinstring = "Supplier/GetPaged";
     Pager pagemodel = new Pager() { PagedList = pager, StringUrl = urlinstring };
 }
 <div class="card-body">

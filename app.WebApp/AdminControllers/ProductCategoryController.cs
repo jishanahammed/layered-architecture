@@ -15,18 +15,18 @@ namespace app.WebApp.AdminControllers
         {
             this.productCategoryServices = productCategoryServices;
         }
-        public async Task<ActionResult> Index(int page = 1, int pagesize = 10)
+        public async Task<ActionResult> Index(int page = 1, int pagesize = 15,string stringsearch=null)
         {
             if (page < 1)
                 page = 1;
-            var results = await productCategoryServices.GetPagedListAsync(page, pagesize);
+            var results = await productCategoryServices.GetPagedListAsync(page, pagesize, stringsearch);
             return View(results);
         }
-        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 10)
+        public async Task<ActionResult> GetPaged(int page = 1, int pagesize = 15, string stringsearch = null)
         {
             if (page < 1)
                 page = 1;
-            var results = await productCategoryServices.GetPagedListAsync(page, pagesize);
+            var results = await productCategoryServices.GetPagedListAsync(page, pagesize, stringsearch);
             return PartialView("_ProductCategorypartial", results);
         }
 

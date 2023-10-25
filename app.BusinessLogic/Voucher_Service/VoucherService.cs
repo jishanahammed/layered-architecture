@@ -152,10 +152,10 @@ namespace app.Services.Voucher_Service
                                               VoucherDate = t1.VoucherDate,
                                               VoucherTypeId = t1.VoucherTypeId,
                                               VendorId = t1.VendorId,
-                                              VendorName = t3.Name,
-                                              VendorMobile = t3.Mobile,
-                                              VendorEmail = t3.Email,
-                                              VendorAddress = t3.Address,
+                                              VendorName = t3.Name==null?"": t3.Name,
+                                              VendorMobile = t3.Mobile == null ? "" : t3.Mobile,
+                                              VendorEmail = t3.Email == null ? "" : t3.Email,
+                                              VendorAddress = t3.Address == null ? "" : t3.Address,
                                               CreatedBy = t1.CreatedBy,
                                               CreatedOn = t1.CreatedOn,
                                               Narration = t1.Narration,
@@ -166,7 +166,6 @@ namespace app.Services.Voucher_Service
                 sarchString = sarchString.Trim().ToLower();
                 model.voucherlist = model.voucherlist.Where(t =>
                     t.VoucherNo.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString) ||
                     t.VendorName.ToLower().Contains(sarchString) ||
                     t.VendorMobile.ToLower().Contains(sarchString) ||
                     t.VendorEmail.ToLower().Contains(sarchString)
@@ -204,7 +203,7 @@ namespace app.Services.Voucher_Service
                                                           VendorId = t1.VendorId,
                                                           CreatedBy = t1.CreatedBy,
                                                           CreatedOn = t1.CreatedOn,
-                                                          Narration = t1.Narration,
+                                                          Narration = t1.Narration==null?"":t1.Narration,
                                                       }).AsQueryable());
 
             if (!string.IsNullOrWhiteSpace(sarchString))
@@ -212,7 +211,7 @@ namespace app.Services.Voucher_Service
                 sarchString = sarchString.Trim().ToLower();
                 model.voucherlist = model.voucherlist.Where(t =>
                     t.VoucherNo.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString)
+                    t.Narration.ToLower().Contains(sarchString)
 
                 );
             }

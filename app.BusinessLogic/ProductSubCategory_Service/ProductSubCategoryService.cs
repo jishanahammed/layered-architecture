@@ -111,7 +111,7 @@ namespace app.Services.ProductSubCategory_Service
             var user = await workContext.GetCurrentUserAsync();
             ProductSubCategoryViewModel model = new ProductSubCategoryViewModel();
             model.ProductSubCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductSubCategory
-                                                                where t1.IsActive == true && t1.ProductCategoryId == id&& t1.TrakingId==user.Id
+                                                                where t1.IsActive == true && t1.ProductCategoryId == id
                                                                    select new ProductSubCategoryViewModel
                                                                 {
                                                                     Id = t1.Id,

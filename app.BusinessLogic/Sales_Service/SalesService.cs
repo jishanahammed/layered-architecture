@@ -154,7 +154,7 @@ namespace app.Services.Sales_Service
                                                        Id = t1.Id,
                                                        UserName = t2.FullName,
                                                        TrakingId = t1.TrakingId,
-                                                       CustomerName = t3.Name,
+                                                       CustomerName = t3.Name==null?"": t3.Name,
                                                        SalesOrderNo = t1.SalesOrderNo,
                                                        SalesDate = t1.SalesDate,
                                                        SupplierPaymentMethodEnumFK = t1.SupplierPaymentMethodEnumFK,
@@ -172,9 +172,7 @@ namespace app.Services.Sales_Service
                 sarchString = sarchString.Trim().ToLower();
                 model.datalist = model.datalist.Where(t =>
                     t.CustomerName.ToLower().Contains(sarchString) ||
-                    t.SalesOrderNo.ToLower().Contains(sarchString) ||
-                    t.UserName.ToLower().Contains(sarchString) ||
-                    t.SupplierPaymentMethodEnumFK.ToLower().Contains(sarchString)
+                    t.SalesOrderNo.ToLower().Contains(sarchString)
                 );
             }
             int resCount = model.datalist.Count();

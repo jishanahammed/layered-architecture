@@ -20,6 +20,9 @@ namespace app.Services.UserProduct_Service
         public string ProductSubCategoryName { get; set; }
         public string UnitNane { get; set; }
         public decimal StockQuntity { get; set; }
+        public string ProductType { get; set; }
+        public long ProductCategoryId { get; set; }
+        public long ProductSubCategoryId { get; set; }
         public IEnumerable<UserProductServiceViewModel> ProductList { get; set; }
     }
 }

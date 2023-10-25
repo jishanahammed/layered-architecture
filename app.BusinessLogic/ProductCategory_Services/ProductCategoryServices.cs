@@ -59,7 +59,7 @@ namespace app.Services.ProductCategory_Services
             return model;
         }
 
-        public async Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize)
+        public async Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize, string stringsearch = null)
         {
             ProductCategoryViewModel model = new ProductCategoryViewModel();
             var user= await workContext.GetCurrentUserAsync();
@@ -77,6 +77,13 @@ namespace app.Services.ProductCategory_Services
             if (user.UserType == 2)
             {
                 model.ProductCategoriesList = model.ProductCategoriesList.Where(f => f.TrakingId == user.Id).AsQueryable();
+            }
+            if (!string.IsNullOrWhiteSpace(stringsearch))
+            {
+                stringsearch = stringsearch.Trim().ToLower();
+                model.ProductCategoriesList = model.ProductCategoriesList.Where(t =>
+                    t.Name.ToLower().Contains(stringsearch)           
+                );
             }
             int resCount = model.ProductCategoriesList.Count();
             var pagers = new PagedList(resCount, page, pageSize);
@@ -99,7 +106,7 @@ namespace app.Services.ProductCategory_Services
             ProductCategoryViewModel model = new ProductCategoryViewModel();
             var user = await workContext.GetCurrentUserAsync();
             model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
-                                                                where t1.IsActive == true && t1.ProductType==id && t1.TrakingId == user.Id
+                                                                where t1.IsActive == true && t1.ProductType==id 
                                                                 select new ProductCategoryViewModel
                                                                 {
                                                                     Id = t1.Id,

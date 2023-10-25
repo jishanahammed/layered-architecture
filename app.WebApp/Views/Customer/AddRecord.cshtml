@@ -62,25 +62,11 @@
                                         <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
                                 </div>  
-           
-                 
-          @*                      <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label asp-for="PaymentType">Payment Type</label>
-                                        <select asp-for="PaymentType" class="form-control" required>
-                                            <option value="">-- Select Unit --</option>
-                                            @foreach (var option in Enum.GetValues(typeof(PaymentType)))
-                                            {
-                                                <option value="@option">@option</option>
-                                            }
-                                        </select>
-                                        <span asp-validation-for="PaymentType" class="text-danger"></span>
-                                    </div>
-                                </div> *@ 
+            
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label asp-for="CustomerType">Customer Type</label>
-                                        <select asp-for="CustomerType" class="form-control" required>
+                                        <select asp-for="CustomerType" class="form-control">
                                             <option value="">-- Customer Type --</option>
                                             @foreach (var option in Enum.GetValues(typeof(CustomerType)))
                                             {

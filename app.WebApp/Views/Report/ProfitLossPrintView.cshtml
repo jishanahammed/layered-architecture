@@ -205,14 +205,14 @@
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Sales </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.Sales </td>
+                        <td style="width:20%;text-align:right"> @(Model.Sales.ToString("C", new System.Globalization.CultureInfo("bn-BD")))  </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
-
+             
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Sales Return </th>
                         <th style="width:20%;">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.SalesReturn </td>
+                        <td style="width:20%;text-align:right"> @(Model.SalesReturn.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
 
@@ -220,7 +220,7 @@
                         <th style="width:30%">  </th>
                         <th style="width:20%"></th>
                         <td style="width:20%;text-align:right;font-weight:700"> Gross Sales </td>
-                        <td style="width:30%;text-align:right;font-weight:700"> @(Model.Sales - Model.SalesReturn) </td>
+                        <td style="width:30%;text-align:right;font-weight:700"> @((Model.Sales - Model.SalesReturn).ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                     </tr>
 
 
@@ -233,21 +233,21 @@
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Opening Stock </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.OpeningStock </td>
+                        <td style="width:20%;text-align:right"> @(Model.OpeningStock.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
-                        <th style="width:30%"> Purches </th>
+                        <th style="width:30%"> Purchase </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.Purches </td>
+                        <td style="width:20%;text-align:right"> @(Model.Purches.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Closing Stock </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.ClosingStock </td>
+                        <td style="width:20%;text-align:right"> @(Model.ClosingStock.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
 
@@ -255,61 +255,61 @@
                         <th style="width:30%">  </th>
                         <th style="width:20%"></th>
                         <td style="width:20%;text-align:right;font-weight:700"> COGS </td>
-                        <td style="width:30%;text-align:right;font-weight:700"> @COGS </td>
+                        <td style="width:30%;text-align:right;font-weight:700"> @(COGS.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
                         <th style="width:30%">  </th>
                         <th style="width:20%"></th>
                         <td style="width:20%;text-align:right;font-weight:700">Gross Profit </td>
-                        <td style="width:30%;text-align:right;font-weight:700"> @GrossProfit </td>
+                        <td style="width:30%;text-align:right;font-weight:700"> @(GrossProfit.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
-                        <th style="width:30%"> Bank Charg </th>
+                        <th style="width:30%"> Bank Charge </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.BankCharg  </td>
+                        <td style="width:20%;text-align:right"> @(Model.BankCharg.ToString("C", new System.Globalization.CultureInfo("bn-BD")))  </td>
                         <td style="width:30%;text-align:right"> </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Transport Charges </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.TransportCharges </td>
+                        <td style="width:20%;text-align:right"> @(Model.TransportCharges.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
-                        <th style="width:30%"> Other Charge </th>
+                        <th style="width:30%"> Other Charges </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.OtherCharge </td>
+                        <td style="width:20%;text-align:right"> @(Model.OtherCharge.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> Other Expenses </th>
                         <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.OtherExpenses </td>
+                        <td style="width:20%;text-align:right"> @(Model.OtherExpenses.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                         <td style="width:30%;text-align:right">  </td>
                     </tr>
                     <tr style="margin-bottom:15px">
                         <th style="width:30%"> </th>
                         <th style="width:20%"></th>
-                        <td style="width:20%;text-align:right;font-weight:700">Total Expenses: </td>
-                        <td style="width:30%;text-align:right;font-weight:700"> @TotalExpenses </td>
+                        <td style="width:20%;text-align:right;font-weight:700">Total Expense: </td>
+                        <td style="width:30%;text-align:right;font-weight:700"> @(TotalExpenses.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
-                        <th style="width:30%"> Other Income </th>
-                        <th style="width:20%">.....................................</th>
-                        <td style="width:20%;text-align:right"> @Model.OtherIncome </td>
-                        <td style="width:30%;text-align:right">  </td>
+                        <th style="width:30%"> </th>
+                        <th style="width:20%"> </th>
+                        <td style="width:20%;text-align:right;font-weight:700"> Other Income   </td>
+                        <td style="width:30%;text-align:right;font-weight:700"> @(Model.OtherIncome.ToString("C", new System.Globalization.CultureInfo("bn-BD"))) </td>
                     </tr>
 
                     <tr style="margin-bottom:15px">
                         <th style="width:30%">  </th>
                         <th style="width:20%"></th>
                         <td style="width:20%;text-align:right;font-weight:700">Net Profit: </td>
-                        <td style="width:30%;text-align:right;font-weight:700"> @NetProfit </td>
+                        <td style="width:30%;text-align:right;font-weight:700">@(NetProfit.ToString("C", new System.Globalization.CultureInfo("bn-BD")))  </td>
                     </tr>
 
 @*                    <tr style="margin-bottom:15px">

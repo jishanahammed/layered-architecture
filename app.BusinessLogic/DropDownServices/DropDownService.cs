@@ -161,5 +161,41 @@ namespace app.Services.DropDownServices
             vendor.Id = 0;
             return vendor;
         }
+
+        public async Task<List<DropDownCustomViewModel>> AdvanceSurachproductlist(long catagoryId, long subcatagoryid, long companyid)
+        {
+            var user = await workContext.GetCurrentUserAsync();
+            List<DropDownCustomViewModel> dropDownViewmodels = await Task.Run(() => (from t1 in dbContext.Product
+                                                                                     join t2 in dbContext.ProductCategory on t1.ProductCategoryId equals t2.Id
+                                                                                     join t3 in dbContext.ProductSubCategory on t1.ProductSubCategoryId equals t3.Id
+                                                                                     join t4 in dbContext.Company on t1.CompanyId equals t4.Id
+                                                                                     where t1.IsActive == true
+                                                                                     && (catagoryId == 0|| t1.ProductCategoryId == catagoryId)
+                                                                                     && (subcatagoryid == 0 || t1.ProductSubCategoryId == subcatagoryid)
+                                                                                     && (companyid == 0 || t1.CompanyId == companyid)
+                                                                                     select new DropDownCustomViewModel
+                                                                                     {
+                                                                                         Id = t1.Id,
+                                                                                         Name = t1.ProductName + " (" + t1.UnitName + ")",
+                                                                                         PCName=t2.Name,
+                                                                                         PSCName=t3.Name,
+                                                                                         CName=t4.Name,
+
+                                                                                     }).ToListAsync());
+            foreach (var item in dropDownViewmodels)
+            {
+                var userproduct = dbContext.UserProduct.FirstOrDefault(f => f.ProductId == item.Id && f.IsActive == true && f.TrakingId == user.Id);
+                if (userproduct != null)
+                {
+                    item.IsAssigen = true;
+                }
+                else
+                {
+                    item.IsAssigen = false;
+                }
+            }
+            return dropDownViewmodels;
+        }
+
     }
 }

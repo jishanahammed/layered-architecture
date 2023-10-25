@@ -15,6 +15,6 @@ namespace app.Services.ProductCategory_Services
         Task<bool> DeleteRecord( long id );
         Task<ProductCategoryViewModel> GetRecord(long id);
         Task<ProductCategoryViewModel> GetProductTypeWiseList(string id);
-        Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize);
+        Task<PagedModel<ProductCategoryViewModel>> GetPagedListAsync(int page, int pageSize,string stringsearch);
     }
 }
