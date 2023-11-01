@@ -90,6 +90,8 @@ namespace app.Services.Sales_Service
                     order.CreatedBy = user.FullName;
                     order.TrakingId = user.Id;
                     order.CreatedOn = BaTime;
+                    order.DiscountAmount = 0;
+                    order.Discountpercentages = 0;
                     dbContext.SalesOrder.Add(order);
                     dbContext.SaveChanges();
                     List<SalesOrderDetails> salesOrderDetails = new List<SalesOrderDetails>();
@@ -105,6 +107,8 @@ namespace app.Services.Sales_Service
                         details.CreatedBy = user.FullName;
                         details.CreatedOn = BaTime;
                         details.TrakingId = user.Id;
+                        details.Discount_Persentage=item.Discount_Persentage;
+                        details.Discount_Amount=item.Discount_Amount;
                         salesOrderDetails.Add(details);
                     }
                     dbContext.SalesOrderDetails.AddRange(salesOrderDetails);
@@ -223,6 +227,8 @@ namespace app.Services.Sales_Service
                                               UserAddress = user.Address,
                                               UserMobile = user.PhoneNumber,
                                               UserEmail = user.Email,
+                                              DiscountAmount=t1.DiscountAmount,
+                                              Discountpercentages = t1.Discountpercentages,
                                           }).FirstOrDefaultAsync());
 
             model.MappVm = await Task.Run(() => (from t1 in dbContext.SalesOrderDetails
@@ -240,7 +246,9 @@ namespace app.Services.Sales_Service
                                                      SalesRate = t1.SalesRate,
                                                      PackSize = t1.PackSize,
                                                      ProductName = t4.Name + "-" + t3.Name + "-" + t2.ProductName,
-                                                     UnitName = t2.UnitName
+                                                     UnitName = t2.UnitName,
+                                                     Discount_Persentage=t1.Discount_Persentage,
+                                                     Discount_Amount=t1.Discount_Amount
 
                                                  }).ToListAsync());
             return model;

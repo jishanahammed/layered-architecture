@@ -236,6 +236,8 @@
                         <th style="text-align: center;padding-left:5px;">Quantity</th>
                         <th style="text-align: center;padding-left:5px;">Unit</th>
                         <th style="text-align: center;padding-left:5px;">Price</th>
+                        <th style="text-align: center;padding-left:5px;">Discount Persentage</th>
+                        <th style="text-align: center;padding-left:5px;">Discount Amount</th>
                         <th style="text-align: left;padding-left:5px;">Total Amount</th>
 
                     </tr>
@@ -251,21 +253,23 @@
                             <td style="text-align: center">@item.SalesQty</td>
                             <th style="text-align: center">@item.PackSize</th>
                             <th style="text-align: center">@item.SalesRate</th>
+                            <th style="text-align: center">@item.Discount_Persentage %</th>
+                            <th style="text-align: center">@item.Discount_Amount</th>
                             <th style="text-align: left;padding-left:5px;">@item.SalesAmount</th>
 
                         </tr>
                     }
                     <tr>
-                        <td colspan="5" style="text-align: right;padding-right:5px;"> <b>Total Sales </b></td>
+                        <td colspan="7" style="text-align: right;padding-right:5px;"> <b>Total Sales </b></td>
                         <td colspan="2" style="text-align: left;padding-left:5px;">@totalpurches</td>
                     </tr>
                     <tr>
-                        <td colspan="5" style="text-align: right;padding-right:5px;"> <b>Other Charge </b></td>
+                        <td colspan="7" style="text-align: right;padding-right:5px;"> <b>Other Charge </b></td>
                         <td colspan="2" style="text-align: left;padding-left:5px;"> @Model.OtherCharge</td>
                     </tr>
 
                     <tr>
-                        <td colspan="5" style="text-align: right;padding-right:5px;"> <b>Gross Total </b></td>
+                        <td colspan="7" style="text-align: right;padding-right:5px;"> <b>Gross Total </b></td>
                         <td colspan="2" style="text-align: left;padding-left:5px;">@(totalpurches + grosstota) </td>
                     </tr>
 

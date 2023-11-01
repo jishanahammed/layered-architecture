@@ -64,14 +64,14 @@ namespace app.Services.ProductCategory_Services
             ProductCategoryViewModel model = new ProductCategoryViewModel();
             var user= await workContext.GetCurrentUserAsync();
             model.ProductCategoriesList = await Task.Run(() => (from t1 in dbContext.ProductCategory
-                                                                join t2 in dbContext.Users on t1.TrakingId equals t2.Id
+                                                                //join t2 in dbContext.Users on t1.TrakingId equals t2.Id
                                                                 where t1.IsActive == true
                                                                 select new ProductCategoryViewModel
                                                                 {
                                                                     Id = t1.Id,
                                                                     ProductType = t1.ProductType,
                                                                     Name = t1.Name,
-                                                                    UserName=t2.FullName,
+                                                                    UserName= user.FullName,
                                                                     TrakingId=t1.TrakingId,
                                                                 }).AsQueryable());
             if (user.UserType == 2)

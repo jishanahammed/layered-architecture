@@ -129,7 +129,7 @@ namespace app.WebApp.AdminControllers
             return RedirectToAction("UpdateRecord", new { id = result });
         }
         [HttpPost]
-        public async Task<IActionResult> AddpurchaseOrderDetalis(SalesReturnDetailsViewmodel model)
+        public async Task<IActionResult> AddSalesReturnDetalies(SalesReturnDetailsViewmodel model)
         {
             var result = await salesReturns.AddSalesReturnDetalies(model);
             return Json(result);

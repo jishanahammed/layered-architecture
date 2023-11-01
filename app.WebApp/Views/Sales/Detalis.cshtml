@@ -99,6 +99,8 @@
                                 <th> Quantity </th>
                                 <th>Unit</th>
                                 <th>MRP</th>
+                                <th>Discount Persentage</th>
+                                <th>Discount Amount</th>
                                 <th>Total Amount</th>
                             </tr>
                         </thead>
@@ -120,6 +122,12 @@
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => vm.SalesRate)
+                                    </td>  
+                                    <td>
+                                        @Html.DisplayFor(modelItem => vm.Discount_Persentage) %
+                                    </td> 
+                                    <td>
+                                        @Html.DisplayFor(modelItem => vm.Discount_Amount)
                                     </td>
 
                                     <td>
@@ -131,18 +139,18 @@
                             }
 
                             <tr>
-                                <td colspan="5" style="text-align: right;"> <b>Total Purches </b></td>
+                                <td colspan="7" style="text-align: right;"> <b>Total Purches </b></td>
                                 <td colspan="2" style="text-align: left;">@totalpurches</td>
                             </tr>
 
 
                             <tr>
-                                <td colspan="5" style="text-align: right;"> <b>Other Charge </b></td>
+                                <td colspan="7" style="text-align: right;"> <b>Other Charge </b></td>
                                 <td colspan="2" style="text-align: left;"> @Model.OtherCharge</td>
                             </tr>
 
                             <tr>
-                                <td colspan="5" style="text-align: right;"> <b>Gross Total </b></td>
+                                <td colspan="7" style="text-align: right;"> <b>Gross Total </b></td>
                                 <td colspan="2" style="text-align: left;">@(totalpurches + grosstota) </td>
                             </tr>
                         </tbody>

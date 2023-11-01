@@ -16,5 +16,7 @@ namespace app.Services.Sales_Service
         public decimal SalesRate { get; set; }
         public decimal SalesAmount { get; set; }
         public string PackSize { get; set; }
+        public decimal Discount_Persentage { get; set; }
+        public decimal Discount_Amount { get; set; }
     }
 }

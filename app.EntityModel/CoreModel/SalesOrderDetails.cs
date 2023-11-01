@@ -13,7 +13,9 @@ namespace app.EntityModel.CoreModel
         public string UnitName { get; set; }
         public decimal SalesQty { get; set; }
         public decimal SalesRate { get; set; }
-        public decimal SalesAmount { get; set; }
+        public decimal SalesAmount {get; set; }
+        public decimal Discount_Persentage {get; set; }
+        public decimal Discount_Amount {get; set; }
         public string PackSize { get; set; }
     }
 }

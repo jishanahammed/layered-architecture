@@ -1,9 +1,11 @@
-﻿using app.Services.DropDownServices;
+﻿using app.Services.Company_Service;
+using app.Services.DropDownServices;
 using app.Services.MainMenuService;
 using app.Services.MenuItemService;
 using app.Services.Product_Services;
 using app.Services.ProductCategory_Services;
 using app.Services.ProductSubCategory_Service;
+using app.Services.Purchase_Return_Service;
 using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
 using app.Services.Report_service;
@@ -48,6 +50,8 @@ namespace app.Services
             services.AddTransient<ISalesService, SalesService>();
             services.AddTransient<IReportService, ReportService>();
             services.AddTransient<ISalesReturns, SalesReturnService>();
+            services.AddTransient<ICompanyService, CompanyServices>();
+            services.AddTransient<IPurchaseReturnService, PurchaseReturnService>();
             return services;
         }
     }

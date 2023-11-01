@@ -61,20 +61,6 @@
                             </div>
                         </div>
 
-                        @*                        <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="form-group">
-                        <label asp-for="SupplierPaymentMethodEnumFK" class="control-label"> Supplier Payment</label>
-                        <select asp-for="SupplierPaymentMethodEnumFK" class="form-control" required>
-                        <option value="">-- Supplier Payment --</option>
-                        @foreach (var option in Enum.GetValues(typeof(PaymentType)))
-                        {
-                        <option value="@option">@option</option>
-                        }
-                        </select>
-                        <span asp-validation-for="SupplierPaymentMethodEnumFK" class="text-danger"></span>
-                        </div>
-                        </div>*@
-
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label asp-for="CustomerMobile" class="control-label">  Customer Mobile </label>
@@ -162,7 +148,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="background:#00bcd41c;padding:10px">
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <label for="ProductId" class="control-label"> Product</label>
                             <select id="ProductId" name="ProductId" class="form-control select2">
@@ -184,6 +170,23 @@
                             <div class="form-group">
                                 <label for="Price" class="control-label">MRP </label>
                                 <input name="Price" id="Price" class="form-control" />
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <div class="form-group">
+                                <label for="DPersentage" class="control-label">Dis_Percentage  </label>
+                                <input name="DPersentage" id="DPersentage" class="form-control" />
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <div class="form-group">
+                                <label for="DisAmt" class="control-label">Dis_Amount  </label>
+                                <input name="DisAmt" id="DisAmt" class="form-control" />
 
                             </div>
                         </div>
@@ -211,7 +214,9 @@
                                 <th>Product Name</th>
                                 <th> Quantity </th>
                                 <th>Price</th>
-                                <th>Unit</th>
+                                <th>Unit</th>                             
+                                <th>Dis_Percentage</th>
+                                <th>Dis_Amount</th>
                                 <th>Total Amount</th>
                                 <th>Action</th>
                             </tr>
@@ -219,10 +224,10 @@
                         <tbody id="datashowlist">
                         </tbody>
                     </table>
-
-                    <table class="table table-bordered" id="checklist2" style="margin-top:20px">
+@*                    <div id="checklist2">
+                    <table class="table table-bordered"  style="margin-top:20px">
                         <tr>
-                            <td colspan="4" style="text-align: right;"> Sales Discount <b class="text-danger"> On Going Work </b> :</td>
+                            <td colspan="4" style="text-align: right;"> Sales Discount  :</td>
                             <td>
                                 <div class="form-group">
                                     <input asp-for="Discountpercentages" class="form-control" />
@@ -236,14 +241,14 @@
                                 </div>
                             </td>
                         </tr>
-                 
+             
                         <tr>
                             <td colspan="5" style="text-align: right;"> <b> Gross Total </b></td>
                             <td colspan="2" style="text-align: left;"> <span id="GrossTotal"> </span></td>
                         </tr>
 
                     </table>
-
+                    </div>*@
                     <div class="row mt-2">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
@@ -260,7 +265,10 @@
     </div>
 </section>
 
-
+<style>
+    .d-active{display:block}
+    .d-inactive{display:none}
+</style>
 
 
 @section Scripts {
@@ -268,6 +276,7 @@
         $(document).ready(function () {
             $('#Sales').addClass('menu-open');
             $('#SalesAddRecord').addClass('active');
+            $('#checklist2').addClass('d-inactive');
             product();
         });
 
@@ -373,12 +382,22 @@
             });
         });
 
+
         $("#Quantity").keyup(function () {
             var Quantity = $('#Quantity').val();
             var Price = $('#Price').val();
+            var DisAmt = $('#DisAmt').val();
             if (Quantity > 0) {
+                let TotalPrice = 0;
                 var total = Quantity * Price;
-                $('#TotalPrice').val(total);
+                if (DisAmt > 0) {
+                    TotalPrice = total - parseFloat(DisAmt);
+                    $('#TotalPrice').val(TotalPrice);
+                } else {
+                    var total = Quantity * Price;
+                    $('#TotalPrice').val(total);
+                }
+
             }
             var stockQuntity = $('#AvailableStock').val();
 
@@ -394,12 +413,71 @@
         $("#Price").keyup(function () {
             var Quantity = $('#Quantity').val();
             var Price = $('#Price').val();
+            var DisAmt = $('#DisAmt').val();
             if (Price > 0) {
+               let TotalPrice=0;
                 var total = Quantity * Price;
-                $('#TotalPrice').val(total);
+                if (DisAmt > 0) {
+                    TotalPrice = total - parseFloat(DisAmt);
+                    $('#TotalPrice').val(TotalPrice);
+                }else{
+                    var total = Quantity * Price;
+                    $('#TotalPrice').val(total);
+                }
+
             }
 
         })
+
+        $("#DisAmt").keyup(function () {
+            var Quantity = $('#Quantity').val();
+            var Price = $('#Price').val();
+            var DisAmt = $('#DisAmt').val();
+            console.log("fff",DisAmt);
+            if (DisAmt > 0) {
+                let TotalPrice = 0;
+                var total = Quantity * Price;
+                if (DisAmt > 0) {
+                    var calculation = (DisAmt * 100) / (Quantity * Price);
+                    $("#DPersentage").val(calculation.toFixed(2));
+
+                    TotalPrice = total - parseFloat(DisAmt);
+                    $('#TotalPrice').val(TotalPrice);
+
+                } else {
+                    var total = Quantity * Price;
+                    $('#TotalPrice').val(total);
+                }
+
+            }
+
+        })
+
+        $("#DPersentage").keyup(function () {
+            var Quantity = $('#Quantity').val();
+            var Price = $('#Price').val();
+            var DPersentage = $('#DPersentage').val();
+            console.log("DPersentage", DPersentage);
+            if (DPersentage > 0) {
+                let TotalPrice = 0;
+                var total = Quantity * Price;
+                var calculation = (total * DPersentage) / 100;
+                $("#DisAmt").val(calculation.toFixed(2));
+                if (calculation > 0) {
+
+                    TotalPrice = total -calculation;
+                    $('#TotalPrice').val(TotalPrice);
+
+                } else {
+                    var total = Quantity * Price;
+                    $('#TotalPrice').val(total);
+                }
+
+            }
+
+        })
+
+
 
         $("#BankCharg").keyup(function () {
             lodedata();
@@ -411,20 +489,45 @@
             lodedata();
         })  
         $("#DiscountAmount").keyup(function () {
+            var DiscountAmount = $("#DiscountAmount").val();
+            var calculation = (DiscountAmount * 100) / TotalSales;
+            $("#Discountpercentages").val(calculation.toFixed(2));
             lodedata();
         })
+        $("#Discountpercentages").keyup(function () {
+            var Discountpercentages = $("#Discountpercentages").val();
+            var calculation = (TotalSales * Discountpercentages) / 100;
+            $("#DiscountAmount").val(calculation.toFixed(2));
+            lodedata();
+        })
+        //$('#ReturnFeePercentage').keyup(function () {
+        //    var total = $("#TolalCollaction").val();
+        //    var Percentage = $("#ReturnFeePercentage").val();
+        //    var calculation = (total * Percentage) / 100;
+        //    console.log("ddddddd", calculation);
+        //    $("#ReturnFee").val(calculation);
+        //})
 
+        //$('#ReturnFee').keyup(function () {
+        //    var total = $("#TolalCollaction").val();
+        //    var ReturnFee = $("#ReturnFee").val();
+        //    var calculation = (ReturnFee * 100) / total;
+        //    $("#ReturnFeePercentage").val(calculation);
+        //})
 
         let datalist = [];
         let productsize = "";
         let GrossTotal = 0;
         let AvailableStock = 0;
+        let TotalSales = 0;
         function getinfo() {
             var productid = $('#ProductId').val();
             var productname = $('#ProductId Option:selected').text();
             var Quantity = $('#Quantity').val();
             var Price = $('#Price').val();
             var total = $('#TotalPrice').val();
+            var DPersentage = $('#DPersentage').val();
+            var DisAmt = $('#DisAmt').val();
             var unit = $('#unitid').text();
             if (productid > 0) {
 
@@ -446,7 +549,7 @@
                 return;
             }
 
-            var object = { ProductId: productid, ProductName: productname, SalesQty: Quantity, SalesRate: Price, SalesAmount: total, PackSize: unit };
+            var object = { ProductId: productid, ProductName: productname, SalesQty: Quantity, SalesRate: Price, SalesAmount: total, PackSize: unit, Discount_Persentage: DPersentage, Discount_Amount: DisAmt };
             var res = datalist.find(x => x.ProductId == object.ProductId);
             if (res == null) {
                 if (AvailableStock >= parseInt(Quantity)) {
@@ -463,15 +566,16 @@
             }
         }
 
-
+    
         function lodedata() {
             var countid = datalist.length;
+            TotalSales = 0;
             let tag = '';
-            let TotalSales = 0;
             let OtherCharge = $("#OtherCharge").val();
             $("#datashowlist").empty();
             if (countid > 0) {
-
+                $('#checklist2').addClass('d-active');
+                $('#checklist2').removeClass('d-inactive');
 
                 $.each(datalist, function (key, item) {
                     tag += '<tr id="' + key + '">';
@@ -480,18 +584,20 @@
                     tag += '<td><input  type="hidden" id="' + key + item.SalesQty + '" name="MappVm[' + key + '].SalesQty" value="' + item.SalesQty + '"/>' + item.SalesQty + '</td>';
                     tag += '<td><input  type="hidden" id="' + key + item.PackSize + '" name="MappVm[' + key + '].PackSize" value="' + item.PackSize + '"/>' + item.PackSize + '</td>';
                     tag += '<td><input  type="hidden" id="' + key + item.SalesRate + '" name="MappVm[' + key + '].SalesRate" value="' + item.SalesRate + '"/>' + item.SalesRate + '</td>';
+                    tag += '<td><input  type="hidden" id="' + key + item.Discount_Persentage + '" name="MappVm[' + key + '].Discount_Persentage" value="' + item.Discount_Persentage + '"/>' + item.Discount_Persentage + ' %</td>';
+                    tag += '<td><input  type="hidden" id="' + key + item.Discount_Amount + '" name="MappVm[' + key + '].Discount_Amount" value="' + item.Discount_Amount + '"/>' + item.Discount_Amount + '</td>';
                     tag += '<td><input  type="hidden" id="' + key + item.SalesAmount + '" name="MappVm[' + key + '].SalesAmount" value="' + item.SalesAmount + '"/>' + item.SalesAmount + '</td>';
                     tag += '<td> <a onclick="removecell(' + item.ProductId + ',' + key + ')" class=" btn-danger btn-flat btn-sm sm"> <i class="fa fa-trash"></i></a>  </td>';
                     tag += '</tr>';
                     TotalSales += parseFloat(item.SalesAmount);
                 });
                 tag += '<tr>';
-                tag += '<td colspan="5" style="text-align: right;"> <b>Total Purches </b></td>';
+                tag += '<td colspan="7" style="text-align: right;"> <b>Total Purches </b></td>';
                 tag += '<td colspan="2" style="text-align: left;">' + TotalSales + ' </td>';
                 tag += '</tr>';
 
                 tag += '<tr>';
-                tag += '<td colspan="5" style="text-align: right;"> <b>Other Charge</b></td>';
+                tag += '<td colspan="7" style="text-align: right;"> <b>Other Charge</b></td>';
                 tag += '<td colspan="2" style="text-align: left;">' + OtherCharge + ' </td>';
                 tag += '</tr>';
                 var DiscountAmount = $("#DiscountAmount").val();
@@ -518,6 +624,13 @@
                 var Price = $('#Price').val(0);
                 var total = $('#TotalPrice').val(0);
                 $('#datashowlist').html(tag);
+            }
+            else{
+                $('#checklist2').addClass('d-inactive');
+                $('#checklist2').removeClass('d-active');
+                $('#Discountpercentages').val(0);
+                $('#DiscountAmount').val(0);
+                
             }
         }
 
