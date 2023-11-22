@@ -9,6 +9,7 @@ using app.Infrastructure.Repository;
 using app.EntityModel.CoreModel;
 using Microsoft.EntityFrameworkCore;
 using app.Utility;
+using System.Runtime.Intrinsics.X86;
 
 namespace app.Services.PurchaseFinalized_Services
 {
@@ -305,6 +306,92 @@ namespace app.Services.PurchaseFinalized_Services
             }
         }
 
+        public async Task<long> GetPurchaseReturnFinalizedAsync(long id)
+        {
+            if (id == 0) { return -1; }
+            var user = await workContext.GetCurrentUserAsync();
+            PurchaseReturn purchaes = await dbContext.PurchaseReturn.FindAsync(id);
+            VoucherType voucherType = dbContext.VoucherType.Where(x => x.Code == "PRV").FirstOrDefault();
+            List<PurchaseReturnDetails> details = await dbContext.PurchaseReturnDetails.Where(d => d.PurchaseReturnId == purchaes.Id && d.IsActive == true).ToListAsync();
+            decimal total = details.Sum(item => item.PurchaseReturnAmount);
+            if (details.Count == 0) { return -2; }
+            using (var scope = dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    Voucher voucher = new Voucher();
+                    voucher.VoucherDate = purchaes.PurchaseReturnDate;
+                    voucher.VoucherNo = GetVoucherNo(voucherType.Id, voucherType.Code, user.Id, purchaes.PurchaseReturnDate);
+                    voucher.VoucherTypeId = voucherType.Id;
+                    voucher.VendorId = purchaes.SupplierId;
+                    voucher.ReferenceId = purchaes.Id;
+                    voucher.Narration = "Return No:" + purchaes.PurchaseReturnNo + "-" + purchaes.Reason;
+                    voucher.CreatedBy = user.FullName;
+                    voucher.TrakingId = user.Id;
+                    voucher.CreatedOn = DateTime.Now;
+                    voucher.IsActive = true;
+                    voucher.IsSubmitted = true;
+                    dbContext.Voucher.Add(voucher);
+                    dbContext.SaveChanges();
+                    List<VoucherDetails> list = new List<VoucherDetails>();
+                    foreach (var item in details)
+                    {
+                        VoucherDetails voucherDetails = new VoucherDetails();
+                        voucherDetails.VoucherId = voucher.Id;
+                        voucherDetails.ProductId = item.ProductId;
+                        voucherDetails.ReferenceId = voucher.ReferenceId;
+                        voucherDetails.DebitAmount = 0;
+                        voucherDetails.CreditAmount = item.PurchaseReturnAmount;
+                        voucherDetails.CreatedBy = user.FullName;
+                        voucherDetails.TrakingId = user.Id;
+                        voucherDetails.CreatedOn = DateTime.Now;
+                        voucherDetails.IsActive = true;
+                        list.Add(voucherDetails);
+                    }
+                    dbContext.VoucherDetails.AddRange(list);
+                    dbContext.SaveChanges();
+                    List<StockInfo> stockInfos = new List<StockInfo>();
+                    List<UserProduct> uproduct = new List<UserProduct>();
+                    foreach (var item in details)
+                    {
 
+                        StockInfo stock = new StockInfo();
+                        stock.StockTypeId = (int)StockType.SRV;
+                        stock.ProductId = item.ProductId;
+                        stock.ReferenceId = purchaes.Id;
+                        stock.ReferenceNo = purchaes.PurchaseReturnNo;
+                        stock.InQty = 0;
+                        stock.InPrice = 0;
+                        stock.OutQty = 0;
+                        stock.OutPrice = 0;
+                        stock.PurchesReturnQty = item.ReturnQty;
+                        stock.PurchesSaleReturnPrice = item.PurchaseReturnRate;
+                        stock.SaleReturnQty = 0;
+                        stock.SaleReturnPrice = 0;
+                        stock.CreatedBy = user.FullName;
+                        stock.TrakingId = user.Id;
+                        stock.CreatedOn = DateTime.Now;
+                        stock.IsActive = true;
+                        stock.ReceivedDate = purchaes.PurchaseReturnDate;
+                        dbContext.StockInfo.Add(stock);
+                        dbContext.SaveChanges();
+                    }
+                    purchaes.IsSubmited = true; ;
+                    purchaes.UpdatedBy = user.FullName;
+                    purchaes.UpdatedOn = DateTime.Now;
+                    dbContext.Entry(purchaes).State = EntityState.Modified;
+                    dbContext.SaveChanges();
+                    scope.Commit();
+                    return voucher.Id;
+                }
+                catch (Exception ex)
+                {
+                    scope.Rollback();
+                    return 0;
+                }
+            }
+
+
+        }
     }
 }

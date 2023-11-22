@@ -1,4 +1,4 @@
-﻿@model PagedModel<SalesReturnViewModel>
+﻿@model PagedModel<PurchaseReturnViewModel>
 @{
     var ff = Model;
     int SN = Model.FirstSerialNumber;
@@ -10,7 +10,7 @@
         pageNo = Model.PagedList.PageIndex;
         SN = ((Model.PagedList.PageIndex * Model.PagedList.PageSize) - Model.PagedList.PageSize) + 1;
     }
-    string urlinstring = "SalesReturns/GetPaged";
+    string urlinstring = "PurchaseReturn/GetPaged";
     Pager pagemodel = new Pager() { PagedList = pager, StringUrl = urlinstring };
 }
 
@@ -23,7 +23,7 @@
                         #
                     </th>
                     <th> Return No</th>
-                    <th> Customer</th>
+                    <th> Supplier</th>
                     <th> Return Date</th>
                     <th> Reason </th>
                     <th> Status </th>
@@ -39,9 +39,9 @@
                         <td>
                             @SN
                         </td>
-                        <td> <a target="_blank" href="~/SalesReturns/SalesReturnDetailReport?id=@item.Id"> @item.SalesReturnNo  </a>  </td>
-                        <td>@item.CustomerName </td>
-                        <td>@item.SalesReturnDate.ToShortDateString() </td>
+                        <td> <a target="_blank" href="~/PurchaseReturn/PurchaseReturnDetailReport?id=@item.Id"> @item.PurchaseReturnNo  </a>  </td>
+                        <td>@item.SupplierName </td>
+                        <td>@item.PurchaseReturnDate.ToShortDateString() </td>
                         <td>@item.Reason </td>
                         <td>
                             @if (@item.IsSubmited == true)

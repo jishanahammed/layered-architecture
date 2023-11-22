@@ -104,9 +104,18 @@ namespace app.Services.Purchase_Return_Service
             throw new NotImplementedException();
         }
 
-        public Task<long> DeletePurchaseReturnDetalies(long id)
+        public async Task<long> DeletePurchaseReturnDetalies(long id)
         {
-            throw new NotImplementedException();
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            var user = await workContext.GetCurrentUserAsync();
+            var result = await dbContext.PurchaseReturnDetails.FirstOrDefaultAsync(x => x.Id == id);
+            result.IsActive = false;
+            result.UpdatedOn = BaTime;
+            result.CreatedBy = user.FullName;
+            dbContext.Entry(result).State = EntityState.Modified;
+            await dbContext.SaveChangesAsync();
+            return result.PurchaseReturnId;
         }
 
         public async Task<PagedModel<PurchaseReturnViewModel>> GetPagedListAsync(int page, int pageSize, string sarchString)
@@ -203,9 +212,20 @@ namespace app.Services.Purchase_Return_Service
             return model;
         }
 
-        public Task<long> UpdatePurchaseReturn(PurchaseReturnViewModel model)
+        public async Task<long> UpdatePurchaseReturn(PurchaseReturnViewModel model)
         {
-            throw new NotImplementedException();
+            var BnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Bangladesh Standard Time");
+            DateTime BaTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, BnTimeZone);
+            var user = await workContext.GetCurrentUserAsync();
+            PurchaseReturn order = await dbContext.PurchaseReturn.FirstOrDefaultAsync(d => d.Id == model.Id);
+            order.SupplierId = model.SupplierId;
+            order.PurchaseReturnDate = model.PurchaseReturnDate;
+            order.Reason = model.Reason;
+            order.UpdatedBy = user.FullName;
+            order.UpdatedOn = BaTime;
+            dbContext.Entry(order).State = EntityState.Modified;
+            await dbContext.SaveChangesAsync();
+            return order.Id;
         }
     }
 }

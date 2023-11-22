@@ -1,8 +1,8 @@
-﻿@model SalesReturnViewModel
+﻿@model PurchaseReturnViewModel
 @{
     ViewData["Title"] = "UpdateRecord";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    decimal totalreturn = Model.MappVm.Select(f => f.ReturnAmount).Sum();
+    decimal totalreturn = Model.MappVm.Select(f => f.PurchaseReturnAmount).Sum();
     int SN = 1;
 }
 
@@ -10,6 +10,7 @@
     .text-sm .select2-container--default .select2-selection--single, select.form-control-sm ~ .select2-container--default .select2-selection--single {
         height: calc(2.2rem + 2px) !important;
     }
+
     .table thead {
         background-color: #d0d0d0 !important;
     }
@@ -19,17 +20,15 @@
         <div class="breadcrumb d-flex justify-content-between align-items-center  pl-3 pr-3">
             <ol class="breadcrumb mb-0 p-0">
                 <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
-                <li class="breadcrumb-item active"> Update Returns  </li>
+                <li class="breadcrumb-item active">Update Return </li>
             </ol>
             <div>
-               
-                <a asp-action="Index"><i class="fa fa-list"></i>  Returns List </a>
+
+                <a asp-action="Index"><i class="fa fa-list"></i> Update Return </a>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <section class="content">
     <div class="container-fluid">
@@ -38,83 +37,53 @@
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="card-title text-info">
-                            <i class="fas fa-plus"></i>
-                            Update Sales Return
+                            <i class="fas fa-edit"></i>
+                           Update Purchase
                         </h3>
                     </div>
+
                     <div class="col-md-6"></div>
+
                 </div>
+
+
             </div>
             <div class="card-body">
                 <form asp-action="UpdateRecord" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+                    <input type="hidden" asp-for="Id" id="Id" />
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label asp-for="SalesReturnDate" class="control-label">Return Date</label>
-                                <input asp-for="SalesReturnDate" class="form-control" required />
-                                <span asp-validation-for="SalesReturnDate" class="text-danger"></span>
+                                <label asp-for="PurchaseReturnDate" class="control-label"> Purchase Return Date </label>
+                                <input asp-for="PurchaseReturnDate" class="form-control" required />
+                                <span asp-validation-for="PurchaseReturnDate" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <label asp-for="CustomerId" class="control-label"> Customer</label>
-                            <select asp-for="CustomerId" class="form-control select2">
-                                <option value="">Select Customer</option>
+                            <label asp-for="SupplierId" class="control-label"> Supplier</label>
+                            <select asp-for="SupplierId" class="form-control select2" required>
+                                <option value="">Select Supplier</option>
                             </select>
-                            <span asp-validation-for="CustomerId" class="text-danger"></span>
+                            <span asp-validation-for="SupplierId" class="text-danger"></span>
                         </div>
 
+                        
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label asp-for="CustomerMobile" class="control-label">  Customer Mobile </label>
-                                <input asp-for="CustomerMobile" class="form-control" readonly required />
-                                <span asp-validation-for="CustomerMobile" class="text-danger"></span>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label asp-for="CustomerName" class="control-label">  Customer Name </label>
-                                <input asp-for="CustomerName" class="form-control" readonly required />
-                                <span asp-validation-for="CustomerName" class="text-danger"></span>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label asp-for="CustomerEmail" class="control-label">  Customer Email </label>
-                                <input asp-for="CustomerEmail" readonly class="form-control" />
-                                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label asp-for="CustomerAddress" class="control-label">  Customer Address </label>
-                                <input asp-for="CustomerAddress" readonly class="form-control" required />
-                                <span asp-validation-for="CustomerAddress" class="text-danger"></span>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label asp-for="Reason" class="control-label">Description</label>
-                                <input asp-for="Reason" class="form-control">
+                                <label asp-for="Reason" class="control-label">Reason</label>
+                                <textarea asp-for="Reason" class="form-control" rows="2"></textarea>
                                 <span asp-validation-for="Reason" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
-                    @if(Model.IsSubmited==true)
+
+                    @if (Model.IsSubmited == true)
                     {
-                          <h5> <b class="text-success"> "Return  submitted successfully."  </b> </h5>
-                        
+                        <h5> <b class="text-success"> "Return  submitted successfully."  </b> </h5>
+
                     }
                     else
                     {
@@ -129,8 +98,7 @@
                         </div>
                     }
 
-                </form>
-
+                    </form>
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -152,7 +120,7 @@
 
                     <div class="col-lg-2 col-md-2 col-sm-12">
                         <div class="form-group">
-                            <label for="Price" class="control-label">Return Rate </label>
+                            <label for="Price" class="control-label">Unit Price </label>
                             <input name="Price" id="Price" class="form-control" />
 
                         </div>
@@ -164,16 +132,17 @@
                             <input name="TotalPrice" id="TotalPrice" readonly class="form-control" />
                         </div>
                     </div>
-                    @if(Model.IsSubmited == false)
+
+                    @if (Model.IsSubmited == false)
                     {
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <div class="form-group mt-4">
-                            <button type="button" class="btn btn-primary" id="addbutton" onclick="getinfo()">   <i class="fas fa-plus"></i> Add</button>
+                                <button type="button" class="btn btn-primary" id="addbutton" onclick="getinfo()">   <i class="fas fa-plus"></i> Add</button>
+                            </div>
                         </div>
-                    </div>
                     }
                 </div>
-               
+
 
                 <div class="table-responsive mt-4">
                     <table class="table table-sm table-hover table-bordered">
@@ -207,16 +176,16 @@
                                         @Html.DisplayFor(modelItem => vm.UnitName)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => vm.ReturnRate)
+                                        @Html.DisplayFor(modelItem => vm.PurchaseReturnRate)
                                     </td>
 
                                     <td>
-                                        @Html.DisplayFor(modelItem => vm.ReturnAmount)
+                                        @Html.DisplayFor(modelItem => vm.PurchaseReturnAmount)
                                     </td>
                                     <td>
                                         @if (Model.IsSubmited == false)
                                         {
-                                        @Html.ActionLink("","DeletepurchaseOrderDetalis", new {  id=vm.Id},new {@class = "text-danger fas fa-trash",  onclick = "return confirm('Are you sure you want to delete this?')" })
+                                            @Html.ActionLink("","DeletepurchaseOrderDetalis", new {  id=vm.Id},new {@class = "text-danger fas fa-trash",  onclick = "return confirm('Are you sure you want to delete this?')" })
                                         }
                                     </td>
                                 </tr>
@@ -231,75 +200,38 @@
                         </tbody>
                     </table>
                 </div>
-
-
             </div>
         </div>
     </div>
 </section>
 
-
-
+                            
 @section Scripts {
     <script>
         $(document).ready(function () {
-            $('#Sales-Return').addClass('menu-open');
-            $('#SalesReturnsAddRecord').addClass('active');
-            product();
+            $('#Purchase-Return').addClass('menu-open');
+
             ff();
+            product();
         });
 
-        $("#salereturnfrom").submit(function (event) {
-            event.preventDefault();
-            var countid = datalist.length;
-            if (countid == 0) {
-                alert("Product Item is Zero ");
-            } else {
-                this.submit();
-            }
-        });
         function ff() {
             $.ajax({
                 type: "GET",
-                url: "@Url.Action("GetAutoCompleteCustomerGet", "SalesReturns")",
+                url: "@Url.Action("GetAutoCompleteSupplierGet", "PurchaseOrder")",
                 datatype: "Json",
                 success: function (data) {
                     if (data) {
-                        $("#CustomerId").empty();
-                        $("#CustomerId").append("<option value=''>Select Customer</option>");
+                        $("#SupplierId").empty();
+                        $("#SupplierId").append("<option value=''>Select Supplier</option>");
                         $(data).each(function (index, item) {
-                            $("#CustomerId").append("<option value='" + item.id + "'>" + item.name + "</option>");
+                            $("#SupplierId").append("<option value='" + item.id + "'>" + item.name + "</option>");
                         });
                     }
-                    $("#CustomerId").val(@Model.CustomerId);
+                    $("#SupplierId").val(@Model.SupplierId);
                 }
             });
         };
-
-        $("#CustomerId").change(function () {
-            productsize = "";
-            var id = $("#CustomerId").val();
-            $.ajax({
-                type: "GET",
-                url: "@Url.Action("GetCustomer", "SalesReturns")",
-                datatype: "Json",
-                data: { id: id },
-                success: function (data) {
-                    if (data) {
-                        console.log("getproducteeee", data);
-                        if (data.id > 0) {
-                            $("#CustomerName").val(data.name);
-                            $("#CustomerMobile").val(data.mobile);
-                            $("#CustomerEmail").val(data.email);
-                            $("#CustomerAddress").val(data.address);
-                            $("#CustomerId").val(data.id);
-                        }
-                    }
-                }
-            });
-        });
-
-
         function product() {
             $.ajax({
                 type: "GET",
@@ -316,6 +248,7 @@
                 }
             });
         };
+
         $("#ProductId").change(function () {
             productsize = "";
             var productid = $("#ProductId").val();
@@ -329,23 +262,18 @@
                         console.log("getproducteeee", data);
                         $("#unitid").text(data.unitNane);
                         $("#Price").val(data.mrp);
-                        $("#AvailableStock").val(data.stockQuntity);
+                        
                         var Quantity = $('#Quantity').val();
                         if (Quantity > 0) {
                             var total = Quantity * data.mrp;
                             $('#TotalPrice').val(total);
                         }
-                        //if (data.stockQuntity > 0) {
-                        //    $('#addbutton').prop('disabled', false)
-                        //}
-                        //else {
-                        //    $('#addbutton').prop('disabled', true)
-                        //}
 
                     }
                 }
             });
         });
+
 
         $("#Quantity").keyup(function () {
             var Quantity = $('#Quantity').val();
@@ -383,11 +311,11 @@
             var Price = $('#Price').val();
             var total = $('#TotalPrice').val();
             var unit = $('#unitid').text();
-            var object = { ProductId: productid, ProductName: productname, ReturnQty: Quantity, ReturnRate: Price, ReturnAmount: total, UnitName: unit, SalesReturnId: @Model.Id };
+            var object = { ProductId: productid, ProductName: productname, ReturnQty: Quantity, PurchaseReturnRate: Price, PurchaseReturnAmount: total, UnitName: unit, PurchaseReturnId: @Model.Id };
 
             $.ajax({
                 type: "POST",
-                url: "@Url.Action("AddSalesReturnDetalies", "SalesReturns")",
+                url: "@Url.Action("AddPurchaseReturnDetalies", "PurchaseReturn")",
                 datatype: "Json",
                 data: object,
                 success: function (data) {
@@ -399,55 +327,9 @@
         }
 
 
-        $("#submitBtn").click(function () {
-            // Get form data
-            var viewModel = {
-                Name: $("#Name").val(),
-                Email: $("#Email").val(),
-                Mobile: $("#Mobile").val(),
-                NID: $("#NID").val(),
-                Address: $("#Address").val(),
-                ACName: $("#ACName").val(),
-                ACNo: $("#ACNo").val(),
-                BankName: $("#BankName").val(),
-                BranchName: $("#BranchName").val(),
-                ContactName: $("#ContactName").val(),
-            };
-            console.log("viewModel", viewModel);
-
-            $.ajax({
-                type: "POST",
-                url: "@Url.Action("jasonAddRecord", "Supplier")",
-                datatype: "Json",
-                data: viewModel,
-                success: function (response) {
-                    if (response == 2) {
-                        console.log("Form submitted successfully!");
-                        ff();
-                        $('.bd-example-modal-lg').modal('hide');
-                        $('.modal-backdrop').remove();
-                    } else {
-                        alert("Supplier already added");
-                    }
-
-                },
-                error: function (error) {
-                    console.error("Error submitting form:", error);
-                }
-            });
-        });
-
-
 
     </script>
-
-
-
-
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     }
-
-
-

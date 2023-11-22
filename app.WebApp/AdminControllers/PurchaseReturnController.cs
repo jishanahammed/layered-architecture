@@ -1,7 +1,9 @@
-﻿using app.Services.DropDownServices;
+﻿using app.EntityModel.CoreModel;
+using app.Services.DropDownServices;
 using app.Services.Purchase_Return_Service;
 using app.Services.PurchaseFinalized_Services;
 using app.Services.PurchaseOrder_Services;
+using app.Services.SalaesReturn_service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
@@ -64,6 +66,52 @@ namespace app.WebApp.AdminControllers
         {
             var result = await purchaseReturnService.GetPurchaseReturn(id);
             return View(result);
+        }
+        [HttpGet]
+        public async Task<IActionResult> PurchaseReturnDetailReport(long id)
+        {
+            var result = await purchaseReturnService.GetPurchaseReturn(id);
+            return View(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateRecord(long id)
+        {
+            var result = await purchaseReturnService.GetPurchaseReturn(id);
+            return View(result);
+        }
+        [HttpGet]
+        public async Task<IActionResult> DeletepurchaseOrderDetalis(long id)
+        {
+            var result = await purchaseReturnService.DeletePurchaseReturnDetalies(id);
+            return RedirectToAction("UpdateRecord", new { id = result });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddPurchaseReturnDetalies(PurchaseReturnDetailsViewModel model)
+        {
+            var result = await purchaseReturnService.AddPurchaseReturnDetalies(model);
+            return Json(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateRecord(PurchaseReturnViewModel viewModel)
+        {
+            var result = await purchaseReturnService.UpdatePurchaseReturn(viewModel);
+            if (result > 0)
+            {
+                return RedirectToAction("Detalis", new { id = result });
+            }
+
+            return View(viewModel);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> ChangeStatus(long id)
+        {
+            var result = await purchaseFinalizedServices.GetPurchaseReturnFinalizedAsync(id);
+            return RedirectToAction("Index");
         }
 
     }
