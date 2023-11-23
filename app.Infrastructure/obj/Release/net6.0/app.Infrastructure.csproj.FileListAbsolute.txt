@@ -1,0 +1,17 @@
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.Infrastructure.deps.json
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.Infrastructure.runtimeconfig.json
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.Infrastructure.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.Infrastructure.pdb
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.EntityModel.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\bin\Release\net6.0\app.EntityModel.pdb
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.csproj.AssemblyReference.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.AssemblyInfoInputs.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.AssemblyInfo.cs
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.csproj.CoreCompileInputs.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.csproj.CopyComplete
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\refint\app.Infrastructure.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.pdb
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\app.Infrastructure.genruntimeconfig.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.Infrastructure\obj\Release\net6.0\ref\app.Infrastructure.dll

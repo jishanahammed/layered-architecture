@@ -1,0 +1,12 @@
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\bin\Debug\net6.0\app.EntityModel.deps.json
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\bin\Debug\net6.0\app.EntityModel.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\bin\Debug\net6.0\app.EntityModel.pdb
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.csproj.AssemblyReference.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.AssemblyInfoInputs.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.AssemblyInfo.cs
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.csproj.CoreCompileInputs.cache
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\refint\app.EntityModel.dll
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\app.EntityModel.pdb
+D:\jishan-personal\KgcomInventory\inventorySystem\app.EntityModel\obj\Debug\net6.0\ref\app.EntityModel.dll

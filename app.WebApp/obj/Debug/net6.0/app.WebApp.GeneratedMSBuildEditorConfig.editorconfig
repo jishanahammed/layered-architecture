@@ -1,0 +1,449 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = app.WebApp
+build_property.RootNamespace = app.WebApp
+build_property.ProjectDir = D:\JackFruite\app.WebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\JackFruite\app.WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/JackFruite/app.WebApp/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Collaction/collactionvoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFjdGlvblxjb2xsYWN0aW9udm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Collaction/CustomerCollaction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFjdGlvblxDdXN0b21lckNvbGxhY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Collaction/Customer_Payment_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFjdGlvblxDdXN0b21lcl9QYXltZW50X0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Collaction/Customer_Payment_Details_Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFjdGlvblxDdXN0b21lcl9QYXltZW50X0RldGFpbHNfUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Collaction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFjdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Company/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGRSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Company/UpdateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxVcGRhdGVSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Customer/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Customer/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVXBkYXRlUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Customer/_customerCategorypartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcX2N1c3RvbWVyQ2F0ZWdvcnlwYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/LogUser/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nVXNlclxBZGRSZWNvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/LogUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/LogUser/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nVXNlclxVcGRhdGVSZWNvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MainMenu/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbk1lbnVcQWRkUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MainMenu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbk1lbnVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MainMenu/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbk1lbnVcVXBkYXRlUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MenuItem/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cQWRkUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MenuItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/MenuItem/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cVXBkYXRlUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherExpenses/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJFeHBlbnNlc1xBZGRSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherExpenses/ExpensesDetalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJFeHBlbnNlc1xFeHBlbnNlc0RldGFsaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherExpenses/ExpensesDetalisReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJFeHBlbnNlc1xFeHBlbnNlc0RldGFsaXNSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherExpenses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJFeHBlbnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherExpenses/PartialotherExpensesVoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJFeHBlbnNlc1xQYXJ0aWFsb3RoZXJFeHBlbnNlc1ZvdWNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherIncome/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJJbmNvbWVcQWRkUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherIncome/IncomeDetalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJJbmNvbWVcSW5jb21lRGV0YWxpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherIncome/IncomeDetalisReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJJbmNvbWVcSW5jb21lRGV0YWxpc1JlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherIncome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJJbmNvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/OtherIncome/PartialOtherIncomeVoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJJbmNvbWVcUGFydGlhbE90aGVySW5jb21lVm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductCategory/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XEFkZFJlY29ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductCategory/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XFVwZGF0ZVJlY29ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductCategory/_ProductCategorypartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XF9Qcm9kdWN0Q2F0ZWdvcnlwYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductSubCategory/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFN1YkNhdGVnb3J5XEFkZFJlY29ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductSubCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFN1YkNhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductSubCategory/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFN1YkNhdGVnb3J5XFVwZGF0ZVJlY29ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductSubCategory/_ProductSubCategorypartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFN1YkNhdGVnb3J5XF9Qcm9kdWN0U3ViQ2F0ZWdvcnlwYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/ProductSubCategory/_subCatagorypagingpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFN1YkNhdGVnb3J5XF9zdWJDYXRhZ29yeXBhZ2luZ3BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Product/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Product/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVSZWNvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Product/_productpaginationpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfcHJvZHVjdHBhZ2luYXRpb25wYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Product/_Productpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfUHJvZHVjdHBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxBZGRSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxEZXRhbGlzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/PurchaseOrderDetailReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxQdXJjaGFzZU9yZGVyRGV0YWlsUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/UpdateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxVcGRhdGVSZWNvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseOrder/_PurchaseOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxfUHVyY2hhc2VPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cQWRkUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cRGV0YWxpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/PurchaseReturnDetailReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cUHVyY2hhc2VSZXR1cm5EZXRhaWxSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/UpdateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cVXBkYXRlUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/PurchaseReturn/_PurchaseReturn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VSZXR1cm5cX1B1cmNoYXNlUmV0dXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/CustomerGeneralledger.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEN1c3RvbWVyR2VuZXJhbGxlZGdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/CustomerGeneralledgerReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEN1c3RvbWVyR2VuZXJhbGxlZGdlclJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/ProfitLoss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFByb2ZpdExvc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/ProfitLossPrintView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFByb2ZpdExvc3NQcmludFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/PurchesReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFB1cmNoZXNSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/PurchesReportPrintView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFB1cmNoZXNSZXBvcnRQcmludFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/SalesReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFNhbGVzUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/SalesReportPrintView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFNhbGVzUmVwb3J0UHJpbnRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/SupplierGeneralledger.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFN1cHBsaWVyR2VuZXJhbGxlZGdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Report/SupplierGeneralledgerReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFN1cHBsaWVyR2VuZXJhbGxlZGdlclJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXEFkZFJlY29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXERldGFsaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/SalesReturnDetailReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXFNhbGVzUmV0dXJuRGV0YWlsUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/UpdateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXFVwZGF0ZVJlY29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/SalesReturns/_salesReturns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNSZXR1cm5zXF9zYWxlc1JldHVybnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWRkUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRGV0YWxpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/partialSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNccGFydGlhbFNhbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/SalesDetailReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcU2FsZXNEZXRhaWxSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Sales/UpdateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcVXBkYXRlUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Shared/_pagingpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wYWdpbmdwYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Shared/_partialAdminSidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wYXJ0aWFsQWRtaW5TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Stock/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Supplier/AddRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQWRkUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Supplier/UpdateRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcVXBkYXRlUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Supplier/_supplierCategorypartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcX3N1cHBsaWVyQ2F0ZWdvcnlwYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Userpermission/AddPermission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnBlcm1pc3Npb25cQWRkUGVybWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Userpermission/AddRecort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnBlcm1pc3Npb25cQWRkUmVjb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/UsersProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/UsersProduct/UserProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNQcm9kdWN0XFVzZXJQcm9kdWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/UsersProduct/_UserProductpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNQcm9kdWN0XF9Vc2VyUHJvZHVjdHBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Vouchers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Vouchers/paymentvoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNccGF5bWVudHZvdWNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Vouchers/SupplierPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNcU3VwcGxpZXJQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Vouchers/Supplier_Payment_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNcU3VwcGxpZXJfUGF5bWVudF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Vouchers/Supplier_Payment_Details_Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm91Y2hlcnNcU3VwcGxpZXJfUGF5bWVudF9EZXRhaWxzX1JlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/JackFruite/app.WebApp/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-gypfu0bcak
+
+[D:/JackFruite/app.WebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-eer1xp5d5k
