@@ -1,0 +1,2405 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\app.WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\app.WebApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\css\\dropify.css",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\css\\dropify.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\css\\dropify.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\css\\dropify.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\fonts\\dropify.eot",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\fonts\\dropify.eot"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\fonts\\dropify.svg",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\fonts\\dropify.svg"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\fonts\\dropify.ttf",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\fonts\\dropify.ttf"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\fonts\\dropify.woff",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\fonts\\dropify.woff"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\js\\dropify.js",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\js\\dropify.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\Dropify\\js\\dropify.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\Dropify\\js\\dropify.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\adminlte.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\adminlte.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\adminlte.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\adminlte.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\adminlte.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\adminlte.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\adminlte.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\adminlte.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.components.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.components.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.components.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.components.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.components.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.components.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.components.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.components.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.core.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.core.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.core.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.core.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.core.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.core.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.core.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.core.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.extra-components.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.pages.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.pages.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.pages.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.pages.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.pages.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.pages.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.pages.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.pages.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.plugins.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.plugins.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.plugins.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.plugins.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.plugins.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.plugins.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\css\\alt\\adminlte.plugins.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\css\\alt\\adminlte.plugins.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\adminlte.js",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\adminlte.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\adminlte.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\adminlte.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\adminlte.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\adminlte.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\adminlte.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\adminlte.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\demo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\demo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\admin\\js\\pages\\dashboard.js",
+      "PackagePath": "staticwebassets\\AdminLib\\admin\\js\\pages\\dashboard.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\all.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\all.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\brands.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\brands.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\brands.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\fontawesome.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\regular.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\regular.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\regular.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\solid.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\solid.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\solid.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\v4-shims.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\AdminLib\\fontawesome-free\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.structure.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.structure.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.structure.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.structure.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.theme.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.theme.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-ui\\jquery-ui.theme.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-ui\\jquery-ui.theme.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\AdminLib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\af.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\af.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ar.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\az.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\az.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\be.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\be.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bg.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bm.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bm.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bn-bd.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bn-bd.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\br.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\br.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\bs.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ca.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\cs.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\cv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\cv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\cy.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\cy.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\da.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\da.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\de-at.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\de-ch.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\de.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\de.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\dv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\dv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\el.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\el.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-SG.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-SG.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-au.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-ca.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-gb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-ie.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-il.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-il.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-in.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-in.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\en-nz.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\eo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\eo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\es-do.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\es-mx.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\es-mx.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\es-us.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\es.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\es.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\et.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\et.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\eu.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fa.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fil.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fil.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\fy.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\fy.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ga.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ga.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\gd.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\gd.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\gl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\gom-deva.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\gom-deva.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\gom-latn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\gom-latn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\gu.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\gu.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\he.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\he.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\hi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\hr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\hu.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\hy-am.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\hy-am.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\id.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\id.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\is.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\is.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\it-ch.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\it-ch.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\it.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\it.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ja.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\jv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\jv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ka.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\kk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\km.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\km.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\kn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\kn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ko.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ku.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ku.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ky.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ky.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\lb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\lo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\lo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\lt.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\lv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\me.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\me.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\mi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\mi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\mk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ml.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ml.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\mn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\mn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\mr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\mr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ms-my.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ms.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\mt.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\mt.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\my.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\my.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\nb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ne.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ne.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\nl-be.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\nl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\nn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\oc-lnc.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\oc-lnc.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\pa-in.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\pa-in.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\pl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\pt-br.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\pt.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ro.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ru.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sd.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sd.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\se.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\se.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\si.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\si.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sq.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ss.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ss.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\sw.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\sw.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ta.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ta.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\te.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\te.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tet.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tet.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tg.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tg.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\th.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\th.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tl-ph.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tl-ph.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tlh.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tlh.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tzl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tzl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tzm-latn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tzm-latn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\tzm.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\tzm.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ug-cn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ug-cn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\uk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\ur.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\ur.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\uz-latn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\uz-latn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\uz.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\uz.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\vi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\x-pseudo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\x-pseudo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\yo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\yo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\zh-mo.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\zh-mo.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locales.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locales.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locales.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locales.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\locales.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\locales.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\moment-with-locales.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\moment-with-locales.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\moment-with-locales.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\moment-with-locales.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\moment-with-locales.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\moment-with-locales.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\moment.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\moment.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\moment\\moment.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\moment\\moment.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\css\\OverlayScrollbars.css",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\css\\OverlayScrollbars.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\css\\OverlayScrollbars.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\css\\OverlayScrollbars.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\js\\OverlayScrollbars.js",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\js\\OverlayScrollbars.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\js\\OverlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\js\\OverlayScrollbars.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\js\\jquery.overlayScrollbars.js",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\js\\jquery.overlayScrollbars.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\overlayScrollbars\\js\\jquery.overlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\overlayScrollbars\\js\\jquery.overlayScrollbars.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\pdfmake\\pdfmake.js",
+      "PackagePath": "staticwebassets\\AdminLib\\pdfmake\\pdfmake.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\pdfmake\\pdfmake.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\pdfmake\\pdfmake.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\pdfmake\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\pdfmake\\pdfmake.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\pdfmake\\pdfmake.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\pdfmake\\pdfmake.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\pdfmake\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\AdminLib\\pdfmake\\vfs_fonts.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper-utils.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper-utils.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper-utils.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper-utils.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper-utils.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper-utils.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\esm\\popper.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\esm\\popper.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper-utils.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper-utils.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper-utils.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper-utils.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper-utils.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper-utils.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\popper.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\popper.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper-utils.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper-utils.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper-utils.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper-utils.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper-utils.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper-utils.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper.js.flow",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper.js.flow"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\popper\\umd\\popper.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\popper\\umd\\popper.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\css\\select2.css",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\css\\select2.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\af.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\af.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ar.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ar.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\az.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\az.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\bg.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\bg.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\bn.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\bn.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\bs.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\bs.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\build.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\build.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ca.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ca.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\cs.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\cs.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\da.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\da.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\de.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\de.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\dsb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\dsb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\el.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\el.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\en.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\en.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\es.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\es.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\et.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\et.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\eu.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\eu.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\fa.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\fa.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\fi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\fi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\fr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\fr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\gl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\gl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\he.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\he.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\hi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\hi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\hr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\hr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\hsb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\hsb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\hu.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\hu.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\hy.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\hy.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\id.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\id.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\is.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\is.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\it.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\it.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ja.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ja.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ka.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ka.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\km.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\km.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ko.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ko.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\lt.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\lt.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\lv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\lv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\mk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\mk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ms.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ms.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\nb.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\nb.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ne.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ne.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\nl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\nl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\pl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\pl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ps.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ps.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\pt-BR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\pt-BR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\pt.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\pt.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ro.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ro.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\ru.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\ru.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sq.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sq.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sr-Cyrl.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sr-Cyrl.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\sv.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\sv.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\th.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\th.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\tk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\tk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\tr.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\tr.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\uk.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\uk.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\vi.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\vi.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\zh-CN.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\zh-CN.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\i18n\\zh-TW.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\i18n\\zh-TW.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\select2.full.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\select2.full.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\select2.full.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\select2.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\select2.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\sparklines\\sparkline.js",
+      "PackagePath": "staticwebassets\\AdminLib\\sparklines\\sparkline.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\sparklines\\sparkline.mjs",
+      "PackagePath": "staticwebassets\\AdminLib\\sparklines\\sparkline.mjs"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\font\\summernote.eot",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\font\\summernote.eot"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\font\\summernote.ttf",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\font\\summernote.ttf"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\font\\summernote.woff",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\font\\summernote.woff"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\font\\summernote.woff2",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\font\\summernote.woff2"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ar-AR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ar-AR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ar-AR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ar-AR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ar-AR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ar-AR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-az-AZ.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-az-AZ.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-az-AZ.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-az-AZ.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-az-AZ.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-az-AZ.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-bg-BG.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-bg-BG.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-bg-BG.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-bg-BG.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-bg-BG.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-bg-BG.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ca-ES.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ca-ES.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ca-ES.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ca-ES.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ca-ES.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ca-ES.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-cs-CZ.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-cs-CZ.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-cs-CZ.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-cs-CZ.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-cs-CZ.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-cs-CZ.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-da-DK.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-da-DK.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-da-DK.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-da-DK.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-da-DK.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-da-DK.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-de-DE.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-de-DE.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-de-DE.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-de-DE.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-de-DE.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-de-DE.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-el-GR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-el-GR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-el-GR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-el-GR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-el-GR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-el-GR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-ES.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-ES.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-ES.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-ES.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-ES.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-ES.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-EU.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-EU.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-EU.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-EU.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-es-EU.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-es-EU.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fa-IR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fa-IR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fa-IR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fa-IR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fa-IR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fa-IR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fi-FI.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fi-FI.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fi-FI.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fi-FI.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fi-FI.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fi-FI.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fr-FR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fr-FR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fr-FR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fr-FR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-fr-FR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-fr-FR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-gl-ES.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-gl-ES.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-gl-ES.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-gl-ES.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-gl-ES.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-gl-ES.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-he-IL.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-he-IL.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-he-IL.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-he-IL.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-he-IL.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-he-IL.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hr-HR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hr-HR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hr-HR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hr-HR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hr-HR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hr-HR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hu-HU.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hu-HU.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hu-HU.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hu-HU.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-hu-HU.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-hu-HU.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-id-ID.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-id-ID.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-id-ID.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-id-ID.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-id-ID.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-id-ID.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-it-IT.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-it-IT.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-it-IT.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-it-IT.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-it-IT.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-it-IT.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ja-JP.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ja-JP.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ja-JP.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ja-JP.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ja-JP.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ja-JP.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ko-KR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ko-KR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ko-KR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ko-KR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ko-KR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ko-KR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LT.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LT.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LT.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LT.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LT.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LT.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LV.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LV.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LV.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LV.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-lt-LV.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-lt-LV.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-mn-MN.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-mn-MN.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-mn-MN.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-mn-MN.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-mn-MN.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-mn-MN.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nb-NO.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nb-NO.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nb-NO.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nb-NO.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nb-NO.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nb-NO.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nl-NL.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nl-NL.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nl-NL.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nl-NL.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-nl-NL.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-nl-NL.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pl-PL.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pl-PL.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pl-PL.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pl-PL.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pl-PL.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pl-PL.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-BR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-BR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-BR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-BR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-BR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-BR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-PT.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-PT.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-PT.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-PT.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-pt-PT.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-pt-PT.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ro-RO.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ro-RO.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ro-RO.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ro-RO.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ro-RO.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ro-RO.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ru-RU.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ru-RU.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ru-RU.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ru-RU.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ru-RU.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ru-RU.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sk-SK.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sk-SK.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sk-SK.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sk-SK.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sk-SK.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sk-SK.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sl-SI.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sl-SI.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sl-SI.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sl-SI.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sl-SI.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sl-SI.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sr-RS.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sr-RS.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sv-SE.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sv-SE.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sv-SE.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sv-SE.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-sv-SE.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-sv-SE.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ta-IN.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ta-IN.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ta-IN.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ta-IN.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-ta-IN.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-ta-IN.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-th-TH.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-th-TH.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-th-TH.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-th-TH.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-th-TH.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-th-TH.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-tr-TR.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-tr-TR.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-tr-TR.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-tr-TR.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-tr-TR.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-tr-TR.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uk-UA.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uk-UA.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uk-UA.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uk-UA.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uk-UA.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uk-UA.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uz-UZ.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uz-UZ.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uz-UZ.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uz-UZ.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-uz-UZ.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-uz-UZ.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-vi-VN.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-vi-VN.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-vi-VN.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-vi-VN.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-vi-VN.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-vi-VN.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-CN.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-CN.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-CN.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-CN.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-CN.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-CN.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-TW.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-TW.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-TW.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-TW.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\lang\\summernote-zh-TW.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\lang\\summernote-zh-TW.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\plugin\\databasic\\summernote-ext-databasic.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\plugin\\databasic\\summernote-ext-databasic.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\plugin\\databasic\\summernote-ext-databasic.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\plugin\\databasic\\summernote-ext-databasic.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\plugin\\hello\\summernote-ext-hello.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\plugin\\hello\\summernote-ext-hello.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-bs4.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-bs4.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote-lite.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote-lite.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\summernote\\summernote.min.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\summernote\\summernote.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\tempusdominus-bootstrap-4\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\AdminLib\\tempusdominus-bootstrap-4\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\tempusdominus-bootstrap-4\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\tempusdominus-bootstrap-4\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\tempusdominus-bootstrap-4\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\AdminLib\\tempusdominus-bootstrap-4\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\tempusdominus-bootstrap-4\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\tempusdominus-bootstrap-4\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\toastr\\toastr.css",
+      "PackagePath": "staticwebassets\\AdminLib\\toastr\\toastr.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\toastr\\toastr.js.map",
+      "PackagePath": "staticwebassets\\AdminLib\\toastr\\toastr.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\toastr\\toastr.min.css",
+      "PackagePath": "staticwebassets\\AdminLib\\toastr\\toastr.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\AdminLib\\toastr\\toastr.min.js",
+      "PackagePath": "staticwebassets\\AdminLib\\toastr\\toastr.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\js\\notify.js",
+      "PackagePath": "staticwebassets\\js\\notify.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\js\\pagination.js",
+      "PackagePath": "staticwebassets\\js\\pagination.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\kgfile\\light.png",
+      "PackagePath": "staticwebassets\\kgfile\\light.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\kgfile\\mainlogo.png",
+      "PackagePath": "staticwebassets\\kgfile\\mainlogo.png"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\JackFruite\\app.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.app.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.app.WebApp.props",
+      "PackagePath": "build\\app.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.app.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\app.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.app.WebApp.props",
+      "PackagePath": "buildTransitive\\app.WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

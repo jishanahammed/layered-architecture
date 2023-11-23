@@ -1,0 +1,12 @@
+D:\JackFruite\app.EntityModel\bin\Debug\net6.0\app.EntityModel.deps.json
+D:\JackFruite\app.EntityModel\bin\Debug\net6.0\app.EntityModel.dll
+D:\JackFruite\app.EntityModel\bin\Debug\net6.0\app.EntityModel.pdb
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.csproj.AssemblyReference.cache
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.AssemblyInfoInputs.cache
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.AssemblyInfo.cs
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.csproj.CoreCompileInputs.cache
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.dll
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\refint\app.EntityModel.dll
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\app.EntityModel.pdb
+D:\JackFruite\app.EntityModel\obj\Debug\net6.0\ref\app.EntityModel.dll

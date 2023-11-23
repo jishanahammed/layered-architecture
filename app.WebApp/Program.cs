@@ -56,7 +56,7 @@ namespace app.WebApp
                 options.Cookie.IsEssential = true;
                 options.IdleTimeout = TimeSpan.FromDays(1);
                 options.IOTimeout = TimeSpan.FromDays(1);
-                options.Cookie.Expiration = TimeSpan.FromDays(1);   
+               // options.Cookie.Expiration = TimeSpan.FromDays(1);   
                 
             });
             builder.Services.AddHttpContextAccessor();
