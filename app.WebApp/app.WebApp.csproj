@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\MainMenu\UpdateRecort.cshtml">
+    <Content Update="Views\MainMenu\UpdateRecord.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

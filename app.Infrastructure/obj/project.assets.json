@@ -2952,11 +2952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JackFruite\\app.Infrastructure\\app.Infrastructure.csproj",
+      "projectUniqueName": "D:\\TCL\\app.Infrastructure\\app.Infrastructure.csproj",
       "projectName": "app.Infrastructure",
-      "projectPath": "D:\\JackFruite\\app.Infrastructure\\app.Infrastructure.csproj",
+      "projectPath": "D:\\TCL\\app.Infrastructure\\app.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Lenono\\.nuget\\packages\\",
-      "outputPath": "D:\\JackFruite\\app.Infrastructure\\obj\\",
+      "outputPath": "D:\\TCL\\app.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenono\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2973,8 +2973,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj": {
-              "projectPath": "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj"
+            "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj": {
+              "projectPath": "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj"
             }
           }
         }

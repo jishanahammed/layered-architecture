@@ -9,8 +9,7 @@
       "app.Services/1.0.0": {
         "dependencies": {
           "app.EntityModel": "1.0.0",
-          "app.Infrastructure": "1.0.0",
-          "app.Utility": "1.0.0"
+          "app.Infrastructure": "1.0.0"
         },
         "runtime": {
           "app.Services.dll": {}
@@ -811,11 +810,6 @@
         "runtime": {
           "app.Infrastructure.dll": {}
         }
-      },
-      "app.Utility/1.0.0": {
-        "runtime": {
-          "app.Utility.dll": {}
-        }
       }
     }
   },
@@ -1307,11 +1301,6 @@
       "sha512": ""
     },
     "app.Infrastructure/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "app.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -12,8 +12,6 @@ namespace app.EntityModel
     {
         [Key]
         public long Id { get; set; }
-        public string TrakingId { get; set; }
-
         [Display(Name = "Created By")]
         public string CreatedBy { get; set; }
         [Display(Name = "Created On")]

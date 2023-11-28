@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj",
+      "projectUniqueName": "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj",
       "projectName": "app.EntityModel",
-      "projectPath": "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj",
+      "projectPath": "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj",
       "packagesPath": "C:\\Users\\Lenono\\.nuget\\packages\\",
-      "outputPath": "D:\\JackFruite\\app.EntityModel\\obj\\",
+      "outputPath": "D:\\TCL\\app.EntityModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenono\\AppData\\Roaming\\NuGet\\NuGet.Config",

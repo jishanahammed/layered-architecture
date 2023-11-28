@@ -21,12 +21,12 @@ namespace app.WebApp.AdminControllers
         public async Task<IActionResult> Index()
         {
             UserViewModel model = new UserViewModel();
-            model = await userServices.GetAllRecort();
+            model = await userServices.GetAllRecord();
             return View(model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> AddRecort()
+        public async Task<IActionResult> AddRecord()
         {           
             UserViewModel model = new UserViewModel();
             ViewBag.Recort = new SelectList(_rolesServices.GetAllAsync().Select(s => new { Id = s.Name, Name = s.Name }), "Id", "Name");
@@ -34,7 +34,7 @@ namespace app.WebApp.AdminControllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddRecort(UserViewModel model)
+        public async Task<IActionResult> AddRecord(UserViewModel model)
         {
             var result = await userServices.AddUser(model);
             if (result == 1)
@@ -49,7 +49,7 @@ namespace app.WebApp.AdminControllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> UpdateRecort(string id)
+        public async Task<IActionResult> UpdateRecord(string id)
         {
             UserViewModel viewModel = new UserViewModel();
             ViewBag.Recort = new SelectList(_rolesServices.GetAllAsync().Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
@@ -57,7 +57,7 @@ namespace app.WebApp.AdminControllers
             return View(viewModel);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateRecort(UserViewModel model)
+        public async Task<IActionResult> UpdateRecord(UserViewModel model)
         {
             var result = await userServices.UpdateUser(model);
             if (result == 1)

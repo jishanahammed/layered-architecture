@@ -19,7 +19,7 @@ namespace app.Services.MenuItemService
             _entityRepository = entityRepository;
             this.dbContext = dbContext;
         }
-        public async Task<bool> AddRecort(MenuItemViewModel model)
+        public async Task<bool> AddRecord(MenuItemViewModel model)
         {
             var getitem = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name == model.Name &&f.Action==model.Action&&f.Controller==model.Controller);
             if (getitem == null)
@@ -46,7 +46,7 @@ namespace app.Services.MenuItemService
 
         }
 
-        public async Task<bool> DeleteRecort(long Id)
+        public async Task<bool> DeleteRecord(long Id)
         {
             var getitem = await _entityRepository.GetByIdAsync(Id);
             if (getitem != null)
@@ -62,7 +62,7 @@ namespace app.Services.MenuItemService
             return false;
         }
 
-        public async Task<MenuItemViewModel> GetAllRecort()
+        public async Task<MenuItemViewModel> GetAllRecord()
         {
             MenuItemViewModel model = new MenuItemViewModel();
             model.datalist = await Task.Run(() => (from t1 in dbContext.MenuItem
@@ -82,7 +82,7 @@ namespace app.Services.MenuItemService
                                                    }).OrderByDescending(x => x.OrderNo).AsEnumerable());
             return model;
         }
-        public async Task<MenuItemViewModel> GetByRecort(long Id)
+        public async Task<MenuItemViewModel> GetByRecord(long Id)
         {
             MenuItemViewModel model = new MenuItemViewModel();
             MenuItem item = await _entityRepository.GetByIdAsync(Id);
@@ -97,7 +97,7 @@ namespace app.Services.MenuItemService
             return model;
         }
 
-        public async Task<bool> UpdateRecort(MenuItemViewModel model)
+        public async Task<bool> UpdateRecord(MenuItemViewModel model)
         {
             var getitem = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name == model.Name && f.Action == model.Action && f.Controller == model.Controller&&f.Id!=model.Id);
             if (getitem == null)

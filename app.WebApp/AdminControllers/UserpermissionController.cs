@@ -27,8 +27,8 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> AddPermission(string id)
         {
-            ViewBag.Recort = await userServices.GetAllRecort();
-            var result = await userpermission.GetAllRecort(id);
+            ViewBag.Record = await userServices.GetAllRecord();
+            var result = await userpermission.GetAllRecord(id);
             result.UserId = id; 
             return View(result);
         }
@@ -36,7 +36,7 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> ChangePermission(long id, string userid)
         {
-            var result = await userpermission.AddRecort(id, userid);
+            var result = await userpermission.AddRecord(id, userid);
             return Json(result);
         }
     }

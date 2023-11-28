@@ -10,7 +10,7 @@ namespace app.Services.MainMenuService
         {
             _entityRepository = entityRepository;
         }
-        public async Task<bool> AddRecort(MainMenuViewModel model)
+        public async Task<bool> AddRecord(MainMenuViewModel model)
         {
             var getitem =  _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name == model.Name.Trim());
             if (getitem == null)
@@ -32,7 +32,7 @@ namespace app.Services.MainMenuService
             return false;
         }
 
-        public async Task<bool> DeleteRecort(long Id)
+        public async Task<bool> DeleteRecord(long Id)
         {
             var getitem = await _entityRepository.GetByIdAsync(Id);
             if (getitem != null)
@@ -48,13 +48,13 @@ namespace app.Services.MainMenuService
             return false;
         }
 
-        public async Task<List<MainMenu>> GetAllRecort()
+        public async Task<List<MainMenu>> GetAllRecord()
         {
             List<MainMenu> getitem = _entityRepository.AllIQueryableAsync().OrderBy(d=>d.OrderNo).ToList();
             return getitem;
         }
 
-        public async Task<MainMenuViewModel> GetByRecort(long Id)
+        public async Task<MainMenuViewModel> GetByRecord(long Id)
         {
             MainMenu menu= await _entityRepository.GetByIdAsync(Id);
             MainMenuViewModel model= new MainMenuViewModel();
@@ -66,7 +66,7 @@ namespace app.Services.MainMenuService
             return model;
         }
 
-        public async Task<bool> UpdateRecort(MainMenuViewModel model)
+        public async Task<bool> UpdateRecord(MainMenuViewModel model)
         {
             var checkmenu = _entityRepository.AllIQueryableAsync().FirstOrDefault(f => f.Name == model.Name&&f.Id!=model.Id);
             if (checkmenu == null)

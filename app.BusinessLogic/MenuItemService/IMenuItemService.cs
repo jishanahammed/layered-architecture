@@ -10,10 +10,10 @@ namespace app.Services.MenuItemService
 {
     public interface IMenuItemService
     {
-        Task<bool> AddRecort(MenuItemViewModel model);
-        Task<MenuItemViewModel> GetAllRecort();
-        Task<bool> UpdateRecort(MenuItemViewModel model);
-        Task<bool> DeleteRecort(long Id);
-        Task<MenuItemViewModel> GetByRecort(long Id);
+        Task<bool> AddRecord(MenuItemViewModel model);
+        Task<MenuItemViewModel> GetAllRecord();
+        Task<bool> UpdateRecord(MenuItemViewModel model);
+        Task<bool> DeleteRecord(long Id);
+        Task<MenuItemViewModel> GetByRecord(long Id);
     }
 }

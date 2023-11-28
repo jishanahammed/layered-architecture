@@ -11,9 +11,9 @@ namespace app.Services.UserpermissionsService
 {
     public interface IUserpermissionServices
     {
-        Task<bool> AddRecort(long Id,string UserId);
-        Task<UserpermissionViewModel> GetAllRecort(string Id);
-        Task<MenuPermissionViewModel> GetAllMenuItemRecort(string username);
+        Task<bool> AddRecord(long Id,string UserId);
+        Task<UserpermissionViewModel> GetAllRecord(string Id);
+        Task<MenuPermissionViewModel> GetAllMenuItemRecord(string username);
 
     }
 }

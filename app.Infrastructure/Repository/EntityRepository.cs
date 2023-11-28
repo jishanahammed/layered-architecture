@@ -119,7 +119,6 @@ namespace app.Infrastructure.Repository
             entity.CreatedOn = BaTime;
             entity.CreatedBy = workContext.CurrentUserAsync().Result.FullName;
             entity.IsActive = true;
-            entity.TrakingId= workContext.CurrentUserAsync().Result.Id;
             return entity;
         }
 

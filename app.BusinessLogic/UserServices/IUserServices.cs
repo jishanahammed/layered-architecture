@@ -10,7 +10,7 @@ namespace app.Services.UserServices
 {
     public interface IUserServices
     {
-        Task<UserViewModel> GetAllRecort();
+        Task<UserViewModel> GetAllRecord();
         Task<ApplicationUser> GetByUser(string username);
         Task<UserViewModel> GetByUserId(string username);
         Task<bool> SoftDelete(string username);

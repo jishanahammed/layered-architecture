@@ -9,10 +9,10 @@ namespace app.Services.MainMenuService
 {
     public interface IMainMenuService
     {
-        Task<bool> AddRecort(MainMenuViewModel model);
-        Task<List<MainMenu>> GetAllRecort();
-        Task<bool> UpdateRecort(MainMenuViewModel model);
-        Task<bool> DeleteRecort(long Id);
-        Task<MainMenuViewModel> GetByRecort(long Id);
+        Task<bool> AddRecord(MainMenuViewModel model);
+        Task<List<MainMenu>> GetAllRecord();
+        Task<bool> UpdateRecord(MainMenuViewModel model);
+        Task<bool> DeleteRecord(long Id);
+        Task<MainMenuViewModel> GetByRecord(long Id);
     }
 }

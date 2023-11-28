@@ -26,7 +26,7 @@ namespace app.Services.UserpermissionsService
             this.dbContext = dbContext;
             this.workContext = workContext;
         }
-        public async Task<bool> AddRecort(long Id, string UserId)
+        public async Task<bool> AddRecord(long Id, string UserId)
         {
             Userpermissions userpermissions = new Userpermissions();
             var result = await dbContext.Userpermissions.FirstOrDefaultAsync(d => d.MenuItem == Id && d.UserId == UserId);
@@ -51,7 +51,7 @@ namespace app.Services.UserpermissionsService
             return true;
         }
 
-        public async Task<MenuPermissionViewModel> GetAllMenuItemRecort(string username)
+        public async Task<MenuPermissionViewModel> GetAllMenuItemRecord(string username)
         {
             MenuPermissionViewModel viewModel = new MenuPermissionViewModel();
             List<MainMenuVM> models = new List<MainMenuVM>();
@@ -90,7 +90,7 @@ namespace app.Services.UserpermissionsService
            return menus;    
         }
 
-        public async Task<UserpermissionViewModel> GetAllRecort(string Id)
+        public async Task<UserpermissionViewModel> GetAllRecord(string Id)
         {
             UserpermissionViewModel viewModel = new UserpermissionViewModel();
             List<UserpermissionViewModel> models = new List<UserpermissionViewModel>();

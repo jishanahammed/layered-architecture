@@ -1239,16 +1239,6 @@
         "runtime": {
           "bin/placeholder/app.Infrastructure.dll": {}
         }
-      },
-      "app.Utility/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/app.Utility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/app.Utility.dll": {}
-        }
       }
     }
   },
@@ -2864,18 +2854,12 @@
       "type": "project",
       "path": "../app.Infrastructure/app.Infrastructure.csproj",
       "msbuildProject": "../app.Infrastructure/app.Infrastructure.csproj"
-    },
-    "app.Utility/1.0.0": {
-      "type": "project",
-      "path": "../app.Utility/app.Utility.csproj",
-      "msbuildProject": "../app.Utility/app.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "app.EntityModel >= 1.0.0",
-      "app.Infrastructure >= 1.0.0",
-      "app.Utility >= 1.0.0"
+      "app.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2884,11 +2868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JackFruite\\app.BusinessLogic\\app.Services.csproj",
+      "projectUniqueName": "D:\\TCL\\app.BusinessLogic\\app.Services.csproj",
       "projectName": "app.Services",
-      "projectPath": "D:\\JackFruite\\app.BusinessLogic\\app.Services.csproj",
+      "projectPath": "D:\\TCL\\app.BusinessLogic\\app.Services.csproj",
       "packagesPath": "C:\\Users\\Lenono\\.nuget\\packages\\",
-      "outputPath": "D:\\JackFruite\\app.BusinessLogic\\obj\\",
+      "outputPath": "D:\\TCL\\app.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenono\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2905,14 +2889,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj": {
-              "projectPath": "D:\\JackFruite\\app.EntityModel\\app.EntityModel.csproj"
+            "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj": {
+              "projectPath": "D:\\TCL\\app.EntityModel\\app.EntityModel.csproj"
             },
-            "D:\\JackFruite\\app.Infrastructure\\app.Infrastructure.csproj": {
-              "projectPath": "D:\\JackFruite\\app.Infrastructure\\app.Infrastructure.csproj"
-            },
-            "D:\\JackFruite\\app.Utility\\app.Utility.csproj": {
-              "projectPath": "D:\\JackFruite\\app.Utility\\app.Utility.csproj"
+            "D:\\TCL\\app.Infrastructure\\app.Infrastructure.csproj": {
+              "projectPath": "D:\\TCL\\app.Infrastructure\\app.Infrastructure.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lm4mRZX6cvwRrpncAWIw80PYCXZ/cAtKxr+bVqRqbm1sClG4XXqAzX13WnM28+TuFwLbg+SH+TtokO20VfM4rQ==",
+  "dgSpecHash": "BiDeXahslL7B2GB5TabHuU1b5Nn4A4kdkIOhFkFQz3zGUvNrwRJRdBX4M/D/rlNydcEHk7/7Pv9bVtOxR/E31Q==",
   "success": true,
-  "projectFilePath": "D:\\JackFruite\\app.BusinessLogic\\app.Services.csproj",
+  "projectFilePath": "D:\\TCL\\app.BusinessLogic\\app.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenono\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Lenono\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

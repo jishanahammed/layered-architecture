@@ -4,8 +4,10 @@ using app.Infrastructure.Repository;
 using app.Services;
 using app.WebApp.Handlers;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WebApp.Handlers;
 
 namespace app.WebApp
 {
@@ -23,7 +25,8 @@ namespace app.WebApp
             builder.Services.AddScoped<IWorkContext, WorkContextsService>();
             builder.Services.AddTransient<IAssigeMenus, AssigeMenus>();
 
-
+            builder.Services.AddScoped<IAuthorizationHandler, PermissionHandler>();
+            builder.Services.AddSingleton<IAuthorizationPolicyProvider, AuthorizationPolicyProvider>();
             builder.Services.AddDbContext<inventoryDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -33,13 +36,7 @@ namespace app.WebApp
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
-            }).AddEntityFrameworkStores<inventoryDbContext>().AddDefaultTokenProviders();
-           
-
-
-
-            //builder.Services.AddInfrastructure(builder.Configuration);
-
+            }).AddEntityFrameworkStores<inventoryDbContext>().AddDefaultTokenProviders();        
             builder.Services.ConfigureApplicationCookie(
             options =>
             {
@@ -47,7 +44,7 @@ namespace app.WebApp
                 options.AccessDeniedPath = new PathString("/Account/AccessDenied");
                 options.LogoutPath = new PathString("/Account/Logout");
                 options.Cookie.Name = "My.Cookie";
-                options.Cookie.Expiration = TimeSpan.FromDays(1);
+                //options.Cookie.Expiration = TimeSpan.FromDays(1);
             });
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             builder.Services.AddSession(options =>
@@ -55,9 +52,7 @@ namespace app.WebApp
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
                 options.IdleTimeout = TimeSpan.FromDays(1);
-                options.IOTimeout = TimeSpan.FromDays(1);
-               // options.Cookie.Expiration = TimeSpan.FromDays(1);   
-                
+                options.IOTimeout = TimeSpan.FromDays(1);                
             });
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddRazorPages();

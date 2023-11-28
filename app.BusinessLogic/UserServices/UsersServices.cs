@@ -61,7 +61,7 @@ namespace app.Services.UserServices
             return 2;
         }
 
-        public async Task<UserViewModel> GetAllRecort()
+        public async Task<UserViewModel> GetAllRecord()
         {
             UserViewModel model = new UserViewModel();
             model.datalist = await Task.Run(() => (from t1 in dbContext.Users

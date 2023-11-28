@@ -34,7 +34,7 @@
                             <label asp-for="UserId" class="control-label"> User Name </label>
                             <select asp-for="UserId" id="UserId" class="form-control select2">
                                 <option value="">Select User Name</option>
-                                @foreach (var item in ViewBag.Recort.datalist)
+                                @foreach (var item in ViewBag.Record.datalist)
                                 {
                                     <option value="@item.UserId"> @item.FullName _ @item.Email _ @item.Mobile</option>
                                 }

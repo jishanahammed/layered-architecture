@@ -50,7 +50,7 @@ namespace app.WebApp.Controllers
             var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
             if (result.Succeeded)
             {
-                var getitem = await userpermission.GetAllMenuItemRecort(user.Id);
+                var getitem = await userpermission.GetAllMenuItemRecord(user.Id);
                 HttpContext.Session.SetString("Username", user.UserName.ToString());
                 var arry= JsonSerializer.Serialize(getitem);
                 HttpContext.Session.SetString("ArrayData", arry);

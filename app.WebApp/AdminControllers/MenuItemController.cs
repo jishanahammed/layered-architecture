@@ -21,20 +21,20 @@ namespace app.WebApp.AdminControllers
         public async Task<IActionResult> Index()
         {
            MenuItemViewModel menuItemViewModel = new MenuItemViewModel();
-            menuItemViewModel = await MenuItem.GetAllRecort();
+            menuItemViewModel = await MenuItem.GetAllRecord();
             return View(menuItemViewModel);
         }
         [HttpGet]
-        public async Task<IActionResult> AddRecort()
+        public async Task<IActionResult> AddRecord()
         {
             MenuItemViewModel menuItemViewModel = new MenuItemViewModel();
-            ViewBag.Recort = new SelectList((await mainmenu.GetAllRecort()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
+            ViewBag.Record = new SelectList((await mainmenu.GetAllRecord()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
             return View(menuItemViewModel);
         }
         [HttpPost]
-        public async Task<IActionResult> AddRecort(MenuItemViewModel model)
+        public async Task<IActionResult> AddRecord(MenuItemViewModel model)
         {
-            var result = await MenuItem.AddRecort(model);
+            var result = await MenuItem.AddRecord(model);
             if (result)
             {
                 return RedirectToAction("Index");
@@ -43,7 +43,7 @@ namespace app.WebApp.AdminControllers
             {
                 ModelState.AddModelError(string.Empty, "Same Name Action Controller already exists!");
                 MenuItemViewModel menuItemViewModel = new MenuItemViewModel();
-                ViewBag.Recort = new SelectList((await mainmenu.GetAllRecort()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
+                ViewBag.Record = new SelectList((await mainmenu.GetAllRecord()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
                 return View(menuItemViewModel);
             }
  
@@ -51,21 +51,21 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> Delete(long id)
         {
-            var res = await MenuItem.DeleteRecort(id);
+            var res = await MenuItem.DeleteRecord(id);
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public async Task<IActionResult> UpdateRecort(long id)
+        public async Task<IActionResult> UpdateRecord(long id)
         {
             MenuItemViewModel menuItemViewModel = new MenuItemViewModel();
-            ViewBag.Recort = new SelectList((await mainmenu.GetAllRecort()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
-            menuItemViewModel = await MenuItem.GetByRecort(id);
+            ViewBag.Record = new SelectList((await mainmenu.GetAllRecord()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
+            menuItemViewModel = await MenuItem.GetByRecord(id);
             return View(menuItemViewModel);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateRecort(MenuItemViewModel viewModel)
+        public async Task<IActionResult> UpdateRecord(MenuItemViewModel viewModel)
         {
-            var result = await MenuItem.UpdateRecort(viewModel);
+            var result = await MenuItem.UpdateRecord(viewModel);
             if (result)
             {
                 return RedirectToAction("Index");
@@ -74,7 +74,7 @@ namespace app.WebApp.AdminControllers
             {
                 ModelState.AddModelError(string.Empty, "Same Name Action Controller already exists!");
                 MenuItemViewModel menuItemViewModel = new MenuItemViewModel();
-                ViewBag.Recort = new SelectList((await mainmenu.GetAllRecort()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
+                ViewBag.Recort = new SelectList((await mainmenu.GetAllRecord()).Select(s => new { Id = s.Id, Name = s.Name }), "Id", "Name");
                 return View(menuItemViewModel);
             }
         }

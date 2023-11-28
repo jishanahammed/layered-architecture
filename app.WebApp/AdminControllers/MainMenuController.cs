@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace app.WebApp.AdminControllers
 {
-    [Authorize]
+    [Authorize("kgecomAuthorizatio")]
     public class MainMenuController : Controller
     {
         private readonly IMainMenuService mainMenu;
@@ -15,14 +15,15 @@ namespace app.WebApp.AdminControllers
         }
 
         [HttpGet]
+    
         public async Task<IActionResult> Index()
         {
             MainMenuViewModel mainMenuViewModel = new MainMenuViewModel();
-            mainMenuViewModel.datalist = await mainMenu.GetAllRecort();
+            mainMenuViewModel.datalist = await mainMenu.GetAllRecord();
             return View(mainMenuViewModel);
         }
         [HttpGet]
-        public async Task<IActionResult> AddRecort()
+        public async Task<IActionResult> AddRecord()
         {
             MainMenuViewModel viewModel = new MainMenuViewModel();
             return View(viewModel);
@@ -31,7 +32,7 @@ namespace app.WebApp.AdminControllers
         [HttpPost]
         public async Task<IActionResult> AddRecort(MainMenuViewModel viewModel)
         {
-            var result = await mainMenu.AddRecort(viewModel);
+            var result = await mainMenu.AddRecord(viewModel);
             if (result)
             {
                 return RedirectToAction("Index");
@@ -42,20 +43,20 @@ namespace app.WebApp.AdminControllers
         [HttpGet]
         public async Task<IActionResult> Delete(long id)
         {
-            var res = await mainMenu.DeleteRecort(id);
+            var res = await mainMenu.DeleteRecord(id);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public async Task<IActionResult> UpdateRecort(long id)
         {
             MainMenuViewModel viewModel = new MainMenuViewModel();
-            viewModel= await mainMenu.GetByRecort(id);
+            viewModel= await mainMenu.GetByRecord(id);
             return View(viewModel);
         }
         [HttpPost]
         public async Task<IActionResult> UpdateRecort(MainMenuViewModel viewModel)
         {
-            var result = await mainMenu.UpdateRecort(viewModel);
+            var result = await mainMenu.UpdateRecord(viewModel);
             if (result)
             {
                 return RedirectToAction("Index");

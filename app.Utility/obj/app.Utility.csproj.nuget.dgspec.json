@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JackFruite\\app.Utility\\app.Utility.csproj": {}
+    "D:\\TCL\\app.Utility\\app.Utility.csproj": {}
   },
   "projects": {
-    "D:\\JackFruite\\app.Utility\\app.Utility.csproj": {
+    "D:\\TCL\\app.Utility\\app.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JackFruite\\app.Utility\\app.Utility.csproj",
+        "projectUniqueName": "D:\\TCL\\app.Utility\\app.Utility.csproj",
         "projectName": "app.Utility",
-        "projectPath": "D:\\JackFruite\\app.Utility\\app.Utility.csproj",
+        "projectPath": "D:\\TCL\\app.Utility\\app.Utility.csproj",
         "packagesPath": "C:\\Users\\Lenono\\.nuget\\packages\\",
-        "outputPath": "D:\\JackFruite\\app.Utility\\obj\\",
+        "outputPath": "D:\\TCL\\app.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenono\\AppData\\Roaming\\NuGet\\NuGet.Config",
